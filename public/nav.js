@@ -159,6 +159,111 @@ window.optImg = function(src, w=800) {
     initNavBehavior(navEl);
   }
 
+  // ── Build Mobile Menu (Dynamic) ──────────────────────────────
+  function buildMobileMenu() {
+    if (!window.ZALI_CATALOG) return;
+
+    let rootListHtml = '';
+    let panelsHtml = '';
+
+    ZALI_CATALOG.categories.forEach(cat => {
+      const meta = CAT_META[cat.id];
+      if (!meta) return;
+
+      // Add to root list
+      rootListHtml += `
+      <button type="button" class="bb-md-item" data-go="cat-${cat.id}">
+        <span class="bb-md-item-text">${meta.label}</span>
+        <span class="bb-md-item-meta">${cat.subcategories.length}</span>
+        <span class="bb-md-arr">›</span>
+      </button>`;
+
+      let subListHtml = `
+      <a href="products.html${meta.anchor}" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All ${meta.label}</span>
+        <span class="bb-md-arr">›</span>
+      </a>`;
+
+      cat.subcategories.forEach(sub => {
+        // Add to cat list
+        subListHtml += `
+      <button type="button" class="bb-md-item" data-go="sub-${sub.id}">
+        <span class="bb-md-item-text">${sub.name}</span>
+        <span class="bb-md-item-meta">${sub.products ? sub.products.length : 0}</span>
+        <span class="bb-md-arr">›</span>
+      </button>`;
+
+        let prodListHtml = `
+      <a href="products.html${meta.anchor}" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All ${sub.name}</span>
+        <span class="bb-md-arr">›</span>
+      </a>`;
+
+        if (sub.products) {
+          sub.products.forEach(prod => {
+            prodListHtml += `
+      <a href="${productUrl(prod)}" class="bb-md-item">
+        <span class="bb-md-item-text">${prod.name}</span>
+        <span class="bb-md-arr">›</span>
+      </a>`;
+          });
+        }
+
+        panelsHtml += `
+  <div class="bb-md-panel" data-panel="sub-${sub.id}">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-${cat.id}">
+        <span class="bb-md-back-arr">‹</span><span>${meta.label}</span>
+      </button>
+      <h3 class="bb-md-panel-title">${sub.name}</h3>
+    </div>
+    <div class="bb-md-list">${prodListHtml}</div>
+  </div>`;
+      });
+
+      panelsHtml += `
+  <div class="bb-md-panel" data-panel="cat-${cat.id}">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">${meta.label}</h3>
+    </div>
+    <div class="bb-md-list">${subListHtml}</div>
+  </div>`;
+    });
+
+    const menuHtml = `
+<div class="bb-md-overlay" id="m-overlay"></div>
+<aside class="bb-md-drawer" id="m-drawer" aria-label="Mobile menu">
+  <button type="button" class="bb-md-close" id="m-close" aria-label="Close menu">×</button>
+  
+  <div class="bb-md-panel active" data-panel="root">
+    <div class="bb-md-panel-head bb-md-root-head">
+      <img src="logo.svg" alt="ZALI Industries" class="bb-md-logo">
+    </div>
+    <div class="bb-md-list">
+      ${rootListHtml}
+      <a href="print-methods.html" class="bb-md-item bb-md-item-plain"><span class="bb-md-item-text">Printing Methods</span></a>
+      <a href="fabrics.html" class="bb-md-item bb-md-item-plain"><span class="bb-md-item-text">Fabrics</span></a>
+      <a href="how-it-works.html" class="bb-md-item bb-md-item-plain"><span class="bb-md-item-text">How It Works</span></a>
+      <a href="about.html" class="bb-md-item bb-md-item-plain"><span class="bb-md-item-text">About</span></a>
+      <a href="contact.html" class="bb-md-item bb-md-item-plain"><span class="bb-md-item-text">Contact</span></a>
+    </div>
+    <div class="bb-md-foot">
+      <a href="contact.html" class="bb-md-cta">Get a Quote →</a>
+    </div>
+  </div>
+  ${panelsHtml}
+</aside>`;
+
+    const div = document.createElement('div');
+    div.innerHTML = menuHtml;
+    while(div.firstChild) {
+      document.body.appendChild(div.firstChild);
+    }
+  }
+
   // ── Re-attach dropdown + burger behaviour ───────────────────
   function initNavBehavior(navEl) {
     // Dropdown hover
@@ -169,28 +274,63 @@ window.optImg = function(src, w=800) {
       cat.addEventListener('mouseleave', () => dd.classList.remove('open'));
     });
 
-    // Burger / mobile menu
-    const burger  = navEl.querySelector('.bb-burger');
-    if (burger) {
-      burger.addEventListener('click', () => {
-        const drawer = document.getElementById('m-drawer');
-        const overlay = document.getElementById('m-overlay');
-        if (drawer) {
-          const isOpen = drawer.classList.contains('open');
-          if (isOpen) {
-            drawer.classList.remove('open');
-            if (overlay) overlay.classList.remove('open');
-            burger.classList.remove('open');
-            document.body.classList.remove('bb-md-locked');
-          } else {
-            drawer.classList.add('open');
-            if (overlay) overlay.classList.add('open');
-            burger.classList.add('open');
-            document.body.classList.add('bb-md-locked');
-          }
+    const burgers = document.querySelectorAll('.nav-burger, .bb-burger');
+    const drawer = document.getElementById('m-drawer');
+    const overlay = document.getElementById('m-overlay');
+    const closeBtn = document.getElementById('m-close');
+
+    function resetToRoot() {
+      document.querySelectorAll('.bb-md-panel').forEach(p => p.classList.remove('active'));
+      const root = document.querySelector('.bb-md-panel[data-panel="root"]');
+      if (root) root.classList.add('active');
+    }
+    
+    function openDrawer() {
+      if (!drawer) return;
+      drawer.classList.add('open');
+      if (overlay) overlay.classList.add('open');
+      burgers.forEach(b => b.classList.add('open'));
+      document.body.classList.add('bb-md-locked');
+    }
+    
+    function closeDrawer() {
+      if (!drawer) return;
+      drawer.classList.remove('open');
+      if (overlay) overlay.classList.remove('open');
+      burgers.forEach(b => b.classList.remove('open'));
+      document.body.classList.remove('bb-md-locked');
+      setTimeout(resetToRoot, 280);
+    }
+
+    if (burgers.length && drawer) {
+      burgers.forEach(b => {
+        b.addEventListener('click', () => {
+          drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+        });
+      });
+      if (overlay) overlay.addEventListener('click', closeDrawer);
+      if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+    }
+
+    // Panel drilldown navigation (data-go)
+    document.querySelectorAll('.bb-md-drawer [data-go]').forEach(btn => {
+      btn.addEventListener('click', e => {
+        if (btn.tagName === 'A') return;
+        e.preventDefault();
+        const target = btn.getAttribute('data-go');
+        document.querySelectorAll('.bb-md-panel').forEach(p => p.classList.remove('active'));
+        const next = document.querySelector(`.bb-md-panel[data-panel="${target}"]`);
+        if (next) {
+          next.classList.add('active');
+          next.scrollTop = 0;
         }
       });
-    }
+    });
+
+    // Close drawer when any LINK inside it is clicked
+    document.querySelectorAll('.bb-md-drawer a').forEach(link => {
+      link.addEventListener('click', closeDrawer);
+    });
 
     // Close dropdown on outside click
     document.addEventListener('click', e => {
@@ -200,11 +340,14 @@ window.optImg = function(src, w=800) {
     });
   }
 
-  // ── Init ─────────────────────────────────────────────────────
+  // Generate the desktop menu HTML, then the mobile menu HTML, then bind events
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', buildNav);
+    document.addEventListener('DOMContentLoaded', () => {
+      buildNav();
+      buildMobileMenu();
+    });
   } else {
     buildNav();
+    buildMobileMenu();
   }
-
 })();

@@ -3321,7 +3321,7 @@
       if (!prod) {
         /* take first product with an image */
         for (const sub of cat.subcategories) {
-          const FEAT_IMG_ORDER = ['ghost_front', 'flat_lay', 'detail', 'model_action', 'model_torso', 'ghost_back', 'ghost_side', 'model_back', 'model_bottom'];
+          const FEAT_IMG_ORDER = ['model_torso', 'ghost_front', 'flat_lay', 'detail', 'model_action', 'ghost_back', 'ghost_side', 'model_back', 'model_bottom'];
           const p = sub.products.find(p => p.images && FEAT_IMG_ORDER.some(k => p.images[k]));
           if (p) { prod = p; break; }
         }
@@ -3330,7 +3330,7 @@
         }
       }
       if (!prod) return;
-      const HERO_IMG_ORDER = ['ghost_front', 'flat_lay', 'detail', 'model_action', 'model_torso', 'ghost_back', 'ghost_side', 'model_back', 'model_bottom'];
+      const HERO_IMG_ORDER = ['model_torso', 'ghost_front', 'flat_lay', 'detail', 'model_action', 'ghost_back', 'ghost_side', 'model_back', 'model_bottom'];
       const bestImgKey = prod.images ? HERO_IMG_ORDER.find(k => prod.images[k]) : null;
       const imgHtml = bestImgKey
         ? `<img src="${window.optImg(prod.images[bestImgKey], 800)}" alt="${prod.name}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`

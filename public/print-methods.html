@@ -1,0 +1,2822 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Print Methods — ZALI Industries</title>
+<meta name="description" content="Five print methods, all under one roof: dye sublimation, screen print, DTF, embroidery, and heat transfer. Detailed guide to which method fits your project." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  /* FABRICS GRID */
+  .lib-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  @media (max-width: 980px) { .lib-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 540px) { .lib-grid { grid-template-columns: 1fr; } }
+
+  .lib-fab {
+    background: var(--white);
+    border: 1px solid var(--bg-line);
+    transition: all 0.25s;
+    overflow: hidden;
+  }
+  .lib-fab:hover { border-color: var(--ink); }
+  .lib-swatch {
+    aspect-ratio: 16/10;
+    position: relative;
+    overflow: hidden;
+  }
+  .lib-swatch::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      repeating-linear-gradient(45deg, transparent 0 6px, rgba(255,255,255,0.04) 6px 12px),
+      radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 50%);
+  }
+  .lib-swatch.s1 { background: linear-gradient(135deg, #1a1a1a, #2a2a2a); }
+  .lib-swatch.s2 { background: linear-gradient(135deg, #14536b, #0a3340); }
+  .lib-swatch.s3 { background: linear-gradient(135deg, #d6411a, #a8311a); }
+  .lib-swatch.s4 { background: linear-gradient(135deg, #4a4a4a, #6a6a6a); }
+  .lib-swatch.s5 { background: linear-gradient(135deg, #2a4a2a, #4a6a4a); }
+  .lib-swatch.s6 { background: linear-gradient(135deg, #6a4a2a, #4a3a1a); }
+  .lib-swatch.s7 { background: linear-gradient(135deg, #4a2a4a, #6a3a6a); }
+  .lib-swatch.s8 { background: linear-gradient(135deg, #2a4a4a, #1a3a3a); }
+  .lib-swatch.s9 { background: linear-gradient(135deg, #d4a056, #a87a36); }
+  .lib-swatch-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    color: var(--bg);
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 5px 9px;
+    z-index: 2;
+  }
+  .lib-info { padding: 22px 24px 24px; }
+  .lib-name {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+  .lib-spec {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+  }
+  .lib-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+    margin-bottom: 18px;
+  }
+  .lib-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid var(--bg-line);
+  }
+  .lib-meta-item .lbl {
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 2px;
+  }
+  .lib-meta-item .val {
+    font-size: 12px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* FAB CATEGORY HEAD */
+  .fab-cat-head {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--bg-line);
+  }
+  .fab-cat-head h3 {
+    font-family: var(--display);
+    font-size: clamp(28px, 3.5vw, 40px);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+  .fab-cat-head h3 em { font-style: italic; color: var(--accent); }
+  .fab-cat-head p {
+    margin-top: 8px;
+    color: var(--ink-mute);
+    font-size: 14px;
+    max-width: 640px;
+  }
+  .fab-cat { margin-bottom: 80px; }
+  .fab-cat:last-child { margin-bottom: 0; }
+</style>
+
+<style>
+  /* METHOD SECTION */
+  .pm {
+    padding: 90px 0;
+    border-bottom: 1px solid var(--bg-line);
+  }
+  .pm:nth-child(even) { background: var(--bg-soft); }
+  .pm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .pm:nth-child(even) .pm-grid { grid-template-columns: 1fr 1fr; direction: rtl; }
+  .pm:nth-child(even) .pm-grid > * { direction: ltr; }
+  @media (max-width: 980px) {
+    .pm-grid, .pm:nth-child(even) .pm-grid { grid-template-columns: 1fr; gap: 40px; direction: ltr; }
+    .pm { padding: 60px 0; }
+  }
+  .pm-num {
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.14em;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pm-popular {
+    background: var(--accent);
+    color: var(--white);
+    padding: 4px 9px;
+    font-family: var(--mono);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-left: 8px;
+  }
+  .pm h2 {
+    font-family: var(--display);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.025em;
+    color: var(--ink);
+    margin-bottom: 22px;
+  }
+  .pm h2 em { font-style: italic; color: var(--accent); }
+  .pm-lead {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+  .pm-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+  .pm-stat {
+    background: var(--white);
+    border: 1px solid var(--bg-line);
+    padding: 18px 20px;
+  }
+  .pm:nth-child(even) .pm-stat { background: var(--bg); }
+  .pm-stat-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 6px;
+  }
+  .pm-stat-value {
+    font-family: var(--display);
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .pm-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+  }
+  .pm-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--bg-line);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+  }
+  .pm:nth-child(even) .pm-list li { border-color: rgba(0,0,0,0.07); }
+  .pm-list li:last-child { border-bottom: none; }
+  .pm-list .check {
+    width: 18px; height: 18px;
+    background: var(--accent);
+    color: var(--white);
+    display: grid; place-items: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* VISUAL SIDE */
+  .pm-visual {
+    aspect-ratio: 4/5;
+    background: var(--ink);
+    position: relative;
+    overflow: hidden;
+  }
+  .pm-visual.v1 { background: linear-gradient(135deg, #d6411a 0%, #a8311a 60%, #1a1a1a 100%); }
+  .pm-visual.v2 { background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 60%, #0a0a0a 100%); }
+  .pm-visual.v3 { background: linear-gradient(135deg, #14536b 0%, #0a3340 60%, #1a2530 100%); }
+  .pm-visual.v4 { background: linear-gradient(135deg, #6a4a2a 0%, #4a3a1a 60%, #2a2a1a 100%); }
+  .pm-visual.v5 { background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 60%, #0a0a0a 100%); }
+  .pm-visual::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: 
+      radial-gradient(circle at 70% 30%, rgba(255,255,255,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(0,0,0,0.3) 0%, transparent 50%);
+  }
+  .pm-visual-overlay {
+    position: absolute; inset: 0; z-index: 2;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--bg);
+  }
+  .pm-visual-tag {
+    align-self: flex-start;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    padding: 7px 14px 7px 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .pm-visual-caption {
+    font-family: var(--display);
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.05;
+    max-width: 320px;
+    letter-spacing: -0.015em;
+  }
+  .pm-visual-caption em { color: var(--sand); font-style: italic; }
+  .pm-visual-caption .small {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 14px;
+    opacity: 0.7;
+    color: var(--bg);
+    font-style: normal;
+  }
+  .pm-visual .corner-tri {
+    position: absolute;
+    bottom: 0; right: 0;
+    z-index: 3;
+    width: 0; height: 0;
+    border-left: 50px solid transparent;
+    border-bottom: 50px solid var(--accent);
+  }
+</style>
+
+<!-- Favicon & OpenGraph -->
+<link rel="icon" type="image/svg+xml" href="logo.svg" />
+<meta property="og:title" content="ZALI Industries - Custom Apparel Manufacturer" />
+<meta property="og:description" content="Custom sublimated sportswear, fightwear, and casual apparel. Manufactured direct in Sialkot, Pakistan." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="zali-logo.png" />
+
+</head>
+<body class="bb-page">
+
+
+<!-- TOP TICKER (MARQUEE) -->
+<div class="topbar">
+  <div class="topbar-track">
+    <span><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash; FOR EVERYONE</span>
+    <span>INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot; FOB</span>
+    <span><span class="accent-text">▲</span> SAMPLE COST DEDUCTED FROM BULK ORDER</span>
+    <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
+    <span><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash; FOR EVERYONE</span>
+    <span>INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot; FOB</span>
+    <span><span class="accent-text">▲</span> SAMPLE COST DEDUCTED FROM BULK ORDER</span>
+    <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
+  </div>
+</div>
+
+<!-- BOOMBAH-STYLE MAIN NAV -->
+<nav class="bb-nav"></nav>
+
+<!-- HERO -->
+
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero-grid">
+      <div>
+        <span class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>Print Methods</span></span>
+        <h1>Five methods, <em>one roof.</em></h1>
+      </div>
+      <div>
+        <p class="lead">No outsourcing. No hand-offs to a third-party printer that never picks up the phone. Every print method below happens in our Sialkot facility, with our own equipment, run by people who've been printing for 10+ years.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD 01 -->
+<section class="pm" id="sublimation">
+  <div class="container">
+    <div class="pm-grid">
+      <div>
+        <div class="pm-num"><span class="tri tri-sm"></span> METHOD 01 <span class="pm-popular">▲ MOST POPULAR</span></div>
+        <h2>Dye <em>Sublimation</em></h2>
+        <p class="pm-lead">Heat-pressed at 200°C, sublimation ink turns into gas and bonds with polyester at the molecular level. The result: full-coverage prints that will not crack, fade, or peel for the life of the garment.</p>
+        <div class="pm-stats">
+          <div class="pm-stat"><div class="pm-stat-label">Best For</div><div class="pm-stat-value">All-Over Prints</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Fabric</div><div class="pm-stat-value">Poly · Lycra</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Min Order</div><div class="pm-stat-value">50 pcs</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Color Range</div><div class="pm-stat-value">CMYK Full</div></div>
+        </div>
+        <ul class="pm-list">
+          <li><span class="check">▲</span> Edge-to-edge, panel-to-panel printing with no print line</li>
+          <li><span class="check">▲</span> Zero hand-feel — the print becomes part of the fabric</li>
+          <li><span class="check">▲</span> Vivid color saturation, photo-realistic gradients</li>
+          <li><span class="check">▲</span> Wash-tested to 50+ cycles with no fade</li>
+          <li><span class="check">▲</span> Only works on white or light polyester base fabric</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Quote a Sublimation Job <span class="arrow">→</span></a>
+      </div>
+      <div class="pm-visual v1">
+        <span class="placeholder-banner">PLACEHOLDER · Sublimation Press</span>
+        <div class="pm-visual-overlay">
+          <div style="display:flex; justify-content:space-between;">
+            <span class="pm-visual-tag"><span class="tri tri-sm" style="margin-right:0;"></span> Plate 04 · 200°C</span>
+            <span style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7;">Bay 02</span>
+          </div>
+          <div>
+            <div class="pm-visual-caption"><em>Where ink</em><br>becomes fabric.<span class="small">Sublimation Press · Active</span></div>
+          </div>
+          <div class="corner-tri"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD 02 -->
+<section class="pm" id="screen-print">
+  <div class="container">
+    <div class="pm-grid">
+      <div>
+        <div class="pm-num"><span class="tri tri-sm"></span> METHOD 02</div>
+        <h2>Screen <em>Print</em></h2>
+        <p class="pm-lead">The classic. Plastisol and water-based inks pushed through hand-prepped screens. Built for cotton tees, hoodies, and bold graphic work where opacity and tactile feel matter.</p>
+        <div class="pm-stats">
+          <div class="pm-stat"><div class="pm-stat-label">Best For</div><div class="pm-stat-value">Cotton Tees</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Fabric</div><div class="pm-stat-value">Cotton · Blends</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Min Order</div><div class="pm-stat-value">100 pcs</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Colors</div><div class="pm-stat-value">Up to 8 per design</div></div>
+        </div>
+        <ul class="pm-list">
+          <li><span class="check">▲</span> High-opacity prints on dark fabrics, no underbase issues</li>
+          <li><span class="check">▲</span> Soft-hand discharge available for premium fashion finish</li>
+          <li><span class="check">▲</span> Plastisol or water-based, eco-certified inks on request</li>
+          <li><span class="check">▲</span> Set-up cost amortizes well at higher quantities</li>
+          <li><span class="check">▲</span> Best for solid graphics, logos, and limited color counts</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Quote a Screen Print Job <span class="arrow">→</span></a>
+      </div>
+      <div class="pm-visual v2">
+        <span class="placeholder-banner">PLACEHOLDER · Screen Print Floor</span>
+        <div class="pm-visual-overlay">
+          <div style="display:flex; justify-content:space-between;">
+            <span class="pm-visual-tag"><span class="tri tri-sm" style="margin-right:0;"></span> Manual Carousel</span>
+            <span style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7;">Bay 03</span>
+          </div>
+          <div>
+            <div class="pm-visual-caption"><em>Hand-prepped</em><br>screens, hand-pulled inks.<span class="small">Screen Print Floor · 8-Color</span></div>
+          </div>
+          <div class="corner-tri"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD 03 -->
+<section class="pm" id="dtf">
+  <div class="container">
+    <div class="pm-grid">
+      <div>
+        <div class="pm-num"><span class="tri tri-sm"></span> METHOD 03</div>
+        <h2>DTF <em>Print</em></h2>
+        <p class="pm-lead">Direct-to-film. The newest, most flexible print method in our shop. Multicolor designs printed on transfer film and heat-pressed onto any fabric. No screen setup, no MOQ on the print itself.</p>
+        <div class="pm-stats">
+          <div class="pm-stat"><div class="pm-stat-label">Best For</div><div class="pm-stat-value">Short Runs</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Fabric</div><div class="pm-stat-value">Anything</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Min Order</div><div class="pm-stat-value">25 pcs</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Colors</div><div class="pm-stat-value">Unlimited</div></div>
+        </div>
+        <ul class="pm-list">
+          <li><span class="check">▲</span> Photo-realistic detail, gradients, fine line work</li>
+          <li><span class="check">▲</span> No set-up fee, no screen costs, no minimums per design</li>
+          <li><span class="check">▲</span> Works on cotton, poly blends, fleece, hoodies, and caps</li>
+          <li><span class="check">▲</span> Best fit for short runs and SKU variations within one order</li>
+          <li><span class="check">▲</span> Slight hand-feel, less ideal for full-coverage all-over print</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Quote a DTF Job <span class="arrow">→</span></a>
+      </div>
+      <div class="pm-visual v3">
+        <span class="placeholder-banner">PLACEHOLDER · DTF Press</span>
+        <div class="pm-visual-overlay">
+          <div style="display:flex; justify-content:space-between;">
+            <span class="pm-visual-tag"><span class="tri tri-sm" style="margin-right:0;"></span> Film Transfer</span>
+            <span style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7;">Bay 04</span>
+          </div>
+          <div>
+            <div class="pm-visual-caption"><em>Photo-grade</em><br>detail, on any fabric.<span class="small">DTF Station · Multi-color</span></div>
+          </div>
+          <div class="corner-tri"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD 04 -->
+<section class="pm" id="embroidery">
+  <div class="container">
+    <div class="pm-grid">
+      <div>
+        <div class="pm-num"><span class="tri tri-sm"></span> METHOD 04</div>
+        <h2><em>Embroidery</em></h2>
+        <p class="pm-lead">Multi-head computerized embroidery. Up to 12-color flat or 3D puff embroidery. The premium hand-feel and dimensional finish that makes a cap or polo feel like a $100 piece even at $25 cost.</p>
+        <div class="pm-stats">
+          <div class="pm-stat"><div class="pm-stat-label">Best For</div><div class="pm-stat-value">Caps · Polos</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Fabric</div><div class="pm-stat-value">Anything Stable</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Min Order</div><div class="pm-stat-value">25 pcs</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Colors</div><div class="pm-stat-value">Up to 12 thread</div></div>
+        </div>
+        <ul class="pm-list">
+          <li><span class="check">▲</span> Flat embroidery, 3D puff, and mixed-technique pieces</li>
+          <li><span class="check">▲</span> Premium thread for color match and shine consistency</li>
+          <li><span class="check">▲</span> Optional applique with embroidered borders for varsity-style pieces</li>
+          <li><span class="check">▲</span> Digitization included free if you supply vector artwork</li>
+          <li><span class="check">▲</span> Best on caps, polos, jackets, hoodie chest hits, and patches</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Quote an Embroidery Job <span class="arrow">→</span></a>
+      </div>
+      <div class="pm-visual v4">
+        <span class="placeholder-banner">PLACEHOLDER · Embroidery Heads</span>
+        <div class="pm-visual-overlay">
+          <div style="display:flex; justify-content:space-between;">
+            <span class="pm-visual-tag"><span class="tri tri-sm" style="margin-right:0;"></span> 12-Head Auto</span>
+            <span style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7;">Bay 05</span>
+          </div>
+          <div>
+            <div class="pm-visual-caption"><em>The premium</em><br>hand-feel.<span class="small">12-Head Embroidery Bay</span></div>
+          </div>
+          <div class="corner-tri"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD 05 -->
+<section class="pm" id="heat-transfer">
+  <div class="container">
+    <div class="pm-grid">
+      <div>
+        <div class="pm-num"><span class="tri tri-sm"></span> METHOD 05</div>
+        <h2>Heat <em>Transfer</em></h2>
+        <p class="pm-lead">Cut vinyl and silicone transfers heat-pressed onto finished garments. The go-to method for player names, jersey numbers, and durable team kit graphics.</p>
+        <div class="pm-stats">
+          <div class="pm-stat"><div class="pm-stat-label">Best For</div><div class="pm-stat-value">Names · Numbers</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Fabric</div><div class="pm-stat-value">Most Fabrics</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Min Order</div><div class="pm-stat-value">No Min</div></div>
+          <div class="pm-stat"><div class="pm-stat-label">Colors</div><div class="pm-stat-value">Per Decoration</div></div>
+        </div>
+        <ul class="pm-list">
+          <li><span class="check">▲</span> Per-piece variable data: each player gets their own name and number</li>
+          <li><span class="check">▲</span> Silicone transfers offer premium tactile feel, vinyl is more economical</li>
+          <li><span class="check">▲</span> Highly durable, holds up through aggressive wash cycles</li>
+          <li><span class="check">▲</span> Combines well with sublimation for full team uniforms</li>
+          <li><span class="check">▲</span> Fast turnaround for last-minute name and number additions</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Quote a Heat Transfer Job <span class="arrow">→</span></a>
+      </div>
+      <div class="pm-visual v5">
+        <span class="placeholder-banner">PLACEHOLDER · Heat Transfer</span>
+        <div class="pm-visual-overlay">
+          <div style="display:flex; justify-content:space-between;">
+            <span class="pm-visual-tag"><span class="tri tri-sm" style="margin-right:0;"></span> Cut Vinyl</span>
+            <span style="font-family:var(--mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; opacity:0.7;">Bay 06</span>
+          </div>
+          <div>
+            <div class="pm-visual-caption"><em>Per-piece</em><br>names and numbers.<span class="small">Team Kit Application</span></div>
+          </div>
+          <div class="corner-tri"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="sec sec-soft">
+  <div class="container">
+    <div class="sec-head">
+      <div class="left">
+        <span class="sec-eyebrow"><span class="tri tri-sm"></span> Side By Side</span>
+        <h2 class="sec-h2">Quick <em>comparison.</em></h2>
+        <p class="sec-desc">Not sure which method fits your project? Use the table below as a starting point, or send us your design and we'll spec the right one for you.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="table-z">
+        <thead>
+          <tr><th>Method</th><th>Best For</th><th>Fabric</th><th>MOQ</th><th>Hand Feel</th><th>Color Range</th><th>Durability</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>Sublimation</strong></td><td>All-over jerseys</td><td>Polyester only</td><td>50 pcs</td><td>None (in fabric)</td><td>CMYK Full</td><td>Excellent</td></tr>
+          <tr><td><strong>Screen Print</strong></td><td>Cotton tees, bold logos</td><td>Cotton, blends</td><td>100 pcs</td><td>Medium</td><td>Up to 8</td><td>Very Good</td></tr>
+          <tr><td><strong>DTF</strong></td><td>Short runs, multicolor</td><td>Anything</td><td>25 pcs</td><td>Slight</td><td>Unlimited</td><td>Very Good</td></tr>
+          <tr><td><strong>Embroidery</strong></td><td>Caps, polos, premium</td><td>Anything stable</td><td>25 pcs</td><td>Dimensional</td><td>Up to 12 thread</td><td>Excellent</td></tr>
+          <tr><td><strong>Heat Transfer</strong></td><td>Names, numbers</td><td>Most fabrics</td><td>No minimum</td><td>Tactile</td><td>Per decoration</td><td>Very Good</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec sec-dark">
+  <div class="container">
+    <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center;">
+      <div>
+        <span class="sec-eyebrow"><span class="tri tri-sm"></span> Mix and Match</span>
+        <h2 class="sec-h2">Use multiple <em>methods</em> on one order.</h2>
+        <p style="margin-top: 24px; max-width: 540px; line-height: 1.6; color: rgba(250,250,247,0.75);">Most of our jerseys combine sublimation with heat transfer for player names. Most of our hoodies use DTF for chest hits and embroidery for the back. We'll spec the right combo for your project.</p>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-light">Send Us Your Project <span class="arrow">→</span></a>
+        <a href="sample-pack.html" class="btn btn-outline" style="color:var(--bg); border-color: rgba(255,255,255,0.3);">Sample Pack</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="logo"><img src="logo.svg" alt="ZALI Industries"></div>
+        <div class="foot-tag">Industries · Sialkot, Pakistan</div>
+        <p class="foot-desc">A factory-direct manufacturer of sublimated performance apparel. Built by hand, by people we know, in the world's capital of sportswear.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="WhatsApp"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.93L4 20l4.18-1.1a7.93 7.93 0 0 0 3.86 1h.01a7.94 7.94 0 0 0 5.55-13.58zM12.05 18.5a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.48.65.66-2.42-.16-.25a6.59 6.59 0 0 1-1-3.49 6.6 6.6 0 1 1 11.27 4.67 6.55 6.55 0 0 1-4.69 1.9z"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Email"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="products.html">All Products</a></li>
+          <li><a href="products.html?cat=fightwear">Fightwear</a></li>
+          <li><a href="products.html?cat=surfwear">Surfwear</a></li>
+          <li><a href="products.html?cat=sportswear">Sportswear</a></li>
+          <li><a href="products.html?cat=team-sports">Team Sports</a></li>
+          <li><a href="products.html?cat=womens">Women's</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Manufacturing</h5>
+        <ul>
+          
+          <li><a href="fabrics.html">Fabric Library</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="sample-pack.html">Sample Pack</a></li>
+          <li><a href="#">Tech Pack Template</a></li>
+          <li><a href="#">Capability Deck (PDF)</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="about.html#sialkot">Sialkot Hub</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 ZALI Industries · All Rights Reserved</div>
+      <div>
+        <a href="#">Terms of Sale</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+<!-- MOBILE DRAWER -->
+<!-- MOBILE MENU DRAWER (3-level drilldown — mobile only) -->
+<div class="bb-md-overlay" id="m-overlay"></div>
+<aside class="bb-md-drawer" id="m-drawer" aria-label="Mobile menu">
+  <button type="button" class="bb-md-close" id="m-close" aria-label="Close menu">×</button>
+  
+  <div class="bb-md-panel active" data-panel="root">
+    <div class="bb-md-panel-head bb-md-root-head">
+      <img src="logo.svg" alt="ZALI Industries" class="bb-md-logo">
+    </div>
+    <div class="bb-md-list">
+      <button type="button" class="bb-md-item" data-go="cat-casual">
+        <span class="bb-md-item-text">Casual</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="cat-sportswear">
+        <span class="bb-md-item-text">Sportswear</span>
+        <span class="bb-md-item-meta">5</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="cat-fightwear">
+        <span class="bb-md-item-text">Fightwear</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="cat-surfwear">
+        <span class="bb-md-item-text">Surfwear</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="cat-team">
+        <span class="bb-md-item-text">Team Sports</span>
+        <span class="bb-md-item-meta">26</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+            <a href="print-methods.html" class="bb-md-item bb-md-item-plain">
+        <span class="bb-md-item-text">Printing Methods</span>
+      </a>
+<a href="fabrics.html" class="bb-md-item bb-md-item-plain">
+        <span class="bb-md-item-text">Fabrics</span>
+      </a>
+      <a href="how-it-works.html" class="bb-md-item bb-md-item-plain">
+        <span class="bb-md-item-text">How It Works</span>
+      </a>
+      <a href="about.html" class="bb-md-item bb-md-item-plain">
+        <span class="bb-md-item-text">About</span>
+      </a>
+      <a href="contact.html" class="bb-md-item bb-md-item-plain">
+        <span class="bb-md-item-text">Contact</span>
+      </a>
+    </div>
+    <div class="bb-md-foot">
+      <a href="contact.html" class="bb-md-cta">Get a Quote →</a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="cat-casual">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">Casual</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Casual</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <button type="button" class="bb-md-item" data-go="sub-casual-tshirts">
+        <span class="bb-md-item-text">T-Shirts</span>
+        <span class="bb-md-item-meta">8</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-polos">
+        <span class="bb-md-item-text">Polos</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-shirts">
+        <span class="bb-md-item-text">Shirts</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-hoodies">
+        <span class="bb-md-item-text">Hoodies & Sweatshirts</span>
+        <span class="bb-md-item-meta">6</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-bottoms">
+        <span class="bb-md-item-text">Bottoms</span>
+        <span class="bb-md-item-meta">5</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-outerwear">
+        <span class="bb-md-item-text">Outerwear</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-casual-sets">
+        <span class="bb-md-item-text">Sets</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="cat-sportswear">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">Sportswear</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Sportswear</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <button type="button" class="bb-md-item" data-go="sub-sportswear-training-tops">
+        <span class="bb-md-item-text">Training Tops</span>
+        <span class="bb-md-item-meta">13</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-sportswear-training-bottoms">
+        <span class="bb-md-item-text">Training Bottoms</span>
+        <span class="bb-md-item-meta">12</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-sportswear-accessories">
+        <span class="bb-md-item-text">Accessories</span>
+        <span class="bb-md-item-meta">2</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-sportswear-golf-court">
+        <span class="bb-md-item-text">Golf & Court</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-sportswear-sets">
+        <span class="bb-md-item-text">Sets</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="cat-fightwear">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">Fightwear</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#fightwear" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Fightwear</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <button type="button" class="bb-md-item" data-go="sub-fightwear-rashguards">
+        <span class="bb-md-item-text">Rashguards</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-fightwear-fight-shorts">
+        <span class="bb-md-item-text">Fight Shorts</span>
+        <span class="bb-md-item-meta">6</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-fightwear-compression">
+        <span class="bb-md-item-text">Compression</span>
+        <span class="bb-md-item-meta">2</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-fightwear-training-sets">
+        <span class="bb-md-item-text">Training & Sets</span>
+        <span class="bb-md-item-meta">6</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="cat-surfwear">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">Surfwear</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#surfwear" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Surfwear</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+            <button type="button" class="bb-md-item" data-go="sub-surfwear-in-water-tops">
+        <span class="bb-md-item-text">In-Water Tops</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-surfwear-in-water-bottoms">
+        <span class="bb-md-item-text">In-Water Bottoms</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-surfwear-beach">
+        <span class="bb-md-item-text">Beach Lifestyle</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-surfwear-fishing">
+        <span class="bb-md-item-text">Fishing</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="cat-team">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="root">
+        <span class="bb-md-back-arr">‹</span><span>Back</span>
+      </button>
+      <h3 class="bb-md-panel-title">Team Sports</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Team Sports</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <button type="button" class="bb-md-item" data-go="sub-team-soccer">
+        <span class="bb-md-item-text">Soccer</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-basketball">
+        <span class="bb-md-item-text">Basketball</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-american-football">
+        <span class="bb-md-item-text">American Football</span>
+        <span class="bb-md-item-meta">10</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-seven-on-seven">
+        <span class="bb-md-item-text">7-on-7 Football</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-flag-football">
+        <span class="bb-md-item-text">Flag Football</span>
+        <span class="bb-md-item-meta">1</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-baseball">
+        <span class="bb-md-item-text">Baseball</span>
+        <span class="bb-md-item-meta">11</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-softball">
+        <span class="bb-md-item-text">Softball</span>
+        <span class="bb-md-item-meta">14</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-rugby">
+        <span class="bb-md-item-text">Rugby</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-cricket">
+        <span class="bb-md-item-text">Cricket</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-volleyball">
+        <span class="bb-md-item-text">Volleyball</span>
+        <span class="bb-md-item-meta">9</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-ice-hockey">
+        <span class="bb-md-item-text">Ice Hockey</span>
+        <span class="bb-md-item-meta">10</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-lacrosse">
+        <span class="bb-md-item-text">Lacrosse</span>
+        <span class="bb-md-item-meta">2</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-field-hockey">
+        <span class="bb-md-item-text">Field Hockey</span>
+        <span class="bb-md-item-meta">1</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-track-field">
+        <span class="bb-md-item-text">Track & Field</span>
+        <span class="bb-md-item-meta">11</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-cycling">
+        <span class="bb-md-item-text">Cycling</span>
+        <span class="bb-md-item-meta">3</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-pickleball">
+        <span class="bb-md-item-text">Pickleball</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-netball">
+        <span class="bb-md-item-text">Netball</span>
+        <span class="bb-md-item-meta">2</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-cheerleading">
+        <span class="bb-md-item-text">Cheerleading</span>
+        <span class="bb-md-item-meta">4</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-rowing">
+        <span class="bb-md-item-text">Rowing / Crew</span>
+        <span class="bb-md-item-meta">6</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-roller-derby">
+        <span class="bb-md-item-text">Roller Derby</span>
+        <span class="bb-md-item-meta">6</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-motocross-bmx">
+        <span class="bb-md-item-text">Motocross / BMX</span>
+        <span class="bb-md-item-meta">7</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-esports">
+        <span class="bb-md-item-text">Esports</span>
+        <span class="bb-md-item-meta">1</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+      <button type="button" class="bb-md-item" data-go="sub-team-team-training-tops">
+        <span class="bb-md-item-text">Training Tops</span>
+        <span class="bb-md-item-meta">2</span>
+        <span class="bb-md-arr">›</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-tshirts">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">T-Shirts</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-tshirts" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All T-Shirts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-crewneck-half-sleeve-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Crewneck Half Sleeve T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+<a href="product-detail.html?id=casual-tshirts-crew-neck-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Crew Neck T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-v-neck-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">V-Neck T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-long-sleeve-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-henley-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Henley T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-oversized-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Oversized T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-crop-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Crop T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-heavyweight-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Heavyweight T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-tshirts-hooded-long-sleeve-tee" class="bb-md-item">
+        <span class="bb-md-item-text">Hooded Long Sleeve Tee</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-polos">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Polos</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-polos" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Polos</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-polos-short-sleeve-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Short Sleeve Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-polos-long-sleeve-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-polos-performance-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Performance Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-polos-quarter-zip-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Quarter-Zip Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-polos-aloha-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Aloha Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-shirts">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Shirts</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-shirts" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Shirts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-shirts-camp-collar-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Camp Collar Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-shirts-cuban-collar-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Cuban Collar Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-shirts-linen-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Linen Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-shirts-aloha-shirt-classic" class="bb-md-item">
+        <span class="bb-md-item-text">Aloha Shirt (Classic)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-shirts-long-sleeve-aloha-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Aloha Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-shirts-wedding-aloha-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Wedding Aloha Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-shirts-palaka-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Palaka Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+          <a href="product-detail.html?id=casual-shirts-mandarin-collar-aloha" class="bb-md-item">
+        <span class="bb-md-item-text">Mandarin Collar Aloha</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-hoodies">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Hoodies & Sweatshirts</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-hoodies" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Hoodies & Sweatshirts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-pullover-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Pullover Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-oversized-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Oversized Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-cropped-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Cropped Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-full-zip-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Full Zip Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-quarter-zip-pullover" class="bb-md-item">
+        <span class="bb-md-item-text">Quarter-Zip Pullover</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-hoodies-crew-neck-sweatshirt" class="bb-md-item">
+        <span class="bb-md-item-text">Crew Neck Sweatshirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-bottoms">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Bottoms</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-bottoms" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Bottoms</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-bottoms-joggers" class="bb-md-item">
+        <span class="bb-md-item-text">Joggers</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-bottoms-cargo-joggers" class="bb-md-item">
+        <span class="bb-md-item-text">Cargo Joggers</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-bottoms-sweatpants" class="bb-md-item">
+        <span class="bb-md-item-text">Sweatpants</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-bottoms-french-terry-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">French Terry Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-bottoms-walkshorts" class="bb-md-item">
+        <span class="bb-md-item-text">Walkshorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-outerwear">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Outerwear</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-outerwear" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Outerwear</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-windbreaker" class="bb-md-item">
+        <span class="bb-md-item-text">Windbreaker</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-softshell-jacket" class="bb-md-item">
+        <span class="bb-md-item-text">Softshell Jacket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-track-jacket" class="bb-md-item">
+        <span class="bb-md-item-text">Track Jacket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-coach-jacket" class="bb-md-item">
+        <span class="bb-md-item-text">Coach Jacket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-sideline-jacket" class="bb-md-item">
+        <span class="bb-md-item-text">Sideline Jacket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-puffer-vest" class="bb-md-item">
+        <span class="bb-md-item-text">Puffer Vest</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-outerwear-varsity-jacket" class="bb-md-item">
+        <span class="bb-md-item-text">Varsity Jacket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-casual-sets">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-casual">
+        <span class="bb-md-back-arr">‹</span><span>Casual</span>
+      </button>
+      <h3 class="bb-md-panel-title">Sets</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#casual-sets" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Sets</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-sets-hoodie-jogger-set" class="bb-md-item">
+        <span class="bb-md-item-text">Hoodie & Jogger Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-sets-tracksuit-set" class="bb-md-item">
+        <span class="bb-md-item-text">Tracksuit Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=casual-sets-tee-shorts-set" class="bb-md-item">
+        <span class="bb-md-item-text">Tee & Shorts Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-sportswear-training-tops">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-sportswear">
+        <span class="bb-md-back-arr">‹</span><span>Sportswear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Training Tops</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear-training-tops" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Training Tops</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-half-sleeve-sublimated-t-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Half Sleeve Sublimated T-Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-performance-tee" class="bb-md-item">
+        <span class="bb-md-item-text">Performance Tee</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-long-sleeve-performance-tee" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Performance Tee</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-performance-tank" class="bb-md-item">
+        <span class="bb-md-item-text">Performance Tank</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-stringer-tank" class="bb-md-item">
+        <span class="bb-md-item-text">Stringer Tank</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-compression-top-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Top (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-compression-top-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Top (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-weightlifting-singlet" class="bb-md-item">
+        <span class="bb-md-item-text">Weightlifting Singlet</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-racerback-tank" class="bb-md-item">
+        <span class="bb-md-item-text">Racerback Tank</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-crop-training-top" class="bb-md-item">
+        <span class="bb-md-item-text">Crop Training Top</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-sports-bra-low-impact" class="bb-md-item">
+        <span class="bb-md-item-text">Sports Bra (Low Impact)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-sports-bra-medium-impact" class="bb-md-item">
+        <span class="bb-md-item-text">Sports Bra (Medium Impact)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-sports-bra-high-impact" class="bb-md-item">
+        <span class="bb-md-item-text">Sports Bra (High Impact)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-tops-longline-sports-bra" class="bb-md-item">
+        <span class="bb-md-item-text">Longline Sports Bra</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-sportswear-training-bottoms">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-sportswear">
+        <span class="bb-md-back-arr">‹</span><span>Sportswear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Training Bottoms</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear-training-bottoms" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Training Bottoms</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-gym-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Gym Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-2-in-1-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">2-in-1 Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-compression-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-biker-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Biker Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-compression-tights" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Tights</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-high-waist-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">High-Waist Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-seamless-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Seamless Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-printed-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Printed Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-scrunch-bum-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Scrunch Bum Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-flare-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Flare Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-running-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Running Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-training-bottoms-running-tights" class="bb-md-item">
+        <span class="bb-md-item-text">Running Tights</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-sportswear-accessories">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-sportswear">
+        <span class="bb-md-back-arr">‹</span><span>Sportswear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Accessories</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear-accessories" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Accessories</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-accessories-compression-arm-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Arm Sleeve</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-accessories-neck-gaiter" class="bb-md-item">
+        <span class="bb-md-item-text">Neck Gaiter</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-sportswear-golf-court">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-sportswear">
+        <span class="bb-md-back-arr">‹</span><span>Sportswear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Golf & Court</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear-golf-court" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Golf & Court</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-golf-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Golf Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-golf-quarter-zip" class="bb-md-item">
+        <span class="bb-md-item-text">Golf Quarter-Zip</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-golf-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Golf Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-golf-pants" class="bb-md-item">
+        <span class="bb-md-item-text">Golf Pants</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-golf-skort" class="bb-md-item">
+        <span class="bb-md-item-text">Golf Skort</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-tennis-skirt" class="bb-md-item">
+        <span class="bb-md-item-text">Tennis Skirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-golf-court-tennis-dress" class="bb-md-item">
+        <span class="bb-md-item-text">Tennis Dress</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-sportswear-sets">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-sportswear">
+        <span class="bb-md-back-arr">‹</span><span>Sportswear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Sets</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#sportswear-sets" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Sets</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-sets-bra-leggings-set" class="bb-md-item">
+        <span class="bb-md-item-text">Bra & Leggings Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-sets-bra-shorts-set" class="bb-md-item">
+        <span class="bb-md-item-text">Bra & Shorts Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=sportswear-sets-compression-set" class="bb-md-item">
+        <span class="bb-md-item-text">Compression Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-fightwear-rashguards">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-fightwear">
+        <span class="bb-md-back-arr">‹</span><span>Fightwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Rashguards</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#fightwear-rashguards" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Rashguards</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-rashguards-short-sleeve-rashguard" class="bb-md-item">
+        <span class="bb-md-item-text">Short Sleeve Rashguard</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-rashguards-long-sleeve-rashguard" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Rashguard</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-rashguards-sleeveless-rashguard" class="bb-md-item">
+        <span class="bb-md-item-text">Sleeveless Rashguard</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-fightwear-fight-shorts">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-fightwear">
+        <span class="bb-md-back-arr">‹</span><span>Fightwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Fight Shorts</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#fightwear-fight-shorts" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Fight Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-mma-fight-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">MMA Fight Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-bjj-grappling-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">BJJ Grappling Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-muay-thai-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Muay Thai Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-k1-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">K1 Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-boxing-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Boxing Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-fight-shorts-vale-tudo-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Vale Tudo Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-fightwear-compression">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-fightwear">
+        <span class="bb-md-back-arr">‹</span><span>Fightwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Compression</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#fightwear-compression" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Compression</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-compression-spats" class="bb-md-item">
+        <span class="bb-md-item-text">Spats</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-compression-spats-shorts-set" class="bb-md-item">
+        <span class="bb-md-item-text">Spats & Shorts Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-fightwear-training-sets">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-fightwear">
+        <span class="bb-md-back-arr">‹</span><span>Fightwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Training & Sets</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#fightwear-training-sets" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Training & Sets</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-mma-training-tee" class="bb-md-item">
+        <span class="bb-md-item-text">MMA Training Tee</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-fight-camp-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Fight Camp Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-boxing-walkout-robe" class="bb-md-item">
+        <span class="bb-md-item-text">Boxing Walkout Robe</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-wrestling-singlet" class="bb-md-item">
+        <span class="bb-md-item-text">Wrestling Singlet</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-wrestling-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Wrestling Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=fightwear-training-sets-wrestling-warmup-set" class="bb-md-item">
+        <span class="bb-md-item-text">Wrestling Warmup Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+    <div class="bb-md-panel" data-panel="sub-surfwear-in-water-tops">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-surfwear">
+        <span class="bb-md-back-arr">‹</span><span>Surfwear &amp; Beachwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">In-Water Tops</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#surfwear-in-water-tops" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All In-Water Tops</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-surf-shirt-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Shirt (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-surf-shirt-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Shirt (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-surf-vest" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Vest</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-paddling-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Paddling Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-hawaiian-print-rashguard-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Hawaiian Print Rashguard (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-hawaiian-print-rashguard-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Hawaiian Print Rashguard (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-surf-one-piece" class="bb-md-item">
+        <span class="bb-md-item-text">Surf One-Piece</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-tops-surf-poncho" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Poncho</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-surfwear-in-water-bottoms">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-surfwear">
+        <span class="bb-md-back-arr">‹</span><span>Surfwear &amp; Beachwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">In-Water Bottoms</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#surfwear-in-water-bottoms" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All In-Water Bottoms</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-boardshorts" class="bb-md-item">
+        <span class="bb-md-item-text">Boardshorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-hawaii-boardshorts" class="bb-md-item">
+        <span class="bb-md-item-text">Hawaii Boardshorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-hybrid-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Hybrid Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-2-in-1-swim-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">2-in-1 Swim Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-swim-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Swim Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-hawaiian-print-leggings" class="bb-md-item">
+        <span class="bb-md-item-text">Hawaiian Print Leggings</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-swim-jammers" class="bb-md-item">
+        <span class="bb-md-item-text">Swim Jammers</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-in-water-bottoms-surf-bikini-bottoms" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Bikini Bottoms</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+<div class="bb-md-panel" data-panel="sub-surfwear-beach">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-surfwear">
+        <span class="bb-md-back-arr">‹</span><span>Surfwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Beach Lifestyle</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#surfwear-beach" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Beach Lifestyle</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-beach-tee" class="bb-md-item">
+        <span class="bb-md-item-text">Beach Tee</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-aloha-camp-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Aloha Camp Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-surf-hoodie" class="bb-md-item">
+        <span class="bb-md-item-text">Surf Hoodie</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-beach-walkshorts" class="bb-md-item">
+        <span class="bb-md-item-text">Beach Walkshorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-terry-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Terry Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-upf-sun-shirt-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">UPF Sun Shirt (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-beach-upf-hooded-sun-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">UPF Hooded Sun Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-surfwear-fishing">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-surfwear">
+        <span class="bb-md-back-arr">‹</span><span>Surfwear</span>
+      </button>
+      <h3 class="bb-md-panel-title">Fishing</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#surfwear-fishing" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Fishing</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-fishing-hooded-fishing-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Hooded Fishing Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-fishing-long-sleeve-fishing-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Fishing Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-fishing-short-sleeve-fishing-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Short Sleeve Fishing Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=surfwear-fishing-fishing-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Fishing Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-soccer">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Soccer</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-soccer" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Soccer</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-soccer-soccer-jersey-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Soccer Jersey (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-soccer-soccer-jersey-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Soccer Jersey (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-soccer-soccer-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Soccer Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-soccer-soccer-kit" class="bb-md-item">
+        <span class="bb-md-item-text">Soccer Kit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-basketball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Basketball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-basketball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Basketball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-basketball-basketball-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Basketball Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-basketball-reversible-basketball-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Reversible Basketball Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-basketball-basketball-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Basketball Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-basketball-basketball-kit" class="bb-md-item">
+        <span class="bb-md-item-text">Basketball Kit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-american-football">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">American Football</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-american-football" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All American Football</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-american-football-jersey-game-cut" class="bb-md-item">
+        <span class="bb-md-item-text">American Football Jersey (Game Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-american-football-jersey-pro-cut" class="bb-md-item">
+        <span class="bb-md-item-text">American Football Jersey (Pro Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-american-football-jersey-replica-cut" class="bb-md-item">
+        <span class="bb-md-item-text">American Football Jersey (Replica Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-american-football-practice-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">American Football Practice Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-long-sleeve-football-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Long Sleeve Football Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-football-pants-integrated-pads" class="bb-md-item">
+        <span class="bb-md-item-text">Football Pants (Integrated Pads)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-football-pants-slotted-no-pads" class="bb-md-item">
+        <span class="bb-md-item-text">Football Pants (Slotted, No Pads)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-football-practice-pants" class="bb-md-item">
+        <span class="bb-md-item-text">Football Practice Pants</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-football-game-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Football Game Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-american-football-football-practice-set" class="bb-md-item">
+        <span class="bb-md-item-text">Football Practice Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-seven-on-seven">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">7-on-7 Football</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-seven-on-seven" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All 7-on-7 Football</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-jersey-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Jersey (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-jersey-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Jersey (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-jersey-sleeveless" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Jersey (Sleeveless)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-reversible-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Reversible Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-shorts-loose-fit" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Shorts (Loose Fit)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-compression-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Compression Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-seven-on-seven-7-on-7-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">7-on-7 Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-flag-football">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Flag Football</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-flag-football" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Flag Football</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-flag-football-flag-football-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Flag Football Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-baseball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Baseball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-baseball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Baseball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-jersey-full-button" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Jersey (Full Button)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-jersey-2-button-henley" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Jersey (2-Button Henley)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-jersey-pullover-v-neck" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Jersey (Pullover V-Neck)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-jersey-sleeveless" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Jersey (Sleeveless)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-raglan-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Raglan Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-throwback-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Throwback Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-practice-jersey-mesh" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Practice Jersey (Mesh)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-pants-full-length" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Pants (Full Length)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-pants-knicker" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Pants (Knicker)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-practice-pants" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Practice Pants</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-baseball-baseball-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Baseball Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-softball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Softball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-softball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Softball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-jersey-full-button" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Jersey (Full Button)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-jersey-2-button-henley" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Jersey (2-Button Henley)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-jersey-crew-neck-pullover" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Jersey (Crew Neck Pullover)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-jersey-v-neck" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Jersey (V-Neck)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-jersey-sleeveless" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Jersey (Sleeveless)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-pants-full-length" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Pants (Full Length)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-pants-knicker" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Pants (Knicker)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-belted-pants" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Belted Pants</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-sliding-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Sliding Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-softball-skort" class="bb-md-item">
+        <span class="bb-md-item-text">Softball Skort</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-womens-softball-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Women's Softball Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-fastpitch-softball-set" class="bb-md-item">
+        <span class="bb-md-item-text">Fastpitch Softball Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-softball-slowpitch-softball-set" class="bb-md-item">
+        <span class="bb-md-item-text">Slowpitch Softball Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-rugby">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Rugby</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-rugby" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Rugby</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rugby-rugby-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Rugby Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rugby-rugby-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Rugby Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rugby-rugby-kit" class="bb-md-item">
+        <span class="bb-md-item-text">Rugby Kit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-cricket">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Cricket</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-cricket" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Cricket</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cricket-cricket-shirt" class="bb-md-item">
+        <span class="bb-md-item-text">Cricket Shirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cricket-cricket-trousers" class="bb-md-item">
+        <span class="bb-md-item-text">Cricket Trousers</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cricket-cricket-kit" class="bb-md-item">
+        <span class="bb-md-item-text">Cricket Kit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-volleyball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Volleyball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-volleyball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Volleyball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-jersey-short-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Jersey (Short Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-jersey-long-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Jersey (Long Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-jersey-sleeveless" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Jersey (Sleeveless)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-jersey-cap-sleeve" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Jersey (Cap Sleeve)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-libero-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Libero Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-spandex-shorts-womens" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Spandex Shorts (Women's)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-shorts-mens-loose-fit" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Shorts (Men's Loose Fit)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-compression-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Compression Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-volleyball-volleyball-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Volleyball Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-ice-hockey">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Ice Hockey</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-ice-hockey" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Ice Hockey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-jersey-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Jersey (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-jersey-pro-cut" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Jersey (Pro Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-jersey-goalie-cut" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Jersey (Goalie Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-practice-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Practice Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-reversible-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Reversible Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-pants-shell-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Pants Shell (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-pants-shell-pro-cut" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Pants Shell (Pro Cut)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-hockey-socks-knit" class="bb-md-item">
+        <span class="bb-md-item-text">Hockey Socks (Knit)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-hockey-socks-sublimated" class="bb-md-item">
+        <span class="bb-md-item-text">Hockey Socks (Sublimated)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-ice-hockey-ice-hockey-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Ice Hockey Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-lacrosse">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Lacrosse</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-lacrosse" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Lacrosse</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-lacrosse-lacrosse-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Lacrosse Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-lacrosse-lacrosse-skort" class="bb-md-item">
+        <span class="bb-md-item-text">Lacrosse Skort</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-field-hockey">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Field Hockey</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-field-hockey" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Field Hockey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-field-hockey-field-hockey-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Field Hockey Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-track-field">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Track & Field</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-track-field" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Track & Field</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-singlet-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Track Singlet (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-singlet-compression" class="bb-md-item">
+        <span class="bb-md-item-text">Track Singlet (Compression)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-singlet-crop-womens" class="bb-md-item">
+        <span class="bb-md-item-text">Track Singlet (Crop / Women's)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-long-sleeve-compression-top" class="bb-md-item">
+        <span class="bb-md-item-text">Track Long Sleeve Compression Top</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-shorts-split-leg" class="bb-md-item">
+        <span class="bb-md-item-text">Track Shorts (Split-Leg)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-shorts-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Track Shorts (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-compression-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Track Compression Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-half-tights" class="bb-md-item">
+        <span class="bb-md-item-text">Track Half-Tights</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-briefs-sprint" class="bb-md-item">
+        <span class="bb-md-item-text">Track Briefs (Sprint)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-briefs-womens-bun-huggers" class="bb-md-item">
+        <span class="bb-md-item-text">Track Briefs (Women's Bun-Huggers)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-track-field-track-field-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Track & Field Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-cycling">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Cycling</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-cycling" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Cycling</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cycling-cycling-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Cycling Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cycling-cycling-bib-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Cycling Bib Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cycling-cycling-kit" class="bb-md-item">
+        <span class="bb-md-item-text">Cycling Kit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-pickleball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Pickleball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-pickleball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Pickleball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-tank" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Tank</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-skort" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Skort</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-dress" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Dress</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-skirt" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Skirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-pickleball-pickleball-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Pickleball Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-netball">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Netball</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-netball" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Netball</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-netball-netball-dress" class="bb-md-item">
+        <span class="bb-md-item-text">Netball Dress</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-netball-netball-skirt-set" class="bb-md-item">
+        <span class="bb-md-item-text">Netball Skirt Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-cheerleading">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Cheerleading</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-cheerleading" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Cheerleading</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cheerleading-cheer-shell-top" class="bb-md-item">
+        <span class="bb-md-item-text">Cheer Shell Top</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cheerleading-cheer-skirt" class="bb-md-item">
+        <span class="bb-md-item-text">Cheer Skirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cheerleading-cheer-bodyliner" class="bb-md-item">
+        <span class="bb-md-item-text">Cheer Bodyliner</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-cheerleading-cheer-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Cheer Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-rowing">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Rowing / Crew</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-rowing" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Rowing / Crew</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-rowing-uni-suit-mens" class="bb-md-item">
+        <span class="bb-md-item-text">Rowing Uni-Suit (Men's)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-rowing-uni-suit-womens" class="bb-md-item">
+        <span class="bb-md-item-text">Rowing Uni-Suit (Women's)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-sleeveless-rowing-uni-suit" class="bb-md-item">
+        <span class="bb-md-item-text">Sleeveless Rowing Uni-Suit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-short-sleeve-rowing-uni-suit" class="bb-md-item">
+        <span class="bb-md-item-text">Short Sleeve Rowing Uni-Suit</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-rowing-singlet" class="bb-md-item">
+        <span class="bb-md-item-text">Rowing Singlet</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-rowing-rowing-trou-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Rowing Trou (Shorts)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-roller-derby">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Roller Derby</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-roller-derby" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Roller Derby</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-jersey-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Jersey (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-jersey-tank" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Jersey (Tank)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-jersey-sleeveless" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Jersey (Sleeveless)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-shorts" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Shorts</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-skirt" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Skirt</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-roller-derby-roller-derby-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">Roller Derby Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-motocross-bmx">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Motocross / BMX</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-motocross-bmx" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Motocross / BMX</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-motocross-jersey-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Motocross Jersey (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-motocross-jersey-vented" class="bb-md-item">
+        <span class="bb-md-item-text">Motocross Jersey (Vented)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-bmx-race-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">BMX Race Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-bmx-casual-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">BMX Casual Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-motocross-pants-standard" class="bb-md-item">
+        <span class="bb-md-item-text">Motocross Pants (Standard)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-motocross-pants-vented" class="bb-md-item">
+        <span class="bb-md-item-text">Motocross Pants (Vented)</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-motocross-bmx-mx-uniform-set" class="bb-md-item">
+        <span class="bb-md-item-text">MX Uniform Set</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-esports">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Esports</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-esports" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Esports</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-esports-esports-jersey" class="bb-md-item">
+        <span class="bb-md-item-text">Esports Jersey</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="bb-md-panel" data-panel="sub-team-team-training-tops">
+    <div class="bb-md-panel-head">
+      <button type="button" class="bb-md-back" data-go="cat-team">
+        <span class="bb-md-back-arr">‹</span><span>Team Sports</span>
+      </button>
+      <h3 class="bb-md-panel-title">Training Tops</h3>
+    </div>
+    <div class="bb-md-list">
+      <a href="products.html#team-team-training-tops" class="bb-md-item bb-md-item-all">
+        <span class="bb-md-item-text">View All Training Tops</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-team-training-tops-team-polo" class="bb-md-item">
+        <span class="bb-md-item-text">Team Polo</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+      <a href="product-detail.html?id=team-team-training-tops-pre-match-training-top" class="bb-md-item">
+        <span class="bb-md-item-text">Pre-Match Training Top</span>
+        <span class="bb-md-arr">›</span>
+      </a>
+    </div>
+  </div>
+
+  </aside>
+
+<!-- FLOATING CONTACT BUBBLES -->
+<div class="contact-bubbles">
+  <a href="https://www.instagram.com/zali_industry" class="contact-bubble bubble-ig" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    <span class="b-text"><strong>Instagram DM</strong><small>Factory updates · Fast replies</small></span>
+  </a>
+  <a href="https://wa.me/923294656184" class="contact-bubble bubble-wa" target="_blank" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.88 11.93L4 20l4.18-1.1a7.93 7.93 0 0 0 3.86 1h.01a7.94 7.94 0 0 0 5.55-13.58zM12.05 18.5a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.48.65.66-2.42-.16-.25a6.59 6.59 0 0 1-1-3.49 6.6 6.6 0 1 1 11.27 4.67 6.55 6.55 0 0 1-4.69 1.9zm3.62-4.93c-.2-.1-1.18-.58-1.36-.65s-.32-.1-.45.1-.51.65-.63.78-.23.15-.43.05a5.42 5.42 0 0 1-1.6-1 6 6 0 0 1-1.1-1.36c-.12-.2 0-.31.09-.41s.2-.23.3-.35a1.4 1.4 0 0 0 .2-.33.36.36 0 0 0 0-.35c0-.1-.45-1.08-.61-1.48s-.33-.34-.45-.34h-.39a.74.74 0 0 0-.54.25 2.27 2.27 0 0 0-.71 1.69 3.92 3.92 0 0 0 .82 2.1 9.05 9.05 0 0 0 3.46 3.05 11.79 11.79 0 0 0 1.15.43 2.78 2.78 0 0 0 1.27.08 2.08 2.08 0 0 0 1.36-.96 1.7 1.7 0 0 0 .12-.95c-.05-.1-.18-.16-.38-.26z"/></svg>
+    <span class="b-text"><strong>WhatsApp</strong><small>Fast replies · 24h response</small></span>
+  </a>
+</div>
+
+<script>
+(function(){
+  // === MOBILE DRAWER — drilldown navigation ===
+  var burgers = document.querySelectorAll('.nav-burger, .bb-burger');
+  var drawer = document.getElementById('m-drawer');
+  var overlay = document.getElementById('m-overlay');
+  var closeBtn = document.getElementById('m-close');
+  
+  function resetToRoot() {
+    document.querySelectorAll('.bb-md-panel').forEach(function(p){ p.classList.remove('active'); });
+    var root = document.querySelector('.bb-md-panel[data-panel="root"]');
+    if (root) root.classList.add('active');
+  }
+  function openDrawer() {
+    if (!drawer) return;
+    drawer.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    burgers.forEach(function(b){ b.classList.add('open'); });
+    document.body.classList.add('bb-md-locked');
+  }
+  function closeDrawer() {
+    if (!drawer) return;
+    drawer.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    burgers.forEach(function(b){ b.classList.remove('open'); });
+    document.body.classList.remove('bb-md-locked');
+    setTimeout(resetToRoot, 280);
+  }
+  if (burgers.length && drawer) {
+    burgers.forEach(function(b){
+      b.addEventListener('click', function(){
+        drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+      });
+    });
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+    if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  }
+  // Panel drilldown navigation (data-go)
+  document.querySelectorAll('.bb-md-drawer [data-go]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      if (btn.tagName === 'A') return;
+      e.preventDefault();
+      var target = btn.getAttribute('data-go');
+      var panels = document.querySelectorAll('.bb-md-panel');
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      var next = document.querySelector('.bb-md-panel[data-panel="' + target + '"]');
+      if (next) {
+        next.classList.add('active');
+        next.scrollTop = 0;
+      }
+    });
+  });
+  // Close drawer when any LINK inside it is clicked (so user navigates AND drawer closes)
+  document.querySelectorAll('.bb-md-drawer a').forEach(function(link){
+    link.addEventListener('click', function(){
+      closeDrawer();
+    });
+  });
+
+  // Drawer section accordion (Products)
+  document.querySelectorAll('.drawer-section-head').forEach(function(h){
+    h.addEventListener('click', function(){
+      h.parentElement.classList.toggle('open');
+    });
+  });
+  // Drawer category accordion
+  document.querySelectorAll('.drawer-cat-head').forEach(function(h){
+    h.addEventListener('click', function(){
+      h.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Mega menu - open/close on hover with delay
+  var megaWrap = document.querySelector('.nav-mega-wrap');
+  var megaPanel = document.getElementById('nav-mega');
+  var megaTimer;
+  if (megaWrap && megaPanel) {
+    function openMega(){ clearTimeout(megaTimer); megaPanel.classList.add('open'); }
+    function closeMega(){ megaTimer = setTimeout(function(){ megaPanel.classList.remove('open'); }, 180); }
+    megaWrap.addEventListener('mouseenter', openMega);
+    megaWrap.addEventListener('mouseleave', closeMega);
+    megaPanel.addEventListener('mouseenter', openMega);
+    megaPanel.addEventListener('mouseleave', closeMega);
+  }
+  // Mega menu category panel switching
+  var sidebar = document.getElementById('mega-sidebar');
+  var panels = document.getElementById('mega-panels');
+  if (sidebar && panels) {
+    sidebar.querySelectorAll('.mega-cat-link').forEach(function(btn){
+      btn.addEventListener('mouseenter', function(){
+        var cat = btn.getAttribute('data-cat');
+        sidebar.querySelectorAll('.mega-cat-link').forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+        panels.querySelectorAll('.mega-panel').forEach(function(p){ p.classList.remove('active'); });
+        var active = panels.querySelector('.mega-panel[data-cat="' + cat + '"]');
+        if (active) active.classList.add('active');
+      });
+    });
+  }
+  // Team Sports two-pane: sport list ↔ preview pane
+  document.querySelectorAll('.team-sport-link').forEach(function(link){
+    function activate(){
+      var sport = link.getAttribute('data-sport');
+      document.querySelectorAll('.team-sport-link').forEach(function(l){ l.classList.remove('active'); });
+      link.classList.add('active');
+      document.querySelectorAll('.team-preview-panel').forEach(function(p){ p.classList.remove('active'); });
+      var panel = document.querySelector('.team-preview-panel[data-sport="' + sport + '"]');
+      if (panel) panel.classList.add('active');
+    }
+    link.addEventListener('mouseenter', activate);
+    link.addEventListener('click', function(e){ e.preventDefault(); activate(); });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+  // BB nav: click to toggle dropdowns on mobile/touch
+  document.querySelectorAll('.bb-cat-link').forEach(function(link){
+    link.addEventListener('click', function(e){
+      var parent = link.closest('.bb-cat');
+      if (!parent) return;
+      if (window.innerWidth < 1100) {
+        e.preventDefault();
+        var wasOpen = parent.classList.contains('open');
+        document.querySelectorAll('.bb-cat.open').forEach(function(c){ c.classList.remove('open'); });
+        if (!wasOpen) parent.classList.add('open');
+      }
+    });
+  });
+  document.addEventListener('click', function(e){
+    if (!e.target.closest('.bb-cat')) {
+      document.querySelectorAll('.bb-cat.open').forEach(function(c){ c.classList.remove('open'); });
+    }
+  });
+})();
+</script>
+
+<script src="products-data.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
+

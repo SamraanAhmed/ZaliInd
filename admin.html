@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ZALI Admin Dashboard</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    .header { background: #111; color: white; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; }
+    .header h1 { margin: 0; font-size: 20px; }
+    .header a { color: #ccc; text-decoration: none; font-size: 14px; }
+    .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    .top-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .btn { background: #e34c26; color: white; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+    .btn:hover { background: #d04320; }
+    .btn-danger { background: #dc3545; }
+    table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+    th { background: #f1f1f1; font-weight: 600; }
+    
+    /* Modal */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+    .modal { background: white; padding: 30px; border-radius: 8px; width: 600px; max-height: 90vh; overflow-y: auto; }
+    .modal h2 { margin-top: 0; }
+    .form-group { margin-bottom: 15px; }
+    .form-group label { display: block; margin-bottom: 5px; font-weight: 500; font-size: 14px; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+    .actions { display: flex; gap: 10px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <h1>ZALI Admin</h1>
+  <a href="/logout">Logout</a>
+</div>
+
+<div class="container">
+  <div class="top-bar">
+    <h2>Product Catalog</h2>
+    <button class="btn" onclick="openModal()">+ Add New Product</button>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Subcategory</th>
+        <th>MOQ</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="product-list">
+      <tr><td colspan="6">Loading...</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Add Product Modal -->
+<div class="modal-overlay" id="addModal">
+  <div class="modal">
+    <h2>Add New Product</h2>
+    <form id="productForm">
+      <div class="form-group">
+        <label>Product ID (e.g., casual-wear-hoodie-001)</label>
+        <input type="text" id="p_id" required>
+      </div>
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" id="p_name" required>
+      </div>
+      <div style="display:flex; gap:15px;">
+        <div class="form-group" style="flex:1;">
+          <label>Category ID</label>
+          <input type="text" id="p_cat" value="casual-wear" required>
+        </div>
+        <div class="form-group" style="flex:1;">
+          <label>Subcategory ID</label>
+          <input type="text" id="p_sub" value="hoodies-and-sweat-shirts" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Gender (male/female/unisex)</label>
+        <input type="text" id="p_gender" value="unisex">
+      </div>
+      <div class="form-group">
+        <label>Title</label>
+        <input type="text" id="p_title">
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea id="p_desc" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Fabric</label>
+        <textarea id="p_fabric" rows="2"></textarea>
+      </div>
+      <div class="form-group">
+        <label>MOQ</label>
+        <input type="number" id="p_moq" value="25">
+      </div>
+      <div class="form-group">
+        <label>Upload Main Image</label>
+        <input type="file" id="p_image" accept="image/*">
+      </div>
+      
+      <div class="actions">
+        <button type="button" class="btn" style="background:#888;" onclick="closeModal()">Cancel</button>
+        <button type="submit" class="btn">Save Product</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  let catalogData = {};
+
+  async function loadData() {
+    try {
+      const res = await fetch('/api/catalog');
+      if (!res.ok) throw new Error('Failed to fetch: ' + res.status + ' ' + res.statusText);
+      const text = await res.text();
+      try {
+        catalogData = JSON.parse(text);
+      } catch (e) {
+        throw new Error('Invalid JSON response: ' + text.substring(0, 100));
+      }
+      renderTable();
+    } catch (err) {
+      document.getElementById('product-list').innerHTML = '<tr><td colspan="6" style="color:red;">Error: ' + err.message + '</td></tr>';
+    }
+  }
+
+  function renderTable() {
+    const tbody = document.getElementById('product-list');
+    tbody.innerHTML = '';
+    
+    if (!catalogData.products || catalogData.products.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6">No products found.</td></tr>';
+      return;
+    }
+    
+    catalogData.products.forEach(p => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = \`
+        <td>\${p.id}</td>
+        <td>\${p.name}</td>
+        <td>\${p.categoryId}</td>
+        <td>\${p.subcategoryId}</td>
+        <td>\${p.moq}</td>
+        <td><button class="btn btn-danger" onclick="deleteProduct('\${p.id}')">Delete</button></td>
+      \`;
+      tbody.appendChild(tr);
+    });
+  }
+
+  function openModal() {
+    document.getElementById('addModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('addModal').style.display = 'none';
+    document.getElementById('productForm').reset();
+  }
+
+  document.getElementById('productForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const submitBtn = e.target.querySelector('button[type="submit"]');
+    submitBtn.innerText = 'Saving...';
+    submitBtn.disabled = true;
+
+    // Handle Image Upload First
+    let uploadedImagePath = '';
+    const fileInput = document.getElementById('p_image');
+    if (fileInput.files.length > 0) {
+      const formData = new FormData();
+      formData.append('image', fileInput.files[0]);
+      const uploadRes = await fetch('/api/upload', { method: 'POST', body: formData });
+      const uploadData = await uploadRes.json();
+      uploadedImagePath = uploadData.path;
+    }
+
+    // Build Product Object
+    const product = {
+      id: document.getElementById('p_id').value,
+      name: document.getElementById('p_name').value,
+      categoryId: document.getElementById('p_cat').value,
+      subcategoryId: document.getElementById('p_sub').value,
+      gender: document.getElementById('p_gender').value,
+      title: document.getElementById('p_title').value,
+      description: document.getElementById('p_desc').value,
+      fabric: document.getElementById('p_fabric').value,
+      moq: parseInt(document.getElementById('p_moq').value, 10),
+      images: uploadedImagePath ? { detail: uploadedImagePath } : {}
+    };
+
+    // Save Product
+    await fetch('/api/products', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(product)
+    });
+
+    closeModal();
+    submitBtn.innerText = 'Save Product';
+    submitBtn.disabled = false;
+    loadData();
+  });
+
+  async function deleteProduct(id) {
+    if (confirm('Are you sure you want to delete ' + id + '?')) {
+      await fetch('/api/products/' + id, { method: 'DELETE' });
+      loadData();
+    }
+  }
+
+  // Init
+  loadData();
+</script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -2918,7 +2918,7 @@
           let mainImgHtml;
           const firstKey = allImgs[0];
           if (firstKey) {
-            mainImgHtml = `<img id="main-product-img" src="${esc(imgs[firstKey])}" alt="${esc(prod.name)}" />
+            mainImgHtml = `<img id="main-product-img" src="${window.optImg(imgs[firstKey], 1000)}" alt="${esc(prod.name)}" />
         <div class="img-label-badge" id="main-img-label">${esc(IMG_LABELS[firstKey] || firstKey)}</div>`;
           } else {
             mainImgHtml = `<div class="main-img-placeholder">${PLACEHOLDER_SVG}</div>`;
@@ -2926,8 +2926,8 @@
 
           let thumbsHtml = '';
           allImgs.forEach((k, i) => {
-            thumbsHtml += `<div class="thumb ${i === 0 ? 'active' : ''}" data-img="${esc(imgs[k])}" data-label="${esc(IMG_LABELS[k] || k)}" onclick="switchImg(this)">
-        <img src="${esc(imgs[k])}" alt="${esc(IMG_LABELS[k] || prod.name)}" loading="lazy" />
+            thumbsHtml += `<div class="thumb ${i === 0 ? 'active' : ''}" data-img="${esc(window.optImg(imgs[k], 1000))}" data-label="${esc(IMG_LABELS[k] || k)}" onclick="switchImg(this)">
+        <img src="${esc(window.optImg(imgs[k], 200))}" alt="${esc(IMG_LABELS[k] || prod.name)}" loading="lazy" />
       </div>`;
           });
 
@@ -3080,7 +3080,7 @@
             const imgSrc =
               p.images && p.images.flat_lay ? p.images.flat_lay : null;
             const imgHtml = imgSrc
-              ? `<img src="${esc(imgSrc)}" alt="${esc(p.name)}" loading="lazy" />`
+              ? `<img src="${esc(window.optImg(imgSrc, 600))}" alt="${esc(p.name)}" loading="lazy" />`
               : `<div class="related-card-img-placeholder">${PLACEHOLDER_SVG}</div>`;
             cardsHtml += `<a href="product-detail.html?id=${encodeURIComponent(p.id)}" class="related-card">
         <div class="related-card-img">${imgHtml}</div>

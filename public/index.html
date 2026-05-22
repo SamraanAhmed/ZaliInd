@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -3333,7 +3333,7 @@
       const HERO_IMG_ORDER = ['flat_lay', 'ghost_front', 'detail', 'model_action', 'model_torso', 'ghost_back', 'ghost_side', 'model_back', 'model_bottom'];
       const bestImgKey = prod.images ? HERO_IMG_ORDER.find(k => prod.images[k]) : null;
       const imgHtml = bestImgKey
-        ? `<img src="${prod.images[bestImgKey]}" alt="${prod.name}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`
+        ? `<img src="${window.optImg(prod.images[bestImgKey], 800)}" alt="${prod.name}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`
         : `<div class="prod-img-inner"><svg viewBox="0 0 100 100" fill="none"><path d="M30 25 L50 18 L70 25 L75 35 L70 75 L30 75 L25 35 Z" stroke="currentColor" stroke-width="2"/></svg></div>`;
       html += `<a href="product-detail.html?id=${encodeURIComponent(prod.id)}" class="prod">
         <div class="prod-img">

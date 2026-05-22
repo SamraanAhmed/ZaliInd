@@ -48,6 +48,7 @@ async function migrate() {
       categoryId TEXT NOT NULL,
       name TEXT NOT NULL,
       slug TEXT NOT NULL,
+      group_name TEXT,
       FOREIGN KEY(categoryId) REFERENCES categories(id) ON DELETE CASCADE
     )`);
 
@@ -80,14 +81,14 @@ async function migrate() {
 
     // 3. Insert Catalog Data
     const insertCat = db.prepare(`INSERT INTO categories (id, name, slug) VALUES (?, ?, ?)`);
-    const insertSub = db.prepare(`INSERT INTO subcategories (id, categoryId, name, slug) VALUES (?, ?, ?, ?)`);
+    const insertSub = db.prepare(`INSERT INTO subcategories (id, categoryId, name, slug, group_name) VALUES (?, ?, ?, ?, ?)`);
     const insertProd = db.prepare(`INSERT INTO products (id, categoryId, subcategoryId, name, folderName, gender, title, description, garmentType, fabric, moq, images) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
 
     for (const cat of catalog.categories) {
       insertCat.run([cat.id, cat.name, cat.slug]);
       
       for (const sub of cat.subcategories) {
-        insertSub.run([sub.id, cat.id, sub.name, sub.slug]);
+        insertSub.run([sub.id, cat.id, sub.name, sub.slug, sub.group || null]);
         
         for (const prod of sub.products) {
           const imgStr = JSON.stringify(prod.images || {});

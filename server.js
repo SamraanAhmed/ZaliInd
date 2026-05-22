@@ -85,6 +85,9 @@ async function regenerateCatalog() {
                 slug: sub.slug,
                 products: []
               };
+              if (sub.group_name) {
+                subObj.group = sub.group_name;
+              }
               
               const subProds = products.filter(p => p.subcategoryId === sub.id);
               subProds.forEach(prod => {
@@ -190,6 +193,40 @@ app.post('/api/upload', isAuthenticated, upload.single('image'), (req, res) => {
   // Return the relative path to be saved in DB
   const relPath = 'images/uploads/' + req.file.filename;
   res.json({ path: relPath });
+});
+
+// Categories API
+app.post('/api/categories', isAuthenticated, (req, res) => {
+  const { id, name, slug } = req.body;
+  db.run(`INSERT INTO categories (id, name, slug) VALUES (?, ?, ?)`, [id, name, slug], function(err) {
+    if (err) return res.status(500).send(err.message);
+    regenerateCatalog().then(() => res.json({ success: true, id }));
+  });
+});
+
+app.delete('/api/categories/:id', isAuthenticated, (req, res) => {
+  db.run(`DELETE FROM categories WHERE id = ?`, [req.params.id], function(err) {
+    if (err) return res.status(500).send(err.message);
+    regenerateCatalog().then(() => res.json({ success: true }));
+  });
+});
+
+// Subcategories API
+app.post('/api/subcategories', isAuthenticated, (req, res) => {
+  const { id, categoryId, name, slug, group_name } = req.body;
+  db.run(`INSERT INTO subcategories (id, categoryId, name, slug, group_name) VALUES (?, ?, ?, ?, ?)`, 
+    [id, categoryId, name, slug, group_name || null], 
+    function(err) {
+      if (err) return res.status(500).send(err.message);
+      regenerateCatalog().then(() => res.json({ success: true, id }));
+  });
+});
+
+app.delete('/api/subcategories/:id', isAuthenticated, (req, res) => {
+  db.run(`DELETE FROM subcategories WHERE id = ?`, [req.params.id], function(err) {
+    if (err) return res.status(500).send(err.message);
+    regenerateCatalog().then(() => res.json({ success: true }));
+  });
 });
 
 app.post('/api/products', isAuthenticated, (req, res) => {

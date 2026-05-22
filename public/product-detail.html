@@ -990,8 +990,8 @@
           if (!related.length) return '';
           let cardsHtml = '';
           related.forEach((p) => {
-            const imgSrc =
-              p.images && p.images.flat_lay ? p.images.flat_lay : null;
+            const bestImgKey = p.images ? IMG_ORDER.find((k) => p.images[k]) : null;
+            const imgSrc = bestImgKey ? p.images[bestImgKey] : null;
             const imgHtml = imgSrc
               ? `<img src="${esc(window.optImg(imgSrc, 600))}" alt="${esc(p.name)}" loading="lazy" />`
               : `<div class="related-card-img-placeholder">${PLACEHOLDER_SVG}</div>`;

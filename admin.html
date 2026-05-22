@@ -63,7 +63,10 @@
   <div id="products-tab" class="tab-content active">
     <div class="top-bar">
       <h2>Products</h2>
-      <button class="btn" onclick="openModal('productModal')">+ Add New Product</button>
+      <div style="display: flex; gap: 10px;">
+        <input type="text" id="productSearch" placeholder="Search products..." oninput="filterProducts()" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px; width: 250px;">
+        <button class="btn" onclick="openModal('productModal')">+ Add New Product</button>
+      </div>
     </div>
     <table>
       <thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Subcategory</th><th>MOQ</th><th>Actions</th></tr></thead>
@@ -244,6 +247,23 @@
       });
       pSub.innerHTML = subHtml;
     };
+  }
+
+  function filterProducts() {
+    const term = document.getElementById('productSearch').value.toLowerCase();
+    const rows = document.querySelectorAll('#product-list tr');
+    rows.forEach(row => {
+      // Don't filter the "No products found" row
+      if (row.cells.length === 1) return;
+      
+      const id = row.cells[0].innerText.toLowerCase();
+      const name = row.cells[1].innerText.toLowerCase();
+      if (id.includes(term) || name.includes(term)) {
+        row.style.display = '';
+      } else {
+        row.style.display = 'none';
+      }
+    });
   }
 
   async function deleteItem(type, id) {

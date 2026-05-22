@@ -2843,13 +2843,10 @@
           'Specialty',
         ];
 
-        // ── Track which categories have been rendered ───────────────────────
-        const builtCategories = new Set();
-
-        // ── Placeholder SVG for products with no image ──────────────────────
+        // â”€â”€ Placeholder SVG for products with no image â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const PLACEHOLDER_SVG = `<div class="prod-img-placeholder"><svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 25 L50 18 L70 25 L75 35 L70 75 L30 75 L25 35 Z" stroke="currentColor" stroke-width="2"/></svg></div>`;
 
-        // ── Preferred image key order for product cards ─────────────────────
+        // â”€â”€ Preferred image key order for product cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const CARD_IMG_ORDER = [
           'flat_lay',
           'ghost_front',
@@ -2862,13 +2859,13 @@
           'model_bottom',
         ];
 
-        // ── Build product card HTML ─────────────────────────────────────────
+        // â”€â”€ Build product card HTML â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function productCard(prod, subcatSlug) {
           const imgs = prod.images || {};
           const bestKey = CARD_IMG_ORDER.find((k) => imgs[k]);
           const imgSrc = bestKey ? imgs[bestKey] : null;
           const imgHtml = imgSrc
-            ? `<img src="${imgSrc}" alt="${escHtml(prod.name)}" loading="lazy" decoding="async">`
+            ? `<img src="${imgSrc}" alt="${escHtml(prod.name)}" loading="lazy">`
             : PLACEHOLDER_SVG;
           const catLabel = prod.subcategory
             ? `${prod.category} · ${prod.subcategory}`
@@ -2880,16 +2877,17 @@
         <div class="prod-name">${escHtml(prod.name)}</div>
         <div class="prod-bottom">
           <span class="prod-moq">MOQ: <strong>${prod.moq}</strong></span>
-          <span class="prod-cta">View →</span>
+          <span class="prod-cta">View â†’</span>
         </div>
       </div>
     </a>`;
         }
 
-        // ── Build subcategory chips ─────────────────────────────────────────
+        // â”€â”€ Build subcategory chips â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function buildChips(cat) {
           let html = `<button class="subcat-chip active" data-sub="all">All</button>`;
           if (cat.id === 'team-sports') {
+            // For team sports, sort subcategories by group order
             const sorted = [...cat.subcategories].sort((a, b) => {
               const ai = TEAM_GROUP_ORDER.indexOf(a.group || 'Specialty');
               const bi = TEAM_GROUP_ORDER.indexOf(b.group || 'Specialty');
@@ -2906,33 +2904,50 @@
           return html;
         }
 
-        // ── Build product grid HTML ─────────────────────────────────────────
+        // â”€â”€ Build product grid HTML â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function buildProductGrid(cat) {
           let html = '';
+          const totalProducts = cat.subcategories.reduce(
+            (a, s) => a + s.products.length,
+            0,
+          );
+
           if (cat.id === 'team-sports') {
+            // Group by nav group, then by sport
             const groups = {};
-            TEAM_GROUP_ORDER.forEach((g) => { groups[g] = []; });
+            TEAM_GROUP_ORDER.forEach((g) => {
+              groups[g] = [];
+            });
             cat.subcategories.forEach((sub) => {
               const grp = sub.group || 'Specialty';
               if (!groups[grp]) groups[grp] = [];
               groups[grp].push(sub);
             });
+
             TEAM_GROUP_ORDER.forEach((grpName) => {
               const subs = groups[grpName];
               if (!subs || !subs.length) return;
               subs.forEach((sub) => {
-                sub.products.forEach((p) => { html += productCard(p, sub.slug); });
+                sub.products.forEach((p) => {
+                  html += productCard(p, sub.slug);
+                });
               });
             });
           } else {
             cat.subcategories.forEach((sub) => {
-              sub.products.forEach((p) => { html += productCard(p, sub.slug); });
+              sub.products.forEach((p) => {
+                html += productCard(p, sub.slug);
+              });
             });
           }
-          return html || `<div class="empty-state"><h4>Coming Soon</h4><p>Products in this category are being added.</p></div>`;
+
+          return (
+            html ||
+            `<div class="empty-state"><h4>Coming Soon</h4><p>Products in this category are being added.</p></div>`
+          );
         }
 
-        // ── Build a single category view ────────────────────────────────────
+        // â”€â”€ Build a single category view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function buildCategoryView(cat, idx) {
           const cfg = CAT_CONFIG[cat.id] || {
             tileClass: 't4',
@@ -2943,12 +2958,17 @@
             headingHtml: cat.name,
             tagline: '',
           };
-          const totalProducts = cat.subcategories.reduce((a, s) => a + s.products.length, 0);
+          const totalProducts = cat.subcategories.reduce(
+            (a, s) => a + s.products.length,
+            0,
+          );
+
           const div = document.createElement('div');
           div.className = 'cat-view';
           div.id = `view-${cfg.hashId}`;
           div.dataset.catName = cat.name;
           div.dataset.catId = cat.id;
+
           div.innerHTML = `
       <a href="#" class="cat-back" data-back>Back to All Categories</a>
       <div class="cat-title-block">
@@ -2960,40 +2980,29 @@
       </div>
       <div class="subcat-row">${buildChips(cat)}</div>
       <div class="cat-products">${buildProductGrid(cat)}</div>`;
+
           return div;
         }
 
-        // ── Lazily build a single category view on first visit ───────────────
-        function ensureCategoryBuilt(hashId) {
-          if (builtCategories.has(hashId)) return;
-          const container = document.getElementById('cat-views-container');
-          if (!container) return;
-          const catIdx = ZALI_CATALOG.categories.findIndex((c) => {
-            const cfg = CAT_CONFIG[c.id];
-            return cfg && cfg.hashId === hashId;
-          });
-          if (catIdx === -1) return;
-          const cat = ZALI_CATALOG.categories[catIdx];
-          const el = buildCategoryView(cat, catIdx);
-          container.appendChild(el);
-          builtCategories.add(hashId);
-        }
-
-        // ── Build picker tiles ──────────────────────────────────────────────
+        // â”€â”€ Build picker tiles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function buildPickerTiles() {
           const grid = document.getElementById('picker-grid');
           if (!grid) return;
           let html = '';
-          ZALI_CATALOG.categories.forEach((cat) => {
+          ZALI_CATALOG.categories.forEach((cat, idx) => {
             const cfg = CAT_CONFIG[cat.id];
             if (!cfg) return;
+            const total = cat.subcategories.reduce(
+              (a, s) => a + s.products.length,
+              0,
+            );
             html += `<a href="#${cfg.hashId}" class="picker-tile ${cfg.tileClass}" id="picker-${cfg.hashId}">
         <div class="picker-bg"></div>
         <div class="picker-content">
           <div class="picker-num"><span class="tri tri-sm"></span> ${cfg.num}</div>
           <div>
             <div class="picker-title">${cfg.titleHtml}</div>
-            <div class="picker-meta"><span>${cfg.metaText}</span><span class="arrow">→</span></div>
+            <div class="picker-meta"><span>${cfg.metaText}</span><span class="arrow">â†’</span></div>
           </div>
         </div>
       </a>`;
@@ -3001,42 +3010,64 @@
           grid.innerHTML = html;
         }
 
-        // ── Filter products by subcat chip ──────────────────────────────────
+        // ── Lazy build: only build a category view when first visited ───────────
+        const builtCategories = new Set();
+
+        function ensureCategoryBuilt(hashId) {
+          if (builtCategories.has(hashId)) return;
+          const container = document.getElementById('cat-views-container');
+          if (!container) return;
+
+          // Find the matching category from the catalog
+          const cfgEntry = Object.entries(CAT_CONFIG).find(([, cfg]) => cfg.hashId === hashId);
+          if (!cfgEntry) return;
+          const catId = cfgEntry[0];
+          const catIdx = ZALI_CATALOG.categories.findIndex(c => c.id === catId);
+          if (catIdx === -1) return;
+          const cat = ZALI_CATALOG.categories[catIdx];
+
+          container.appendChild(buildCategoryView(cat, catIdx));
+          builtCategories.add(hashId);
+        }
+
+        // â”€â”€ Filter products by subcat chip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         function filterProducts(view) {
           const activeChip = view.querySelector('.subcat-chip.active');
           if (!activeChip) return;
           const sub = activeChip.dataset.sub;
           view.querySelectorAll('.cat-products .prod').forEach((p) => {
-            p.style.display = sub === 'all' || p.dataset.sub === sub ? '' : 'none';
+            p.style.display =
+              sub === 'all' || p.dataset.sub === sub ? '' : 'none';
           });
         }
 
-        // ── Show/hide category view ─────────────────────────────────────────
+        // â”€â”€ Show/hide category view â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
         const pickerView = document.getElementById('picker-view');
+
         function showCat(hash) {
           const hashClean = hash.replace('#', '');
-          const allViews = document.querySelectorAll('.cat-view');
-          allViews.forEach((v) => v.classList.remove('active'));
+
           if (!hashClean) {
+            // Back to category picker — hide all built views
+            document.querySelectorAll('.cat-view').forEach((v) => v.classList.remove('active'));
             pickerView.classList.remove('hidden');
             const bc = document.getElementById('bc-cat');
             if (bc) bc.textContent = 'Products';
             return;
           }
 
-          // Build the category lazily on first visit
+          // Lazily build this category if not yet built
           ensureCategoryBuilt(hashClean);
 
           const view = document.getElementById('view-' + hashClean);
           if (view) {
+            document.querySelectorAll('.cat-view').forEach((v) => v.classList.remove('active'));
             pickerView.classList.add('hidden');
             view.classList.add('active');
             const bc = document.getElementById('bc-cat');
             if (bc) bc.textContent = view.dataset.catName;
-            // Reset chips
-            view
-              .querySelectorAll('.subcat-chip')
-              .forEach((c) => c.classList.remove('active'));
+            // Reset chips to "All"
+            view.querySelectorAll('.subcat-chip').forEach((c) => c.classList.remove('active'));
             const allChip = view.querySelector('.subcat-chip[data-sub="all"]');
             if (allChip) allChip.classList.add('active');
             filterProducts(view);
@@ -3079,8 +3110,8 @@
             console.error('ZALI_CATALOG not loaded');
             return;
           }
-          // Only build picker tiles on init — categories are built lazily on demand
           buildPickerTiles();
+          buildCategoryViews();
           showCat(window.location.hash);
         }
 

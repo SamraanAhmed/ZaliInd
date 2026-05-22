@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -110,10 +110,16 @@
     line-height: 1.45;
   }
   .form-helper-list li::before {
-    content: '<span class="tri tri-sm" style="margin-right:4px;border-bottom-color:var(--accent)"></span>';
-    color: var(--accent);
-    font-size: 11px;
-    margin-top: 2px;
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid var(--accent);
+    margin-right: 8px;
+    margin-top: 5px;
+    flex-shrink: 0;
   }
 
   /* MAIN FORM */

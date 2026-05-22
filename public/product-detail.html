@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="page-title">Product â€” ZALI Industries</title>
+    <title id="page-title">Product — ZALI Industries</title>
     <meta
       name="description"
       id="page-desc"
@@ -465,7 +465,7 @@
         break-inside: avoid;
       }
       .custom-extras li::before {
-        content: 'â–²';
+        content: '▲';
         position: absolute;
         left: 0;
         top: 7px;
@@ -608,7 +608,7 @@
     <div class="topbar">
       <div class="topbar-track">
         <span
-          ><span class="accent-text">â–²</span> FREE DESIGN &amp; MOCKUPS &mdash;
+          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash;
           FOR EVERYONE</span
         >
         <span
@@ -616,12 +616,12 @@
           FOB</span
         >
         <span
-          ><span class="accent-text">â–²</span> SAMPLE COST DEDUCTED FROM BULK
+          ><span class="accent-text">▲</span> SAMPLE COST DEDUCTED FROM BULK
           ORDER</span
         >
         <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
         <span
-          ><span class="accent-text">â–²</span> FREE DESIGN &amp; MOCKUPS &mdash;
+          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash;
           FOR EVERYONE</span
         >
         <span
@@ -629,7 +629,7 @@
           FOB</span
         >
         <span
-          ><span class="accent-text">â–²</span> SAMPLE COST DEDUCTED FROM BULK
+          ><span class="accent-text">▲</span> SAMPLE COST DEDUCTED FROM BULK
           ORDER</span
         >
         <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
@@ -2826,7 +2826,7 @@
       (function () {
         'use strict';
 
-        // â”€â”€ Image type labels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Image type labels ───────────────────────────────────
         const IMG_LABELS = {
           flat_lay: 'Flat Lay',
           detail: 'Detail',
@@ -2863,7 +2863,7 @@
             .replace(/"/g, '&quot;');
         }
 
-        // â”€â”€ Get product from catalog â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Get product from catalog ──────────────────────────────────
         function findProduct(id) {
           if (!window.ZALI_PRODUCT_MAP) return null;
           if (ZALI_PRODUCT_MAP[id]) return ZALI_PRODUCT_MAP[id];
@@ -2872,7 +2872,7 @@
           return ZALI_PRODUCT_MAP[decoded] || null;
         }
 
-        // â”€â”€ Get related products â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Get related products ──────────────────────────────────────
         function getRelated(prod, count) {
           if (!window.ZALI_CATALOG) return [];
           const results = [];
@@ -2906,7 +2906,7 @@
           return results;
         }
 
-        // â”€â”€ Build gallery section â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Build gallery section ─────────────────────────────────────
         function buildGallery(prod) {
           const imgs = prod.images || {};
           const orderedImgs = IMG_ORDER.filter((k) => imgs[k]);
@@ -2938,7 +2938,7 @@
       </div>`;
         }
 
-        // â”€â”€ Build info column â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Build info column ─────────────────────────────────────────
         function buildInfo(prod) {
           const catHref = `products.html#${prod.categoryId === 'casual-wear' ? 'casual' : prod.categoryId === 'team-sports' ? 'team' : prod.categoryId}`;
           const breadcrumbs = `
@@ -2959,7 +2959,7 @@
             : 'Performance Polyester';
           const fabricDisplay =
             fabricShort.length > 60
-              ? fabricShort.substring(0, 60) + 'â€¦'
+              ? fabricShort.substring(0, 60) + '…'
               : fabricShort;
 
           // Description from product info
@@ -2968,7 +2968,7 @@
             .filter((l) => l.trim());
           const descHtml =
             descLines.map((l) => `<p>${esc(l)}</p>`).join('') ||
-            `<p>Available in polyester and cotton blends. Full customization available â€” sublimation, DTF, DTG, and screen printing. Logos, graphics, and text on chest, sleeves, back, or hem. Youth and adult sizing available, 2T to 9XL.</p>`;
+            `<p>Available in polyester and cotton blends. Full customization available — sublimation, DTF, DTG, and screen printing. Logos, graphics, and text on chest, sleeves, back, or hem. Youth and adult sizing available, 2T to 9XL.</p>`;
 
           const garment = prod.garmentType
             ? prod.garmentType.charAt(0).toUpperCase() +
@@ -2990,7 +2990,7 @@
             <div class="spec-item"><div class="lbl">Print Methods</div><div class="val">Sublimation · DTF · DTG · Screen</div></div>
             <div class="spec-item"><div class="lbl">Size Range</div><div class="val">2T to 9XL · Youth &amp; Adult</div></div>
             <div class="spec-item"><div class="lbl">Min Order (MOQ)</div><div class="val">${prod.moq || 25} pieces</div></div>
-            <div class="spec-item"><div class="lbl">Lead Time</div><div class="val">12 â€“ 18 days (bulk)</div></div>
+            <div class="spec-item"><div class="lbl">Lead Time</div><div class="val">12 – 18 days (bulk)</div></div>
           </div>
 
         </div>
@@ -3002,11 +3002,11 @@
         <p>Send us your tech pack, sketch, or reference, and we'll return a digital mockup and clear quote within 48 hours. We sample first, you approve, then we run bulk. No commitment until you sign off.</p>
         <div class="quote-panel-meta">
           <div class="quote-panel-meta-item"><div class="lbl">MOQ</div><div class="val">${prod.moq || 25} pieces</div></div>
-          <div class="quote-panel-meta-item"><div class="lbl">Lead Time</div><div class="val">12â€“18 days</div></div>
+          <div class="quote-panel-meta-item"><div class="lbl">Lead Time</div><div class="val">12–18 days</div></div>
           <div class="quote-panel-meta-item"><div class="lbl">Reply</div><div class="val">Within 24h</div></div>
         </div>
         <div class="quote-panel-ctas">
-          <a href="contact.html" class="btn btn-light">Request a Quote <span class="arrow">â†’</span></a>
+          <a href="contact.html" class="btn btn-light">Request a Quote <span class="arrow">→</span></a>
           <a href="https://wa.me/923294656184" target="_blank" class="btn btn-outline">WhatsApp Us</a>
         </div>
       </div>
@@ -3014,7 +3014,7 @@
       <div class="pdp-description">
         <h3 class="pdp-section-h"><span class="tri tri-sm"></span> Description</h3>
         ${descHtml}
-        ${prod.fabric ? `<h4>Fabric</h4><p>${esc(prod.fabric.substring(0, 300))}${prod.fabric.length > 300 ? 'â€¦' : ''}</p>` : ''}
+        ${prod.fabric ? `<h4>Fabric</h4><p>${esc(prod.fabric.substring(0, 300))}${prod.fabric.length > 300 ? '…' : ''}</p>` : ''}
         <div class="sizechart-callout">
           <div class="sizechart-callout-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
@@ -3028,12 +3028,12 @@
 
       <div class="pdp-customization">
         <h3 class="pdp-section-h"><span class="tri tri-sm"></span> Customization</h3>
-        <p class="pdp-customization-intro">Every garment is built to your brand. Pick one print method or mix several on the same piece â€” we'll recommend what works best for your fabric, design, and order size.</p>
+        <p class="pdp-customization-intro">Every garment is built to your brand. Pick one print method or mix several on the same piece — we'll recommend what works best for your fabric, design, and order size.</p>
         <div class="custom-grid">
           <div class="custom-card">
-            <div class="custom-card-tag popular">â–² Most Popular</div>
+            <div class="custom-card-tag popular">▲ Most Popular</div>
             <h4>Sublimation</h4>
-            <p>Any pattern, any design, any logo â€” printed edge to edge, sleeve to hem. Vibrant, permanent, zero cracking or peeling. Works on polyester and poly blends.</p>
+            <p>Any pattern, any design, any logo — printed edge to edge, sleeve to hem. Vibrant, permanent, zero cracking or peeling. Works on polyester and poly blends.</p>
             <div class="custom-card-meta">All-over print &middot; Unlimited colors</div>
           </div>
           <div class="custom-card">
@@ -3071,7 +3071,7 @@
       </div>`;
         }
 
-        // â”€â”€ Build related products â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Build related products ────────────────────────────────────
         function buildRelated(prod) {
           const related = getRelated(prod, 4);
           if (!related.length) return '';
@@ -3104,19 +3104,19 @@
       </section>`;
         }
 
-        // â”€â”€ Render not-found state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Render not-found state ────────────────────────────────────
         function renderNotFound(id) {
           document.getElementById('pdp-root').innerHTML = `
       <div class="container">
         <div class="not-found">
           <h1>Product not found</h1>
           <p>The product "${esc(id)}" could not be located in the catalog.</p>
-          <a href="products.html" class="btn btn-primary">Browse All Products â†’</a>
+          <a href="products.html" class="btn btn-primary">Browse All Products →</a>
         </div>
       </div>`;
         }
 
-        // â”€â”€ Main render â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Main render ───────────────────────────────────────────────
         function render() {
           const params = new URLSearchParams(window.location.search);
           const id = params.get('id');
@@ -3133,7 +3133,7 @@
 
           // Update page meta
           document.getElementById('page-title').textContent =
-            `${prod.title || prod.name} â€” ZALI Industries`;
+            `${prod.title || prod.name} — ZALI Industries`;
           document
             .getElementById('page-desc')
             .setAttribute(
@@ -3148,7 +3148,7 @@
       ${buildRelated(prod)}`;
         }
 
-        // â”€â”€ Thumb switcher (global so inline onclick works) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Thumb switcher (global so inline onclick works) ───────────
         window.switchImg = function (thumb) {
           const src = thumb.dataset.img;
           const label = thumb.dataset.label;
@@ -3165,7 +3165,7 @@
           thumb.classList.add('active');
         };
 
-        // â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Init ──────────────────────────────────────────────────────
         if (document.readyState === 'loading') {
           document.addEventListener('DOMContentLoaded', render);
         } else {

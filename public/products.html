@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products â€” ZALI Industries</title>
+    <title>Products — ZALI Industries</title>
     <meta
       name="description"
-      content="Browse the full ZALI catalog by category â€” fightwear, surfwear, sportswear, casual, team kits, and more."
+      content="Browse the full ZALI catalog by category — fightwear, surfwear, sportswear, casual, team kits, and more."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* CATEGORY PICKER â€” landing tile grid */
+      /* CATEGORY PICKER — landing tile grid */
       .picker-wrap {
         padding: 32px 0 90px;
       }
@@ -540,14 +540,14 @@
     </section>
 
     <div class="container">
-      <!-- CATEGORY PICKER (default view) â€” rendered by JS -->
+      <!-- CATEGORY PICKER (default view) — rendered by JS -->
       <div class="picker-wrap" id="picker-view">
         <div class="picker-grid" id="picker-grid">
           <!-- JS renders tiles here -->
         </div>
       </div>
 
-      <!-- CATEGORY VIEWS â€” rendered by JS -->
+      <!-- CATEGORY VIEWS — rendered by JS -->
       <div id="cat-views-container">
         <!-- JS renders category views here -->
       </div>
@@ -3145,7 +3145,7 @@
           }
         }
 
-        // â”€â”€ Chip click delegation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Chip click delegation ─────────────────────────────────────
         document.addEventListener('click', function (e) {
           const chip = e.target.closest('.subcat-chip');
           if (chip) {
@@ -3172,7 +3172,7 @@
           showCat(window.location.hash),
         );
 
-        // â”€â”€ Init â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Init ──────────────────────────────────────────────────────
         function init() {
           if (!window.ZALI_CATALOG) {
             console.error('ZALI_CATALOG not loaded');
@@ -3188,7 +3188,7 @@
           init();
         }
 
-        // â”€â”€ Utility â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+        // ── Utility ───────────────────────────────────────────────────
         function escHtml(str) {
           if (!str) return '';
           return str

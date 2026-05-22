@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -2937,6 +2937,22 @@
           );
         }
 
+        // ── Skeleton placeholder grid (shown instantly before real cards) ──
+        function buildSkeletonGrid() {
+          let html = '';
+          for (let i = 0; i < 12; i++) {
+            html += `<div class="skeleton-card">
+              <div class="skeleton-img"></div>
+              <div class="skeleton-info">
+                <div class="skeleton-line sk-wide"></div>
+                <div class="skeleton-line sk-medium"></div>
+                <div class="skeleton-line sk-narrow"></div>
+              </div>
+            </div>`;
+          }
+          return html;
+        }
+
         // ── Build a single category view (lazy — called on first visit) ───
         function buildCategoryView(cat, idx) {
           const cfg = CAT_CONFIG[cat.id] || {
@@ -2959,6 +2975,7 @@
           div.dataset.catName = cat.name;
           div.dataset.catId = cat.id;
 
+          // ── Render header + chips + SKELETON grid immediately ────────────
           div.innerHTML = `
       <a href="#" class="cat-back" data-back>Back to All Categories</a>
       <div class="cat-title-block">
@@ -2969,7 +2986,7 @@
         <div class="count">SKUs<strong>${totalProducts}</strong></div>
       </div>
       <div class="subcat-row">${buildChips(cat)}</div>
-      <div class="cat-products">${buildProductGrid(cat)}</div>`;
+      <div class="cat-products" id="prod-grid-${cfg.hashId}">${buildSkeletonGrid()}</div>`;
 
           return div;
         }
@@ -3034,7 +3051,8 @@
           }
 
           // ── Build the view the first time it's needed ─────────────────
-          if (!builtCats.has(hashClean)) {
+          const isFirstVisit = !builtCats.has(hashClean);
+          if (isFirstVisit) {
             const idx = ZALI_CATALOG.categories.indexOf(catEntry);
             const viewEl = buildCategoryView(catEntry, idx);
             catViewsContainer.appendChild(viewEl);
@@ -3051,8 +3069,24 @@
             view.querySelectorAll('.subcat-chip').forEach((c) => c.classList.remove('active'));
             const allChip = view.querySelector('.subcat-chip[data-sub="all"]');
             if (allChip) allChip.classList.add('active');
-            filterProducts(view);
             window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // ── Swap skeleton → real cards after browser paints skeleton ──
+            if (isFirstVisit) {
+              const cfg = CAT_CONFIG[catEntry.id];
+              const gridId = cfg ? `prod-grid-${cfg.hashId}` : null;
+              requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                  const grid = gridId ? document.getElementById(gridId) : null;
+                  if (grid) {
+                    grid.innerHTML = buildProductGrid(catEntry);
+                  }
+                  filterProducts(view);
+                });
+              });
+            } else {
+              filterProducts(view);
+            }
           } else {
             pickerView.classList.remove('hidden');
           }

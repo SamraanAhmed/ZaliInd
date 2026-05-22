@@ -53,6 +53,24 @@
           position: static;
         }
       }
+      @keyframes pulseSkeleton {
+        0% { background-color: #f0f0f0; }
+        50% { background-color: #e0e0e0; }
+        100% { background-color: #f0f0f0; }
+      }
+      .skeleton-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+        background-color: #f0f0f0;
+        animation: pulseSkeleton 1.5s infinite ease-in-out;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.2s ease;
+      }
+      .skeleton-overlay.active {
+        opacity: 1;
+      }
       .main-img {
         aspect-ratio: 4/5;
         background: var(--bg-soft);
@@ -2925,16 +2943,24 @@
           }
 
           let thumbsHtml = '';
+          let preloadHtml = '<div style="display:none;" aria-hidden="true">';
           allImgs.forEach((k, i) => {
-            thumbsHtml += `<div class="thumb ${i === 0 ? 'active' : ''}" data-img="${esc(window.optImg(imgs[k], 1000))}" data-label="${esc(IMG_LABELS[k] || k)}" onclick="switchImg(this)">
+            const highResUrl = esc(window.optImg(imgs[k], 1000));
+            preloadHtml += `<img src="${highResUrl}" />`;
+            thumbsHtml += `<div class="thumb ${i === 0 ? 'active' : ''}" data-img="${highResUrl}" data-label="${esc(IMG_LABELS[k] || k)}" onclick="switchImg(this)">
         <img src="${esc(window.optImg(imgs[k], 200))}" alt="${esc(IMG_LABELS[k] || prod.name)}" loading="lazy" />
       </div>`;
           });
+          preloadHtml += '</div>';
 
           return `
       <div class="gallery">
-        <div class="main-img" id="main-img-wrap">${mainImgHtml}</div>
+        <div class="main-img" id="main-img-wrap">
+          <div class="skeleton-overlay" id="main-skeleton"></div>
+          ${mainImgHtml}
+        </div>
         <div class="thumbs">${thumbsHtml}</div>
+        ${preloadHtml}
       </div>`;
         }
 
@@ -3154,8 +3180,24 @@
           const label = thumb.dataset.label;
           const mainImg = document.getElementById('main-product-img');
           const mainLabel = document.getElementById('main-img-label');
-          if (mainImg) {
+          const skeleton = document.getElementById('main-skeleton');
+          
+          if (mainImg && mainImg.src !== src) {
+            if (skeleton) skeleton.classList.add('active');
+            
+            // Wait for new image to load before hiding skeleton
+            mainImg.onload = function() {
+              if (skeleton) skeleton.classList.remove('active');
+              mainImg.onload = null; // cleanup
+            };
+            
+            // If the image is cached, onload might not fire or fire instantly
             mainImg.src = src;
+            if (mainImg.complete) {
+              if (skeleton) skeleton.classList.remove('active');
+              mainImg.onload = null;
+            }
+            
             mainImg.alt = label;
           }
           if (mainLabel) mainLabel.textContent = label;

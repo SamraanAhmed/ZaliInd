@@ -2932,7 +2932,7 @@
               if (!subs || !subs.length) return;
               const groupSlug = grpName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
               subs.forEach((sub) => {
-                html += `<div class="sport-header" style="width: 100%; margin-top: 40px; margin-bottom: 20px; font-size: 24px; font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--bg-line); padding-bottom: 10px;" data-sub="${groupSlug}" id="sport-${sub.slug}"><span class="tri tri-sm" style="margin-right: 8px;"></span>${escHtml(sub.name)}</div>`;
+                html += `<div class="sport-header" style="grid-column: 1 / -1; width: 100%; margin-top: 40px; margin-bottom: 20px; font-size: 24px; font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--bg-line); padding-bottom: 10px;" data-sub="${groupSlug}" id="sport-${sub.slug}"><span class="tri tri-sm" style="margin-right: 8px;"></span>${escHtml(sub.name)}</div>`;
                 sub.products.forEach((p) => { html += productCard(p, groupSlug); });
               });
             });

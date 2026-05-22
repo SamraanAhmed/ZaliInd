@@ -2898,17 +2898,18 @@
         function buildChips(cat) {
           let html = `<button class="subcat-chip active" data-sub="all">All</button>`;
           if (cat.id === 'team-sports') {
-            const sorted = [...cat.subcategories].sort((a, b) => {
-              const ai = TEAM_GROUP_ORDER.indexOf(a.group || 'Specialty');
-              const bi = TEAM_GROUP_ORDER.indexOf(b.group || 'Specialty');
-              return ai - bi;
-            });
-            sorted.forEach((sub) => {
-              html += `<button class="subcat-chip" data-sub="${sub.slug}">${escHtml(sub.name)}</button>`;
+            TEAM_GROUP_ORDER.forEach((grpName) => {
+              const hasProducts = cat.subcategories.some(s => (s.group || 'Specialty') === grpName && s.products.length > 0);
+              if (hasProducts) {
+                const groupSlug = grpName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                html += `<button class="subcat-chip" data-sub="${groupSlug}">${escHtml(grpName)}</button>`;
+              }
             });
           } else {
             cat.subcategories.forEach((sub) => {
-              html += `<button class="subcat-chip" data-sub="${sub.slug}">${escHtml(sub.name)}</button>`;
+              if (sub.products.length > 0) {
+                html += `<button class="subcat-chip" data-sub="${sub.slug}">${escHtml(sub.name)}</button>`;
+              }
             });
           }
           return html;
@@ -2924,18 +2925,22 @@
             cat.subcategories.forEach((sub) => {
               const grp = sub.group || 'Specialty';
               if (!groups[grp]) groups[grp] = [];
-              groups[grp].push(sub);
+              if (sub.products.length > 0) groups[grp].push(sub);
             });
             TEAM_GROUP_ORDER.forEach((grpName) => {
               const subs = groups[grpName];
               if (!subs || !subs.length) return;
+              const groupSlug = grpName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
               subs.forEach((sub) => {
-                sub.products.forEach((p) => { html += productCard(p, sub.slug); });
+                html += `<div class="sport-header" style="width: 100%; margin-top: 40px; margin-bottom: 20px; font-size: 24px; font-family: 'Playfair Display', serif; border-bottom: 1px solid var(--bg-line); padding-bottom: 10px;" data-sub="${groupSlug}" id="sport-${sub.slug}"><span class="tri tri-sm" style="margin-right: 8px;"></span>${escHtml(sub.name)}</div>`;
+                sub.products.forEach((p) => { html += productCard(p, groupSlug); });
               });
             });
           } else {
             cat.subcategories.forEach((sub) => {
-              sub.products.forEach((p) => { html += productCard(p, sub.slug); });
+              if (sub.products.length > 0) {
+                sub.products.forEach((p) => { html += productCard(p, sub.slug); });
+              }
             });
           }
 
@@ -3026,9 +3031,9 @@
           const activeChip = view.querySelector('.subcat-chip.active');
           if (!activeChip) return;
           const sub = activeChip.dataset.sub;
-          view.querySelectorAll('.cat-products .prod').forEach((p) => {
-            p.style.display =
-              sub === 'all' || p.dataset.sub === sub ? '' : 'none';
+          view.querySelectorAll('.cat-products .prod, .sport-header').forEach((el) => {
+            el.style.display =
+              sub === 'all' || el.dataset.sub === sub ? '' : 'none';
           });
         }
 
@@ -3047,10 +3052,18 @@
             return;
           }
 
+          let catHash = hashClean;
+          let subHash = null;
+          // Handle team sports deep links (e.g. #team-7-on-7-football)
+          if (hashClean.startsWith('team-') && hashClean !== 'team-sports') {
+            catHash = 'team';
+            subHash = hashClean.substring(5);
+          }
+
           // ── Find the matching cat data by hashId ──────────────────────
           const catEntry = ZALI_CATALOG.categories.find((c) => {
             const cfg = CAT_CONFIG[c.id];
-            return cfg && cfg.hashId === hashClean;
+            return cfg && cfg.hashId === catHash;
           });
 
           if (!catEntry) {
@@ -3059,25 +3072,37 @@
           }
 
           // ── Build the view the first time it's needed ─────────────────
-          const isFirstVisit = !builtCats.has(hashClean);
+          const isFirstVisit = !builtCats.has(catHash);
           if (isFirstVisit) {
             const idx = ZALI_CATALOG.categories.indexOf(catEntry);
             const viewEl = buildCategoryView(catEntry, idx);
             catViewsContainer.appendChild(viewEl);
-            builtCats.add(hashClean);
+            builtCats.add(catHash);
           }
 
-          const view = document.getElementById('view-' + hashClean);
+          const view = document.getElementById('view-' + catHash);
           if (view) {
             pickerView.classList.add('hidden');
             view.classList.add('active');
             const bc = document.getElementById('bc-cat');
             if (bc) bc.textContent = catEntry.name;
-            // Reset chips to "All"
+            
+            // Determine target chip
+            let targetGroupSlug = 'all';
+            if (subHash && catEntry.id === 'team-sports') {
+              const sport = catEntry.subcategories.find(s => s.slug === subHash);
+              if (sport) {
+                targetGroupSlug = (sport.group || 'Specialty').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+              }
+            } else if (subHash) {
+              targetGroupSlug = subHash;
+            }
+
+            // Reset chips
             view.querySelectorAll('.subcat-chip').forEach((c) => c.classList.remove('active'));
-            const allChip = view.querySelector('.subcat-chip[data-sub="all"]');
-            if (allChip) allChip.classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            let targetChip = targetGroupSlug !== 'all' ? view.querySelector(`.subcat-chip[data-sub="${targetGroupSlug}"]`) : null;
+            if (!targetChip) targetChip = view.querySelector('.subcat-chip[data-sub="all"]');
+            if (targetChip) targetChip.classList.add('active');
 
             // ── Swap skeleton → real cards after browser paints skeleton ──
             if (isFirstVisit) {
@@ -3090,10 +3115,30 @@
                     grid.innerHTML = buildProductGrid(catEntry);
                   }
                   filterProducts(view);
+                  if (subHash) {
+                    const header = document.getElementById('sport-' + subHash);
+                    if (header) {
+                      const yOffset = -80; 
+                      const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({top: y, behavior: 'smooth'});
+                    }
+                  } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
                 });
               });
             } else {
               filterProducts(view);
+              if (subHash) {
+                const header = document.getElementById('sport-' + subHash);
+                if (header) {
+                  const yOffset = -80; 
+                  const y = header.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                  window.scrollTo({top: y, behavior: 'smooth'});
+                }
+              } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
             }
           } else {
             pickerView.classList.remove('hidden');

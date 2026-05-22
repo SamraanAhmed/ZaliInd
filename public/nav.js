@@ -156,7 +156,6 @@ window.optImg = function(src, w=800) {
       </div>`;
 
     navEl.innerHTML = newNav;
-    initNavBehavior(navEl);
   }
 
   // ── Build Mobile Menu (Dynamic) ──────────────────────────────
@@ -341,13 +340,16 @@ window.optImg = function(src, w=800) {
   }
 
   // Generate the desktop menu HTML, then the mobile menu HTML, then bind events
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      buildNav();
-      buildMobileMenu();
-    });
-  } else {
+  function initAll() {
     buildNav();
     buildMobileMenu();
+    const navEl = document.querySelector('nav.bb-nav');
+    if (navEl) initNavBehavior(navEl);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+  } else {
+    initAll();
   }
 })();

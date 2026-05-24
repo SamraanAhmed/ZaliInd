@@ -164,8 +164,12 @@ button {
 
 /* ============ SKELETON LOADER ============ */
 @keyframes shimmer {
-  0%   { background-position: -800px 0; }
-  100% { background-position:  800px 0; }
+  0% {
+    background-position: -800px 0;
+  }
+  100% {
+    background-position: 800px 0;
+  }
 }
 .skeleton-card {
   background: var(--white);
@@ -192,9 +196,17 @@ button {
   background-size: 800px 100%;
   animation: shimmer 1.4s infinite linear;
 }
-.skeleton-line.sk-wide   { width: 80%; }
-.skeleton-line.sk-medium { width: 55%; animation-delay: 0.1s; }
-.skeleton-line.sk-narrow { width: 35%; animation-delay: 0.2s; }
+.skeleton-line.sk-wide {
+  width: 80%;
+}
+.skeleton-line.sk-medium {
+  width: 55%;
+  animation-delay: 0.1s;
+}
+.skeleton-line.sk-narrow {
+  width: 35%;
+  animation-delay: 0.2s;
+}
 
 /* ============ NAV ============ */
 nav.main {
@@ -626,7 +638,7 @@ nav.main {
   color: var(--ink);
 }
 .sec-desc {
-  font-size: 16px;
+  font-size: 12px;
   color: var(--ink-soft);
   margin-top: 22px;
   max-width: 540px;

@@ -5,11 +5,9 @@
 
 window.optImg = function(src, w=800) {
   if (!src) return src;
-  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') return src;
   const decoded = decodeURIComponent(src);
   const abs = decoded.startsWith('/') ? decoded : '/' + decoded;
-  const encodedAbs = abs.split('/').map(encodeURIComponent).join('/');
-  return `/.netlify/images?url=${encodedAbs}&w=${w}&fm=webp`;
+  return abs.split('/').map(encodeURIComponent).join('/');
 };
 
 (function () {

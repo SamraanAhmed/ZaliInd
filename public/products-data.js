@@ -6245,3 +6245,13 @@ window.ZALI_CATALOG = {
     }
   ]
 };
+
+/* --- Flat lookup by product id --- */
+window.ZALI_PRODUCT_MAP = {};
+window.ZALI_CATALOG.categories.forEach(cat => {
+  cat.subcategories.forEach(sub => {
+    sub.products.forEach(p => {
+      window.ZALI_PRODUCT_MAP[p.id] = p;
+    });
+  });
+});

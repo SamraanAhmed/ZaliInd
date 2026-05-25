@@ -291,6 +291,14 @@ app.put('/api/products/:id', isAuthenticated, (req, res) => {
   );
 });
 
+app.put('/api/products/:id/feature', isAuthenticated, (req, res) => {
+  const { is_featured } = req.body;
+  db.run(`UPDATE products SET is_featured = ? WHERE id = ?`, [is_featured ? 1 : 0, req.params.id], function(err) {
+    if (err) return res.status(500).send(err.message);
+    regenerateCatalog().then(() => res.json({ success: true }));
+  });
+});
+
 app.delete('/api/products/:id', isAuthenticated, (req, res) => {
   db.run(`DELETE FROM products WHERE id = ?`, [req.params.id], function(err) {
     if (err) return res.status(500).send(err.message);

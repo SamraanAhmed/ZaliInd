@@ -193,6 +193,7 @@
   <button onclick="switchTab('categories')">Categories</button>
   <button onclick="switchTab('subcategories')">Subcategories</button>
   <button onclick="switchTab('fabrics')">Fabrics</button>
+  <button onclick="switchTab('featured')">Featured Homepage</button>
 </div>
 
 <div class="container">
@@ -259,9 +260,39 @@
     </table>
   </div>
 
+  <!-- FEATURED TAB -->
+  <div id="featured-tab" class="tab-content">
+    <div class="top-bar">
+      <h2>Featured Homepage Products</h2>
+      <button class="btn" onclick="openModal('featuredModal')">+ Add Featured Product</button>
+    </div>
+    <table>
+      <thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Actions</th></tr></thead>
+      <tbody id="featured-list"></tbody>
+    </table>
+  </div>
+
 </div>
 
 <!-- MODALS -->
+
+<!-- Add Featured Modal -->
+<div class="modal-overlay" id="featuredModal">
+  <div class="modal" style="position: relative;">
+    <button type="button" onclick="closeModal('featuredModal')" style="position: absolute; top: 20px; right: 24px; background: none; border: none; font-size: 28px; cursor: pointer; color: var(--text-soft); line-height: 1;">&times;</button>
+    <h2>Add Featured Product</h2>
+    <form id="featuredForm">
+      <div class="form-group">
+        <label>Select Product</label>
+        <select id="feat_product" required></select>
+      </div>
+      <div class="actions">
+        <button type="button" class="btn btn-secondary" onclick="closeModal('featuredModal')">Cancel</button>
+        <button type="submit" class="btn">Add to Featured</button>
+      </div>
+    </form>
+  </div>
+</div>
 
 <!-- Add Fabric Family Modal -->
 <div class="modal-overlay" id="fabricFamilyModal">
@@ -389,11 +420,6 @@
 
       <div class="form-group"><label>Description</label><textarea id="p_desc" rows="3"></textarea></div>
 
-      <div class="form-group" style="display: flex; align-items: center; margin-top: 10px;">
-        <input type="checkbox" id="p_featured" style="width: auto; margin-right: 10px;">
-        <label for="p_featured" style="margin-bottom: 0;">Featured on Homepage</label>
-      </div>
-
       <h4 style="margin-top: 20px; margin-bottom: 10px;">Images</h4>
       <div class="image-uploads">
         <div class="form-group"><label>Model Torso</label><input type="file" id="img_model_torso" accept="image/*"></div>
@@ -455,7 +481,6 @@
     document.getElementById('p_leadTime').value = p.leadTime || '';
     document.getElementById('p_fabric').value = p.fabric || '';
     document.getElementById('p_desc').value = p.description || '';
-    document.getElementById('p_featured').checked = !!p.is_featured;
     
     document.getElementById('productModal').style.display = 'flex';
   }
@@ -511,6 +536,14 @@
         tbodyF.innerHTML += `<tr><td>${f.id}</td><td>${f.family}</td><td>${f.name}</td><td><button class="btn" style="background:#333; color:white; margin-right:5px; padding: 6px 12px;" onclick="editFabric('${f.id}')">Edit</button><button class="btn btn-danger" style="padding: 6px 12px;" onclick="deleteItem('fabrics', '${f.id}')">Delete</button></td></tr>`;
       });
     }
+
+    // Featured Products
+    const tbodyFeat = document.getElementById('featured-list');
+    const featuredProds = catalogData.products.filter(p => p.is_featured);
+    tbodyFeat.innerHTML = featuredProds.length ? '' : '<tr><td colspan="4">No featured products selected.</td></tr>';
+    featuredProds.forEach(p => {
+      tbodyFeat.innerHTML += `<tr><td>${p.id}</td><td>${p.name}</td><td>${p.categoryId}</td><td><button class="btn btn-danger" style="padding: 6px 12px;" onclick="removeFeatured('${p.id}')">Remove</button></td></tr>`;
+    });
   }
 
   function populateDropdowns() {
@@ -541,6 +574,13 @@
     }
     fFamily.innerHTML = famHtml;
     pFabric.innerHTML = famHtml;
+
+    const featSelect = document.getElementById('feat_product');
+    let featHtml = '<option value="">Select a Product...</option>';
+    catalogData.products.forEach(p => {
+      featHtml += `<option value="${p.id}">${p.name} (${p.id})</option>`;
+    });
+    featSelect.innerHTML = featHtml;
   }
 
   function filterProducts() {
@@ -634,7 +674,6 @@
       sizeRange: document.getElementById('p_sizeRange').value,
       leadTime: document.getElementById('p_leadTime').value,
       moq: parseInt(document.getElementById('p_moq').value, 10),
-      is_featured: document.getElementById('p_featured').checked,
       images
     };
 
@@ -696,6 +735,31 @@
     closeModal('fabricFamilyModal');
     loadData();
   });
+
+  // Handle Featured Submit
+  document.getElementById('featuredForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const id = document.getElementById('feat_product').value;
+    if (!id) return;
+    await fetch('/api/products/' + id + '/feature', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ is_featured: true })
+    });
+    closeModal('featuredModal');
+    loadData();
+  });
+
+  async function removeFeatured(id) {
+    if (confirm(`Remove ${id} from featured?`)) {
+      await fetch('/api/products/' + id + '/feature', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ is_featured: false })
+      });
+      loadData();
+    }
+  }
 
   document.getElementById('fabricForm').addEventListener('submit', async (e) => {
     e.preventDefault();

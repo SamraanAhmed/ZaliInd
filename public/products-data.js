@@ -243,7 +243,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
-              "is_featured": false,
+              "is_featured": true,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-6ca11e/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-6ca11e/02_ghost_front.webp",
@@ -1145,7 +1145,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
-              "is_featured": false,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/BJJ%20Grappling%20Shorts-1e2539/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/BJJ%20Grappling%20Shorts-1e2539/02_detail.webp",
@@ -9318,7 +9318,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
-              "is_featured": false,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Long%20Sleeve)-5cdd9e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Long%20Sleeve)-5cdd9e/02_detail.webp",
@@ -9623,7 +9623,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
-              "is_featured": false,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Aloha%20Camp%20Shirt-601371/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Aloha%20Camp%20Shirt-601371/02_detail.webp",

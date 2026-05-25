@@ -1040,11 +1040,8 @@
       </div>
       <a href="fabrics.html" class="sec-link">All Fabrics →</a>
     </div>
-    <div class="fab-grid">
-      <div class="fab"><div class="fab-swatch s1"></div><div class="fab-name">Interlock Polyester</div><div class="fab-spec">160-220 GSM · 4-Way Stretch</div></div>
-      <div class="fab"><div class="fab-swatch s2"></div><div class="fab-name">Compression Lycra</div><div class="fab-spec">230-280 GSM · 80/20 Poly-Spandex</div></div>
-      <div class="fab"><div class="fab-swatch s3"></div><div class="fab-name">Peach Skin Microfiber</div><div class="fab-spec">90-110 GSM · Quick Dry</div></div>
-      <div class="fab"><div class="fab-swatch s4"></div><div class="fab-name">Heavy Fleece</div><div class="fab-spec">320-400 GSM · Brushed Back</div></div>
+    <div class="fab-grid" id="home-fab-grid">
+      <!-- Dynamically rendered by JS -->
     </div>
   </div>
 </section>
@@ -1165,6 +1162,7 @@
 </script>
 
 
+<script src="fabrics-data.js"></script>
 <script src="products-data.js"></script>
 <script src="nav.js"></script>
 <script>
@@ -1256,10 +1254,37 @@
     grid.innerHTML = html;
   }
 
+  function renderHomeFabrics() {
+    if (!window.ZALI_FABRICS) return;
+    const grid = document.getElementById('home-fab-grid');
+    if (!grid) return;
+
+    let html = '';
+    const topFabrics = window.ZALI_FABRICS.slice(0, 4);
+    
+    topFabrics.forEach(f => {
+      const swatchStyle = f.image ? `style="background: url('${f.image}') center/cover;"` : '';
+      const swatchClass = f.image ? 'has-img' : (f.swatchClass || 's1');
+      
+      html += `
+        <a href="fabrics.html" class="fab" style="text-decoration: none; color: inherit;">
+          <div class="fab-swatch ${swatchClass}" ${swatchStyle}></div>
+          <div class="fab-name">${f.name}</div>
+          <div class="fab-spec">${f.spec || ''}</div>
+        </a>
+      `;
+    });
+    grid.innerHTML = html;
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', renderFeatured);
+    document.addEventListener('DOMContentLoaded', () => {
+      renderFeatured();
+      renderHomeFabrics();
+    });
   } else {
     renderFeatured();
+    renderHomeFabrics();
   }
 })();
 </script>

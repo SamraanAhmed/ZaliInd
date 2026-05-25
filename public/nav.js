@@ -1,5 +1,5 @@
 /* ============================================================
-   nav.js  —  Dynamic navigation builder for ZALI Industries
+   nav.js, Dynamic navigation builder for ZALI Industries
    Reads ZALI_CATALOG from products-data.js (must be loaded first)
    ============================================================ */
 

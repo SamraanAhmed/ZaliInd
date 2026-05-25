@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ZALI Industries — Custom Sublimated Apparel Manufacturer · Sialkot, Pakistan</title>
+<title>ZALI Industries, Custom Sublimated Apparel Manufacturer · Sialkot, Pakistan</title>
 <meta name="description" content="Custom sublimated sportswear, fightwear, surfwear, and island wear manufactured in Sialkot. From sample to bulk, one factory, no middlemen." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -729,7 +729,7 @@
     .aud-card-title { font-size: 32px; }
   }
 
-  /* INFO STRIP (Free Design + Global Shipping) — BLACK THEME */
+  /* INFO STRIP (Free Design + Global Shipping), BLACK THEME */
   .info-strip-sec { padding: 56px 0 !important; }
   .info-strip {
     display: grid;
@@ -794,14 +794,14 @@
 <!-- TOP TICKER (MARQUEE) -->
 <div class="topbar">
   <div class="topbar-track">
-    <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> FREE DESIGN &amp; MOCKUPS &mdash; FOR EVERYONE</span>
+    <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> FREE DESIGN &amp; MOCKUPS, FOR EVERYONE</span>
     <span>INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot; FOB</span>
     <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> SAMPLE COST DEDUCTED FROM BULK ORDER</span>
-    <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
-    <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> FREE DESIGN &amp; MOCKUPS &mdash; FOR EVERYONE</span>
+    <span>MOQ FROM 25 PIECES</span>
+    <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> FREE DESIGN &amp; MOCKUPS, FOR EVERYONE</span>
     <span>INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot; FOB</span>
     <span><span class="tri tri-sm" style="margin-right:0;border-bottom-color:var(--accent)"></span> SAMPLE COST DEDUCTED FROM BULK ORDER</span>
-    <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
+    <span>MOQ FROM 25 PIECES</span>
   </div>
 </div>
 
@@ -829,7 +829,7 @@
           <div class="placeholder-banner">PLACEHOLDER · Factory Photo</div>
           <div class="hero-photo-overlay">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
-              <span class="photo-tag"><span class="tri tri-sm" style="margin-right:0;"></span> Live · Factory Floor</span>
+              <div></div>
               <span class="photo-label">SIA · 32.49°N</span>
             </div>
             <div>
@@ -927,20 +927,20 @@
   </div>
 </section>
 
-<!-- INFO STRIP — Free Design + Global Shipping -->
+<!-- INFO STRIP, Free Design + Global Shipping -->
 <section class="sec sec-tight info-strip-sec">
   <div class="container">
     <div class="info-strip">
       <div class="info-strip-tile">
         <div class="info-strip-eyebrow"><span class="tri tri-sm"></span> Free Service</div>
         <h3 class="info-strip-title">Design &amp; mockups, <em>always free.</em></h3>
-        <p class="info-strip-desc">Digital mockups for every quote &mdash; no commitment, no design fee, no upfront cost. Free for brands, suppliers, teams, and first-time customers alike. Send us what you have and we'll send back a full digital mockup within 48 hours.</p>
+        <p class="info-strip-desc">Digital mockups for every quote, no commitment, no design fee, no upfront cost. Free for brands, suppliers, teams, and first-time customers alike. Send us what you have and we'll send back a full digital mockup within 48 hours.</p>
       </div>
       <div class="info-strip-divider"></div>
       <div class="info-strip-tile">
         <div class="info-strip-eyebrow"><span class="tri tri-sm"></span> Worldwide Shipping</div>
         <h3 class="info-strip-title">We ship <em>globally.</em></h3>
-        <p class="info-strip-desc">We support multiple international shipping terms &mdash; <strong>DDU, DDP, CNF, and FOB</strong> &mdash; so brands, suppliers, and distributors can manage imports in whatever way works best for them. Default is DDP via DHL, FedEx, or UPS.</p>
+        <p class="info-strip-desc">We support multiple international shipping terms, <strong>DDU, DDP, CNF, and FOB</strong>, so brands, suppliers, and distributors can manage imports in whatever way works best for them. Default is DDP via DHL, FedEx, or UPS.</p>
       </div>
     </div>
   </div>
@@ -1135,7 +1135,7 @@
 
 
 <!-- MOBILE DRAWER -->
-<!-- MOBILE MENU DRAWER (3-level drilldown — mobile only) -->
+<!-- MOBILE MENU DRAWER (3-level drilldown, mobile only) -->
 
 
 
@@ -1175,6 +1175,38 @@
     const grid = document.getElementById('home-feat-grid');
     if (!grid) return;
 
+    let featuredProducts = [];
+    if (window.ZALI_PRODUCT_MAP) {
+      featuredProducts = Object.values(window.ZALI_PRODUCT_MAP).filter(p => p.is_featured);
+    }
+
+    if (featuredProducts.length > 0) {
+      let html = '';
+      featuredProducts.forEach(prod => {
+        const HERO_IMG_ORDER = ['ghost_front', 'model_torso', 'model_bottom', 'model_action', 'model_back', 'flat_lay', 'ghost_back', 'ghost_side', 'detail'];
+        const bestImgKey = prod.images ? HERO_IMG_ORDER.find(k => prod.images[k]) : null;
+        const imgHtml = bestImgKey
+          ? `<img src="${window.optImg(prod.images[bestImgKey], 800)}" alt="${prod.name}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">`
+          : `<div class="prod-img-inner"><svg viewBox="0 0 100 100" fill="none"><path d="M30 25 L50 18 L70 25 L75 35 L70 75 L30 75 L25 35 Z" stroke="currentColor" stroke-width="2"/></svg></div>`;
+        const tag = '<span class="tri tri-sm" style="margin-right:4px;border-bottom-color:var(--accent)"></span> Featured';
+        
+        html += `<a href="product-detail.html?id=${encodeURIComponent(prod.id)}" class="prod">
+          <div class="prod-img">
+            <span class="prod-tag hot">${tag}</span>
+            ${imgHtml}
+          </div>
+          <div class="prod-info">
+            <div class="prod-cat">${prod.category} &middot; ${prod.subcategory}</div>
+            <div class="prod-name">${prod.name}</div>
+            <div class="prod-bottom"><span class="prod-moq">MOQ: <strong>${prod.moq || 25} pcs</strong></span><span class="prod-cta">View →</span></div>
+          </div>
+        </a>`;
+      });
+      grid.innerHTML = html;
+      return;
+    }
+
+    /* Fallback if no products are explicitly marked as featured */
     /* [categoryId, subcategorySlug, label, tagText, tagHot] */
     const picks = [
       ['fightwear',    null,              'Fightwear',    '<span class="tri tri-sm" style="margin-right:4px;border-bottom-color:var(--accent)"></span> Best Seller', true],

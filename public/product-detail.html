@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="page-title">Product — ZALI Industries</title>
+    <title id="page-title">Product, ZALI Industries</title>
     <meta
       name="description"
       id="page-desc"
@@ -626,8 +626,7 @@
     <div class="topbar">
       <div class="topbar-track">
         <span
-          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash;
-          FOR EVERYONE</span
+          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS, FOR EVERYONE</span
         >
         <span
           >INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot;
@@ -639,8 +638,7 @@
         >
         <span>MOQ FROM 25 PIECES &middot; NO FINE PRINT</span>
         <span
-          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS &mdash;
-          FOR EVERYONE</span
+          ><span class="accent-text">▲</span> FREE DESIGN &amp; MOCKUPS, FOR EVERYONE</span
         >
         <span
           >INTERNATIONAL SHIPPING: DDU &middot; DDP &middot; CNF &middot;
@@ -661,7 +659,7 @@
     <div id="pdp-root"></div>
 
     
-<!-- MOBILE MENU DRAWER (3-level drilldown — mobile only) -->
+<!-- MOBILE MENU DRAWER (3-level drilldown, mobile only) -->
 
 
 <!-- FOOTER -->
@@ -881,7 +879,7 @@
             .filter((l) => l.trim());
           const descHtml =
             descLines.map((l) => `<p>${esc(l)}</p>`).join('') ||
-            `<p>Available in polyester and cotton blends. Full customization available — sublimation, DTF, DTG, and screen printing. Logos, graphics, and text on chest, sleeves, back, or hem. Youth and adult sizing available, 2T to 9XL.</p>`;
+            `<p>Available in polyester and cotton blends. Full customization available, sublimation, DTF, DTG, and screen printing. Logos, graphics, and text on chest, sleeves, back, or hem. Youth and adult sizing available, 2T to 9XL.</p>`;
 
           const garment = prod.garmentType
             ? prod.garmentType.charAt(0).toUpperCase() +
@@ -895,15 +893,15 @@
         <div class="pdp-info">
           <div class="pdp-cat"><span class="tri tri-sm"></span> ${esc(prod.category)} &middot; ${esc(prod.subcategory)}</div>
           <h1>${esc(prod.title || prod.name)}</h1>
-          <p class="pdp-tagline">Custom-built to your brand. Full color sublimation, DTF, or screen print. Sample first, bulk to follow.</p>
+          <p class="pdp-tagline">${esc(prod.description || 'Custom-built to your brand. Full color sublimation, DTF, or screen print. Sample first, bulk to follow.')}</p>
 
           <div class="spec-grid">
             <div class="spec-item"><div class="lbl">Garment Type</div><div class="val">${esc(garment)}</div></div>
             <div class="spec-item"><div class="lbl">Fabric</div><div class="val">${esc(fabricDisplay)}</div></div>
-            <div class="spec-item"><div class="lbl">Print Methods</div><div class="val">Sublimation · DTF · DTG · Screen</div></div>
-            <div class="spec-item"><div class="lbl">Size Range</div><div class="val">2T to 9XL · Youth &amp; Adult</div></div>
+            <div class="spec-item"><div class="lbl">Print Methods</div><div class="val">${esc(prod.printMethods || 'Sublimation · DTF · DTG · Screen')}</div></div>
+            <div class="spec-item"><div class="lbl">Size Range</div><div class="val">${esc(prod.sizeRange || '2T to 9XL · Youth & Adult')}</div></div>
             <div class="spec-item"><div class="lbl">Min Order (MOQ)</div><div class="val">${prod.moq || 25} pieces</div></div>
-            <div class="spec-item"><div class="lbl">Lead Time</div><div class="val">12 – 18 days (bulk)</div></div>
+            <div class="spec-item"><div class="lbl">Lead Time</div><div class="val">${esc(prod.leadTime || '12 – 18 days (bulk)')}</div></div>
           </div>
 
         </div>
@@ -913,74 +911,12 @@
         <div class="quote-panel-tag"><span class="tri tri-sm"></span> Custom build for your brand</div>
         <h3>Your <em>brand.</em> Your design.<br>Your fit.</h3>
         <p>Send us your tech pack, sketch, or reference, and we'll return a digital mockup and clear quote within 48 hours. We sample first, you approve, then we run bulk. No commitment until you sign off.</p>
-        <div class="quote-panel-meta">
-          <div class="quote-panel-meta-item"><div class="lbl">MOQ</div><div class="val">${prod.moq || 25} pieces</div></div>
-          <div class="quote-panel-meta-item"><div class="lbl">Lead Time</div><div class="val">12–18 days</div></div>
-          <div class="quote-panel-meta-item"><div class="lbl">Reply</div><div class="val">Within 24h</div></div>
-        </div>
+
         <div class="quote-panel-ctas">
           <a href="contact.html" class="btn btn-light">Request a Quote <span class="arrow">→</span></a>
           <a href="https://wa.me/923294656184" target="_blank" class="btn btn-outline">WhatsApp Us</a>
         </div>
       </div>
-
-      <div class="pdp-description">
-        <h3 class="pdp-section-h"><span class="tri tri-sm"></span> Description</h3>
-        ${descHtml}
-        ${prod.fabric ? `<h4>Fabric</h4><p>${esc(prod.fabric.substring(0, 300))}${prod.fabric.length > 300 ? '…' : ''}</p>` : ''}
-        <div class="sizechart-callout">
-          <div class="sizechart-callout-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-          </div>
-          <div class="sizechart-callout-text">
-            <strong>Use your own size chart</strong>
-            <p>Send us your spec sheet or grade rules and we'll cut to your exact measurements. We'll convert your spec into a tech pack, sample to it, and lock it for production.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="pdp-customization">
-        <h3 class="pdp-section-h"><span class="tri tri-sm"></span> Customization</h3>
-        <p class="pdp-customization-intro">Every garment is built to your brand. Pick one print method or mix several on the same piece — we'll recommend what works best for your fabric, design, and order size.</p>
-        <div class="custom-grid">
-          <div class="custom-card">
-            <div class="custom-card-tag popular">▲ Most Popular</div>
-            <h4>Sublimation</h4>
-            <p>Any pattern, any design, any logo — printed edge to edge, sleeve to hem. Vibrant, permanent, zero cracking or peeling. Works on polyester and poly blends.</p>
-            <div class="custom-card-meta">All-over print &middot; Unlimited colors</div>
-          </div>
-          <div class="custom-card">
-            <div class="custom-card-tag">Short Runs</div>
-            <h4>DTF Print</h4>
-            <p>Direct-to-film, heat-pressed onto the garment. Color-rich, detailed. Works on cotton, poly, and blends.</p>
-            <div class="custom-card-meta">Multi-color &middot; Detailed graphics</div>
-          </div>
-          <div class="custom-card">
-            <div class="custom-card-tag">Premium Finish</div>
-            <h4>Embroidery</h4>
-            <p>Any logo, flat or 3D puff, up to 12 thread colors. Premium hand-feel for caps, polos, hoodies.</p>
-            <div class="custom-card-meta">Up to 12 colors &middot; Flat or 3D</div>
-          </div>
-          <div class="custom-card">
-            <div class="custom-card-tag">Volume</div>
-            <h4>Screen Print</h4>
-            <p>Best for high-volume, bold spot-color designs on cotton and poly. Durable inks, crisp edges.</p>
-            <div class="custom-card-meta">Spot color &middot; High durability</div>
-          </div>
-        </div>
-        <div class="custom-extras">
-          <h4>Also available on this product</h4>
-          <ul>
-            <li>Heat-seal labels &amp; hangtags</li>
-            <li>Custom woven labels</li>
-            <li>Reflective trim &amp; piping</li>
-            <li>Mesh panels &amp; inserts</li>
-            <li>Drawcords, zippers, buttons</li>
-            <li>Anti-odor &amp; UV treatments</li>
-            <li>Padding &amp; lining options</li>
-            <li>Custom colorway matching</li>
-          </ul>
-        </div>
       </div>`;
         }
 
@@ -1046,7 +982,7 @@
 
           // Update page meta
           document.getElementById('page-title').textContent =
-            `${prod.title || prod.name} — ZALI Industries`;
+            `${prod.title || prod.name}, ZALI Industries`;
           document
             .getElementById('page-desc')
             .setAttribute(

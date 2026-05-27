@@ -7,9 +7,9 @@ const db = new sqlite3.Database(dbPath);
 
 async function regenerateCatalog() {
   return new Promise((resolve, reject) => {
-    db.all('SELECT * FROM categories', [], (err, categories) => {
+    db.all('SELECT * FROM categories ORDER BY sort_order ASC, id ASC', [], (err, categories) => {
       if (err) return reject(err);
-      db.all('SELECT * FROM subcategories', [], (err, subcategories) => {
+      db.all('SELECT * FROM subcategories ORDER BY sort_order ASC, id ASC', [], (err, subcategories) => {
         if (err) return reject(err);
         db.all('SELECT * FROM products', [], (err, products) => {
           if (err) return reject(err);

@@ -826,8 +826,10 @@
         </div>
       <div class="hero-visual">
         <div class="hero-photo">
-          <div class="placeholder-banner">PLACEHOLDER · Factory Photo</div>
-          <div class="hero-photo-overlay">
+          <video class="hero-video" autoplay loop muted playsinline style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 2;">
+            <source src="SiteVideos/Main page ground floor video.MOV" type="video/mp4">
+          </video>
+          <div class="hero-photo-overlay" style="z-index: 3;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
               <div></div>
               <span class="photo-label">SIA · 32.49°N</span>
@@ -836,7 +838,7 @@
               <div class="photo-caption"><em>Sublimation press</em><br>at 200°C.<br>Where ink becomes fabric.<span class="small">Plate 04 · Production Bay 2</span></div>
             </div>
           </div>
-          <div class="corner-tri"></div>
+          <div class="corner-tri" style="z-index: 4;"></div>
         </div>
       </div>
     </div>

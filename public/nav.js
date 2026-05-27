@@ -3,7 +3,7 @@
    Reads ZALI_CATALOG from products-data.js (must be loaded first)
    ============================================================ */
 
-window.optImg = function(src, w=800) {
+window.optImg = function (src, w = 800) {
   if (!src) return src;
   const decoded = decodeURIComponent(src);
   const abs = decoded.startsWith('/') ? decoded : '/' + decoded;
@@ -19,11 +19,11 @@ window.optImg = function(src, w=800) {
   // ── Nav structure definition ────────────────────────────────
   // Maps category id → display label + anchor used in nav
   const CAT_META = {
-    'casual-wear':  { label: 'Casual Wear',   anchor: '#casual' },
-    'fightwear':    { label: 'Fightwear',      anchor: '#fightwear' },
-    'sportswear':   { label: 'SportsWear',     anchor: '#sportswear' },
-    'surfwear':     { label: 'SurfWear',       anchor: '#surfwear' },
-    'team-sports':  { label: 'Team Sports',    anchor: '#team' },
+    'casual-wear': { label: 'Casual Wear', anchor: '#casual' },
+    fightwear: { label: 'Fightwear', anchor: '#fightwear' },
+    sportswear: { label: 'SportsWear', anchor: '#sportswear' },
+    surfwear: { label: 'SurfWear', anchor: '#surfwear' },
+    'team-sports': { label: 'Team Sports', anchor: '#team' },
   };
 
   // For Team Sports, group subcategories under their nav group
@@ -42,9 +42,9 @@ window.optImg = function(src, w=800) {
   function productsPageUrl(catId) {
     const anchors = {
       'casual-wear': '#casual',
-      'fightwear':   '#fightwear',
-      'sportswear':  '#sportswear',
-      'surfwear':    '#surfwear',
+      fightwear: '#fightwear',
+      sportswear: '#sportswear',
+      surfwear: '#surfwear',
       'team-sports': '#team',
     };
     return 'products.html' + (anchors[catId] || '');
@@ -61,11 +61,11 @@ window.optImg = function(src, w=800) {
     const colCount = Math.min(subs.length, 7);
     let html = `<div class="bb-cols bb-cols-${colCount}">`;
 
-    subs.forEach(sub => {
+    subs.forEach((sub) => {
       html += `<div class="bb-col">`;
       html += `<h4 class="bb-col-h">${sub.name}</h4>`;
       // Show up to 10 products per subcategory column
-      sub.products.slice(0, 10).forEach(p => {
+      sub.products.slice(0, 10).forEach((p) => {
         html += `<a href="${productUrl(p)}" class="bb-col-link">${p.name}</a>`;
       });
       html += `</div>`;
@@ -78,24 +78,28 @@ window.optImg = function(src, w=800) {
   function buildTeamDropdown(cat) {
     // Group subcategories by their nav group
     const grouped = {};
-    TEAM_NAV_GROUPS.forEach(g => { grouped[g] = []; });
+    TEAM_NAV_GROUPS.forEach((g) => {
+      grouped[g] = [];
+    });
 
-    cat.subcategories.forEach(sub => {
+    cat.subcategories.forEach((sub) => {
       const grp = sub.group || 'Specialty';
       if (!grouped[grp]) grouped[grp] = [];
       grouped[grp].push(sub);
     });
 
-    const colCount = TEAM_NAV_GROUPS.filter(g => grouped[g] && grouped[g].length).length;
+    const colCount = TEAM_NAV_GROUPS.filter(
+      (g) => grouped[g] && grouped[g].length,
+    ).length;
     let html = `<div class="bb-cols bb-cols-${colCount}">`;
 
-    TEAM_NAV_GROUPS.forEach(grp => {
+    TEAM_NAV_GROUPS.forEach((grp) => {
       const subs = grouped[grp];
       if (!subs || !subs.length) return;
 
       html += `<div class="bb-col">`;
       html += `<h4 class="bb-col-h">${grp}</h4>`;
-      subs.forEach(sub => {
+      subs.forEach((sub) => {
         html += `<a href="products.html#team-${sub.slug}" class="bb-col-link">${sub.name}</a>`;
       });
       html += `</div>`;
@@ -117,7 +121,7 @@ window.optImg = function(src, w=800) {
 
     // Build category bar left section
     let catLinks = '';
-    ZALI_CATALOG.categories.forEach(cat => {
+    ZALI_CATALOG.categories.forEach((cat) => {
       const meta = CAT_META[cat.id];
       if (!meta) return;
       catLinks += `
@@ -163,7 +167,7 @@ window.optImg = function(src, w=800) {
     let rootListHtml = '';
     let panelsHtml = '';
 
-    ZALI_CATALOG.categories.forEach(cat => {
+    ZALI_CATALOG.categories.forEach((cat) => {
       const meta = CAT_META[cat.id];
       if (!meta) return;
 
@@ -181,7 +185,7 @@ window.optImg = function(src, w=800) {
         <span class="bb-md-arr">›</span>
       </a>`;
 
-      cat.subcategories.forEach(sub => {
+      cat.subcategories.forEach((sub) => {
         // Add to cat list
         subListHtml += `
       <button type="button" class="bb-md-item" data-go="sub-${sub.id}">
@@ -197,7 +201,7 @@ window.optImg = function(src, w=800) {
       </a>`;
 
         if (sub.products) {
-          sub.products.forEach(prod => {
+          sub.products.forEach((prod) => {
             prodListHtml += `
       <a href="${productUrl(prod)}" class="bb-md-item">
         <span class="bb-md-item-text">${prod.name}</span>
@@ -256,7 +260,7 @@ window.optImg = function(src, w=800) {
 
     const div = document.createElement('div');
     div.innerHTML = menuHtml;
-    while(div.firstChild) {
+    while (div.firstChild) {
       document.body.appendChild(div.firstChild);
     }
   }
@@ -264,7 +268,7 @@ window.optImg = function(src, w=800) {
   // ── Re-attach dropdown + burger behaviour ───────────────────
   function initNavBehavior(navEl) {
     // Dropdown hover
-    navEl.querySelectorAll('.bb-cat').forEach(cat => {
+    navEl.querySelectorAll('.bb-cat').forEach((cat) => {
       const dd = cat.querySelector('.bb-dropdown');
       if (!dd) return;
       cat.addEventListener('mouseenter', () => dd.classList.add('open'));
@@ -277,30 +281,32 @@ window.optImg = function(src, w=800) {
     const closeBtn = document.getElementById('m-close');
 
     function resetToRoot() {
-      document.querySelectorAll('.bb-md-panel').forEach(p => p.classList.remove('active'));
+      document
+        .querySelectorAll('.bb-md-panel')
+        .forEach((p) => p.classList.remove('active'));
       const root = document.querySelector('.bb-md-panel[data-panel="root"]');
       if (root) root.classList.add('active');
     }
-    
+
     function openDrawer() {
       if (!drawer) return;
       drawer.classList.add('open');
       if (overlay) overlay.classList.add('open');
-      burgers.forEach(b => b.classList.add('open'));
+      burgers.forEach((b) => b.classList.add('open'));
       document.body.classList.add('bb-md-locked');
     }
-    
+
     function closeDrawer() {
       if (!drawer) return;
       drawer.classList.remove('open');
       if (overlay) overlay.classList.remove('open');
-      burgers.forEach(b => b.classList.remove('open'));
+      burgers.forEach((b) => b.classList.remove('open'));
       document.body.classList.remove('bb-md-locked');
       setTimeout(resetToRoot, 280);
     }
 
     if (burgers.length && drawer) {
-      burgers.forEach(b => {
+      burgers.forEach((b) => {
         b.addEventListener('click', () => {
           drawer.classList.contains('open') ? closeDrawer() : openDrawer();
         });
@@ -310,13 +316,17 @@ window.optImg = function(src, w=800) {
     }
 
     // Panel drilldown navigation (data-go)
-    document.querySelectorAll('.bb-md-drawer [data-go]').forEach(btn => {
-      btn.addEventListener('click', e => {
+    document.querySelectorAll('.bb-md-drawer [data-go]').forEach((btn) => {
+      btn.addEventListener('click', (e) => {
         if (btn.tagName === 'A') return;
         e.preventDefault();
         const target = btn.getAttribute('data-go');
-        document.querySelectorAll('.bb-md-panel').forEach(p => p.classList.remove('active'));
-        const next = document.querySelector(`.bb-md-panel[data-panel="${target}"]`);
+        document
+          .querySelectorAll('.bb-md-panel')
+          .forEach((p) => p.classList.remove('active'));
+        const next = document.querySelector(
+          `.bb-md-panel[data-panel="${target}"]`,
+        );
         if (next) {
           next.classList.add('active');
           next.scrollTop = 0;
@@ -325,14 +335,16 @@ window.optImg = function(src, w=800) {
     });
 
     // Close drawer when any LINK inside it is clicked
-    document.querySelectorAll('.bb-md-drawer a').forEach(link => {
+    document.querySelectorAll('.bb-md-drawer a').forEach((link) => {
       link.addEventListener('click', closeDrawer);
     });
 
     // Close dropdown on outside click
-    document.addEventListener('click', e => {
+    document.addEventListener('click', (e) => {
       if (!navEl.contains(e.target)) {
-        navEl.querySelectorAll('.bb-dropdown.open').forEach(d => d.classList.remove('open'));
+        navEl
+          .querySelectorAll('.bb-dropdown.open')
+          .forEach((d) => d.classList.remove('open'));
       }
     });
   }

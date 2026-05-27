@@ -508,15 +508,23 @@
     // Categories
     const tbodyC = document.getElementById('category-list');
     tbodyC.innerHTML = catalogData.categories.length ? '' : '<tr><td colspan="4">No categories found.</td></tr>';
-    catalogData.categories.forEach(c => {
-      tbodyC.innerHTML += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.slug}</td><td><button class="btn btn-danger" onclick="deleteItem('categories', '${c.id}')">Delete</button></td></tr>`;
+    catalogData.categories.forEach((c, i) => {
+      tbodyC.innerHTML += `<tr><td>${c.id}</td><td>${c.name}</td><td>${c.slug}</td><td>
+        <button class="btn" style="padding: 4px 8px; margin-right: 4px;" onclick="moveItem('categories', ${i}, -1)" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button class="btn" style="padding: 4px 8px; margin-right: 8px;" onclick="moveItem('categories', ${i}, 1)" ${i === catalogData.categories.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="btn btn-danger" onclick="deleteItem('categories', '${c.id}')">Delete</button>
+      </td></tr>`;
     });
 
     // Subcategories
     const tbodyS = document.getElementById('subcategory-list');
     tbodyS.innerHTML = catalogData.subcategories.length ? '' : '<tr><td colspan="5">No subcategories found.</td></tr>';
-    catalogData.subcategories.forEach(s => {
-      tbodyS.innerHTML += `<tr><td>${s.id}</td><td>${s.name}</td><td>${s.categoryId}</td><td>${s.group_name || '-'}</td><td><button class="btn btn-danger" onclick="deleteItem('subcategories', '${s.id}')">Delete</button></td></tr>`;
+    catalogData.subcategories.forEach((s, i) => {
+      tbodyS.innerHTML += `<tr><td>${s.id}</td><td>${s.name}</td><td>${s.categoryId}</td><td>${s.group_name || '-'}</td><td>
+        <button class="btn" style="padding: 4px 8px; margin-right: 4px;" onclick="moveItem('subcategories', ${i}, -1)" ${i === 0 ? 'disabled' : ''}>↑</button>
+        <button class="btn" style="padding: 4px 8px; margin-right: 8px;" onclick="moveItem('subcategories', ${i}, 1)" ${i === catalogData.subcategories.length - 1 ? 'disabled' : ''}>↓</button>
+        <button class="btn btn-danger" onclick="deleteItem('subcategories', '${s.id}')">Delete</button>
+      </td></tr>`;
     });
 
     // Fabric Families
@@ -605,6 +613,26 @@
       await fetch(`/api/${type}/${id}`, { method: 'DELETE' });
       loadData();
     }
+  }
+
+  async function moveItem(type, index, direction) {
+    const list = type === 'categories' ? catalogData.categories : catalogData.subcategories;
+    if (index + direction < 0 || index + direction >= list.length) return;
+    
+    // Swap the elements locally to calculate new order array
+    const newOrder = list.map(item => item.id);
+    const temp = newOrder[index];
+    newOrder[index] = newOrder[index + direction];
+    newOrder[index + direction] = temp;
+    
+    // Send to backend
+    await fetch(`/api/${type}/reorder`, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ order: newOrder })
+    });
+    
+    loadData();
   }
 
   // Handle Category Submit

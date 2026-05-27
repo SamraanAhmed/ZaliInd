@@ -58,10 +58,10 @@ async function regenerateCatalog() {
   return new Promise((resolve, reject) => {
     console.log('Regenerating products-data.js...');
     
-    db.all('SELECT * FROM categories', [], (err, categories) => {
+    db.all('SELECT * FROM categories ORDER BY sort_order ASC, id ASC', [], (err, categories) => {
       if (err) return reject(err);
       
-      db.all('SELECT * FROM subcategories', [], (err, subcategories) => {
+      db.all('SELECT * FROM subcategories ORDER BY sort_order ASC, id ASC', [], (err, subcategories) => {
         if (err) return reject(err);
         
         db.all('SELECT * FROM products', [], (err, products) => {
@@ -191,8 +191,8 @@ app.get('/admin', isAuthenticated, (req, res) => {
 
 app.get('/api/catalog', isAuthenticated, (req, res) => {
   // Returns raw tables for the admin dashboard
-  db.all('SELECT * FROM categories', [], (err, categories) => {
-    db.all('SELECT * FROM subcategories', [], (err, subcategories) => {
+  db.all('SELECT * FROM categories ORDER BY sort_order ASC, id ASC', [], (err, categories) => {
+    db.all('SELECT * FROM subcategories ORDER BY sort_order ASC, id ASC', [], (err, subcategories) => {
       db.all('SELECT * FROM products', [], (err, products) => {
         db.all('SELECT * FROM fabrics', [], (err, fabrics) => {
           db.all('SELECT * FROM fabric_families', [], (err, fabric_families) => {
@@ -251,6 +251,24 @@ app.delete('/api/categories/:id', isAuthenticated, (req, res) => {
   });
 });
 
+app.put('/api/categories/reorder', isAuthenticated, (req, res) => {
+  const { order } = req.body; // Array of IDs
+  if (!order || !Array.isArray(order)) return res.status(400).send('Invalid order array');
+  
+  let completed = 0;
+  let hasError = false;
+  order.forEach((id, index) => {
+    db.run(`UPDATE categories SET sort_order = ? WHERE id = ?`, [index, id], (err) => {
+      if (err) hasError = true;
+      completed++;
+      if (completed === order.length) {
+        if (hasError) return res.status(500).send('Error updating some items');
+        regenerateCatalog().then(() => res.json({ success: true }));
+      }
+    });
+  });
+});
+
 // Subcategories API
 app.post('/api/subcategories', isAuthenticated, (req, res) => {
   const { id, categoryId, name, slug, group_name } = req.body;
@@ -266,6 +284,24 @@ app.delete('/api/subcategories/:id', isAuthenticated, (req, res) => {
   db.run(`DELETE FROM subcategories WHERE id = ?`, [req.params.id], function(err) {
     if (err) return res.status(500).send(err.message);
     regenerateCatalog().then(() => res.json({ success: true }));
+  });
+});
+
+app.put('/api/subcategories/reorder', isAuthenticated, (req, res) => {
+  const { order } = req.body; // Array of IDs
+  if (!order || !Array.isArray(order)) return res.status(400).send('Invalid order array');
+  
+  let completed = 0;
+  let hasError = false;
+  order.forEach((id, index) => {
+    db.run(`UPDATE subcategories SET sort_order = ? WHERE id = ?`, [index, id], (err) => {
+      if (err) hasError = true;
+      completed++;
+      if (completed === order.length) {
+        if (hasError) return res.status(500).send('Error updating some items');
+        regenerateCatalog().then(() => res.json({ success: true }));
+      }
+    });
   });
 });
 

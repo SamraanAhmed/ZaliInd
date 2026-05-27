@@ -2688,44 +2688,35 @@ footer {
   position: absolute;
   inset: 0;
   transition: transform 0.6s ease;
+  width: 100%;
+  height: 100%;
+}
+.method-big-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .method-big:hover .method-big-bg {
   transform: scale(1.06);
 }
-.method-big.m1 .method-big-bg {
-  background: linear-gradient(135deg, #d6411a 0%, #a8311a 60%, #1a1a1a 100%);
-}
-.method-big.m2 .method-big-bg {
-  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 60%, #0a0a0a 100%);
-}
-.method-big.m3 .method-big-bg {
-  background: linear-gradient(135deg, #14536b 0%, #0a3340 60%, #1a2530 100%);
-}
-.method-big.m4 .method-big-bg {
-  background: linear-gradient(135deg, #6a4a2a 0%, #4a3a1a 60%, #2a2a1a 100%);
-}
-.method-big.m5 .method-big-bg {
-  background: linear-gradient(135deg, #4a4a4a 0%, #2a2a2a 60%, #0a0a0a 100%);
-}
-.method-big-bg::after {
-  content: '';
+.method-big-overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    circle at 30% 30%,
-    rgba(255, 255, 255, 0.08) 0%,
-    transparent 55%
-  );
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 40%, rgba(0,0,0,0.2) 100%);
+  z-index: 1;
+  pointer-events: none;
 }
 .method-big-content {
   position: relative;
   z-index: 2;
   height: 100%;
+  padding: 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 18px;
   color: var(--bg);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 .method-big-num {
   font-family: var(--mono);

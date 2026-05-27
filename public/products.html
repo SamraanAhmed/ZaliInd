@@ -55,9 +55,24 @@
         position: absolute;
         inset: 0;
         transition: transform 0.6s ease;
+        width: 100%;
+        height: 100%;
+      }
+      .picker-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
       }
       .picker-tile:hover .picker-bg {
         transform: scale(1.06);
+      }
+      .picker-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);
+        z-index: 1;
+        pointer-events: none;
       }
       .picker-tile.t1 .picker-bg {
         background: linear-gradient(
@@ -120,6 +135,7 @@
         justify-content: space-between;
         padding: 22px;
         color: var(--bg);
+        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       }
       .picker-num {
         font-family: var(--mono);
@@ -688,6 +704,8 @@
             hashId: 'casual',
             headingHtml: '01 · <em>Casual</em> Wear',
             tagline: 'Everyday basics, elevated.',
+            desktopImg: 'SiteData/Casual%20WearDesktop.png',
+            mobileImg: 'SiteData/Casual%20WearMobile.png'
           },
           sportswear: {
             tileClass: 't5',
@@ -697,6 +715,8 @@
             hashId: 'sportswear',
             headingHtml: '03 · <em>SportsWear</em>',
             tagline: 'Performance gear, fully customized.',
+            desktopImg: 'SiteData/Sportswear%20Desktop.png',
+            mobileImg: 'SiteData/Sportswear%20Mobile.png'
           },
           fightwear: {
             tileClass: 't1',
@@ -706,6 +726,8 @@
             hashId: 'fightwear',
             headingHtml: '02 · <em>Fightwear</em>',
             tagline: 'Built for fighters, branded for brands.',
+            desktopImg: 'SiteData/Fightwear%20Desktop.png',
+            mobileImg: 'SiteData/Fightwear%20Mobile%20(2).png'
           },
           surfwear: {
             tileClass: 't2',
@@ -715,6 +737,8 @@
             hashId: 'surfwear',
             headingHtml: '04 · <em>SurfWear</em>',
             tagline: 'Made for the water and the shore.',
+            desktopImg: 'SiteData/SurfWear%20Desktop.png',
+            mobileImg: 'SiteData/SurfWear%20Mobile.png'
           },
           'team-sports': {
             tileClass: 't3',
@@ -724,6 +748,8 @@
             hashId: 'team',
             headingHtml: '05 · <em>Team</em> Sports',
             tagline: 'Full kits for every sport and every level.',
+            desktopImg: 'SiteData/Team%20Sports%20Desktop.png',
+            mobileImg: 'SiteData/TeamSports%20Mobile.png'
           },
         };
 
@@ -896,7 +922,8 @@
             const cfg = CAT_CONFIG[cat.id];
             if (!cfg) return;
             html += `<a href="#${cfg.hashId}" class="picker-tile ${cfg.tileClass}" id="picker-${cfg.hashId}">
-        <div class="picker-bg"></div>
+        <div class="picker-bg"><img src="${cfg.mobileImg}" alt="${cfg.headingHtml.replace(/<[^>]*>?/gm, '')}"></div>
+        <div class="picker-overlay"></div>
         <div class="picker-content">
           <div class="picker-num"><span class="tri tri-sm"></span> ${cfg.num}</div>
           <div>

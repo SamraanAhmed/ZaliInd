@@ -19,7 +19,7 @@ window.ZALI_FABRICS = [
     "familyDesc": "Our most-used fabric type for sublimation. Polyester takes ink permanently at the molecular level, which means zero fade, zero cracking, and full color saturation across complex prints.",
     "name": "Bird's Eye Mesh",
     "spec": "140-180 GSM · Breathable",
-    "description": "Hexagonal knit polyester for high-airflow sportswear. Soccer, basketball, and training tops where breathability is non-negotiable.",
+    "description": "Hexagonal knit polyester for high-airflow fitnesswear. Soccer, basketball, and training tops where breathability is non-negotiable.",
     "bestFor": "Team Jerseys",
     "metaLabel": "Stretch",
     "metaValue": "2-Way",

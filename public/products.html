@@ -6,7 +6,7 @@
     <title>Products, ZALI Industries</title>
     <meta
       name="description"
-      content="Browse the full ZALI catalog by category, fightwear, surfwear, sportswear, casual, team kits, and more."
+      content="Browse the full ZALI catalog by category, fightwear, surfwear, Fitnesswear, casual, team kits, and more."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -493,7 +493,7 @@
 <!-- Favicon & OpenGraph -->
 <link rel="icon" type="image/svg+xml" href="logo.svg" />
 <meta property="og:title" content="ZALI Industries - Custom Apparel Manufacturer" />
-<meta property="og:description" content="Custom sublimated sportswear, fightwear, and casual apparel. Manufactured direct in Sialkot, Pakistan." />
+<meta property="og:description" content="Custom sublimated Fitnesswear, fightwear, and casual apparel. Manufactured direct in Sialkot, Pakistan." />
 <meta property="og:type" content="website" />
 <meta property="og:image" content="zali-logo.png" />
 
@@ -581,7 +581,7 @@
             <p class="foot-desc">
               A factory-direct manufacturer of sublimated performance apparel.
               Built by hand, by people we know, in the world's capital of
-              sportswear.
+              Fitnesswear.
             </p>
             <div class="foot-social">
               <a href="#" aria-label="Instagram"
@@ -643,7 +643,7 @@
               <li><a href="products.html">All Products</a></li>
               <li><a href="products.html?cat=fightwear">Fightwear</a></li>
               <li><a href="products.html?cat=surfwear">Surfwear</a></li>
-              <li><a href="products.html?cat=sportswear">Sportswear</a></li>
+              <li><a href="products.html?cat=fitnesswear">Fitnesswear</a></li>
               <li><a href="products.html?cat=team-sports">Team Sports</a></li>
               <li><a href="products.html?cat=womens">Women's</a></li>
             </ul>
@@ -707,16 +707,16 @@
             desktopImg: 'SiteData/Casual%20WearDesktop.webp',
             mobileImg: 'SiteData/Casual%20WearMobile.webp'
           },
-          sportswear: {
+          fitnesswear: {
             tileClass: 't5',
             num: '03',
-            titleHtml: '<em>SportsWear</em><br>& Activewear',
+            titleHtml: '<em>Fitnesswear</em><br>& Activewear',
             metaText: 'Compression · Tanks · Tights · Golf · Sets',
-            hashId: 'sportswear',
-            headingHtml: '03 · <em>SportsWear</em>',
+            hashId: 'fitnesswear',
+            headingHtml: '03 · <em>Fitnesswear</em>',
             tagline: 'Performance gear, fully customized.',
-            desktopImg: 'SiteData/Sportswear%20Desktop.webp',
-            mobileImg: 'SiteData/Sportswear%20Mobile.webp'
+            desktopImg: 'SiteData/Fitnesswear%20Desktop.webp',
+            mobileImg: 'SiteData/Fitnesswear%20Mobile.webp'
           },
           fightwear: {
             tileClass: 't1',
@@ -782,7 +782,10 @@
         // ── Build product card HTML ────────────────────────────────────────
         function productCard(prod, subcatSlug) {
           const imgs = prod.images || {};
-          const bestKey = CARD_IMG_ORDER.find((k) => imgs[k]);
+          let bestKey = prod.primaryImageKey;
+          if (!bestKey || !imgs[bestKey]) {
+            bestKey = CARD_IMG_ORDER.find((k) => imgs[k]);
+          }
           const imgSrc = bestKey ? imgs[bestKey] : null;
           const imgHtml = imgSrc
             ? `<img src="${optImg(imgSrc, 600)}" alt="${escHtml(prod.name)}" loading="lazy">`

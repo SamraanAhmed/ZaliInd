@@ -112,7 +112,6 @@ async function regenerateCatalog() {
                     leadTime: prod.leadTime,
                     moq: prod.moq,
                     is_featured: prod.is_featured === 1,
-                    primaryImageKey: prod.primary_image_key || null,
                     images: JSON.parse(prod.images || '{}')
                   });
                 });
@@ -203,13 +202,6 @@ app.get('/api/catalog', isAuthenticated, (req, res) => {
     db.all('SELECT * FROM subcategories ORDER BY sort_order ASC, id ASC', [], (err, subcategories) => {
       db.all('SELECT * FROM products', [], (err, products) => {
         db.all('SELECT * FROM fabrics', [], (err, fabrics) => {
-          const parsedProducts = (products || []).map(p => {
-            let parsedImages = p.images;
-            if (p.images && typeof p.images === 'string' && p.images.startsWith('{')) {
-              try { parsedImages = JSON.parse(p.images); } catch (e) {}
-            }
-            return { ...p, images: parsedImages };
-          });
           const parsedFabrics = (fabrics || []).map(f => {
             let parsedImage = f.image;
             if (f.image && typeof f.image === 'string' && f.image.startsWith('[')) {
@@ -218,7 +210,7 @@ app.get('/api/catalog', isAuthenticated, (req, res) => {
             return { ...f, image: parsedImage };
           });
           db.all('SELECT * FROM fabric_families', [], (err, fabric_families) => {
-            res.json({ categories, subcategories, products: parsedProducts, fabrics: parsedFabrics, fabric_families });
+            res.json({ categories, subcategories, products, fabrics: parsedFabrics, fabric_families });
           });
         });
       });
@@ -328,9 +320,9 @@ app.put('/api/subcategories/reorder', isAuthenticated, (req, res) => {
 });
 
 app.post('/api/products', isAuthenticated, (req, res) => {
-  const { id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured, primaryImageKey } = req.body;
-  db.run(`INSERT INTO products (id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured, primary_image_key) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
-    [id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, JSON.stringify(images), is_featured ? 1 : 0, primaryImageKey || null],
+  const { id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured } = req.body;
+  db.run(`INSERT INTO products (id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+    [id, categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, JSON.stringify(images), is_featured ? 1 : 0],
     function(err) {
       if (err) return res.status(500).send(err.message);
       regenerateCatalog().then(() => res.json({ success: true, id }));
@@ -339,9 +331,9 @@ app.post('/api/products', isAuthenticated, (req, res) => {
 });
 
 app.put('/api/products/:id', isAuthenticated, (req, res) => {
-  const { categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured, primaryImageKey } = req.body;
-  db.run(`UPDATE products SET categoryId = ?, subcategoryId = ?, name = ?, gender = ?, title = ?, description = ?, garmentType = ?, fabric = ?, printMethods = ?, sizeRange = ?, leadTime = ?, moq = ?, images = ?, is_featured = ?, primary_image_key = ? WHERE id = ?`,
-    [categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, JSON.stringify(images), is_featured ? 1 : 0, primaryImageKey || null, req.params.id],
+  const { categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, images, is_featured } = req.body;
+  db.run(`UPDATE products SET categoryId = ?, subcategoryId = ?, name = ?, gender = ?, title = ?, description = ?, garmentType = ?, fabric = ?, printMethods = ?, sizeRange = ?, leadTime = ?, moq = ?, images = ?, is_featured = ? WHERE id = ?`,
+    [categoryId, subcategoryId, name, gender, title, description, garmentType, fabric, printMethods, sizeRange, leadTime, moq, JSON.stringify(images), is_featured ? 1 : 0, req.params.id],
     function(err) {
       if (err) return res.status(500).send(err.message);
       regenerateCatalog().then(() => res.json({ success: true, id: req.params.id }));
@@ -399,3 +391,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+
+regenerateCatalog().then(() => { console.log('Done'); process.exit(0); }).catch(console.error);

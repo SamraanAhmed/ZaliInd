@@ -421,6 +421,20 @@
       <div class="form-group"><label>Description</label><textarea id="p_desc" rows="3"></textarea></div>
 
       <h4 style="margin-top: 20px; margin-bottom: 10px;">Images</h4>
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label>Primary Image (Default View)</label>
+        <select id="p_primaryImageKey">
+          <option value="">Auto-select (Default)</option>
+          <option value="ghost_front">Ghost Front</option>
+          <option value="ghost_back">Ghost Back</option>
+          <option value="model_action">Model Action</option>
+          <option value="model_torso">Model Torso</option>
+          <option value="model_bottom">Model Bottom</option>
+          <option value="model_back">Model Back</option>
+          <option value="flat_lay">Flat Lay</option>
+          <option value="detail">Detail</option>
+        </select>
+      </div>
       <div class="image-uploads">
         <div class="form-group"><label>Model Torso</label><input type="file" id="img_model_torso" accept="image/*"></div>
         <div class="form-group"><label>Model Bottom</label><input type="file" id="img_model_bottom" accept="image/*"></div>
@@ -481,6 +495,7 @@
     document.getElementById('p_leadTime').value = p.leadTime || '';
     document.getElementById('p_fabric').value = p.fabric || '';
     document.getElementById('p_desc').value = p.description || '';
+    document.getElementById('p_primaryImageKey').value = p.primaryImageKey || '';
     
     document.getElementById('productModal').style.display = 'flex';
   }
@@ -702,14 +717,19 @@
       sizeRange: document.getElementById('p_sizeRange').value,
       leadTime: document.getElementById('p_leadTime').value,
       moq: parseInt(document.getElementById('p_moq').value, 10),
+      primaryImageKey: document.getElementById('p_primaryImageKey').value,
+      is_featured: false, // Default to false, overridden below if editing
       images
     };
 
     if (modalMode === 'edit') {
       const existing = catalogData.products.find(x => x.id === product.id);
-      if (existing && existing.images) {
+      if (existing) {
+        product.is_featured = existing.is_featured;
+        if (existing.images) {
         for (const k in existing.images) {
           if (!product.images[k]) product.images[k] = existing.images[k];
+        }
         }
       }
     }

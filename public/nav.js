@@ -21,7 +21,7 @@ window.optImg = function (src, w = 800) {
   const CAT_META = {
     'casual-wear': { label: 'Casual Wear', anchor: '#casual' },
     fightwear: { label: 'Fightwear', anchor: '#fightwear' },
-    sportswear: { label: 'SportsWear', anchor: '#sportswear' },
+    fitnesswear: { label: 'FitnessWear', anchor: '#fitnesswear' },
     surfwear: { label: 'SurfWear', anchor: '#surfwear' },
     'team-sports': { label: 'Team Sports', anchor: '#team' },
   };
@@ -43,7 +43,7 @@ window.optImg = function (src, w = 800) {
     const anchors = {
       'casual-wear': '#casual',
       fightwear: '#fightwear',
-      sportswear: '#sportswear',
+      fitnesswear: '#fitnesswear',
       surfwear: '#surfwear',
       'team-sports': '#team',
     };

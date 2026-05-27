@@ -4,8 +4,8 @@
 # =============================================================
 
 $siteRoot     = "e:\zaliSiteFinal"
-$downloadsPath = "$siteRoot\FinalAllProductsZali\Downloads"
-$outputFile   = "$siteRoot\products-data.js"
+$downloadsPath = "$siteRoot\public\FinalAllProductsZali\Downloads"
+$outputFile   = "$siteRoot\public\products-data.js"
 
 # ---- helpers ------------------------------------------------
 
@@ -209,7 +209,7 @@ $catalog = [ordered]@{}
 $mainCats = @(
     [ordered]@{ folder = "Casual Wear";  id = "casual-wear";  name = "Casual Wear" },
     [ordered]@{ folder = "Fightwear";    id = "fightwear";    name = "Fightwear" },
-    [ordered]@{ folder = "SportsWear";   id = "sportswear";   name = "SportsWear" },
+    [ordered]@{ folder = "FitnessWear";  id = "fitnesswear";  name = "FitnessWear" },
     [ordered]@{ folder = "SurfWear";     id = "surfwear";     name = "SurfWear" },
     [ordered]@{ folder = "Team Sports";  id = "team-sports";  name = "Team Sports" }
 )

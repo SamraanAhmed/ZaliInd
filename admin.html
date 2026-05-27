@@ -335,7 +335,7 @@
       </div>
       <div class="form-row">
         <div class="form-group"><label>Tag (e.g., Most Used)</label><input type="text" id="f_tag"></div>
-        <div class="form-group"><label>Image (Optional)</label><input type="file" id="f_image" accept="image/*"></div>
+        <div class="form-group"><label>Images (Optional)</label><input type="file" id="f_image" accept="image/*" multiple></div>
       </div>
       <div class="form-group"><label>Description</label><textarea id="f_desc" rows="3"></textarea></div>
       <div class="actions">
@@ -801,16 +801,29 @@
       if (ff) familyDesc = ff.description;
     }
 
-    let imagePath = null;
-    const file = document.getElementById('f_image').files[0];
-    if (file) {
-      const fd = new FormData(); fd.append('image', file);
-      const res = await fetch('/api/upload', { method: 'POST', body: fd });
-      const data = await res.json();
-      imagePath = data.path;
+    let imagePaths = [];
+    const files = document.getElementById('f_image').files;
+    if (files.length > 0) {
+      for (let i = 0; i < files.length; i++) {
+        const fd = new FormData(); fd.append('image', files[i]);
+        const res = await fetch('/api/upload', { method: 'POST', body: fd });
+        const data = await res.json();
+        imagePaths.push(data.path);
+      }
     } else if (modalMode === 'edit') {
       const existing = catalogData.fabrics.find(x => x.id === document.getElementById('f_id').value);
-      if (existing) imagePath = existing.image || null;
+      if (existing && existing.image) {
+        if (Array.isArray(existing.image)) {
+          imagePaths = existing.image;
+        } else if (typeof existing.image === 'string') {
+          // Backward compatibility if it was saved as a single string without JSON bracket
+          if (existing.image.startsWith('[')) {
+            try { imagePaths = JSON.parse(existing.image); } catch (e) { imagePaths = [existing.image]; }
+          } else {
+            imagePaths = [existing.image];
+          }
+        }
+      }
     }
 
     const fabric = {
@@ -825,7 +838,7 @@
       swatchClass: document.getElementById('f_swatchClass').value,
       tag: document.getElementById('f_tag').value,
       description: document.getElementById('f_desc').value,
-      image: imagePath
+      image: imagePaths.length > 0 ? imagePaths : null
     };
 
     const url = modalMode === 'edit' ? '/api/fabrics/' + fabric.id : '/api/fabrics';

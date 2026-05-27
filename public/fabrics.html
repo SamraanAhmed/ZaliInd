@@ -344,11 +344,25 @@
           <div class="lib-grid">
       `;
 
-      fam.items.forEach(f => {
+      fam.items.forEach((f, fIdx) => {
+        let swatchContent = '';
+        let swatchClass = f.swatchClass || 's1';
+        
+        if (f.image && Array.isArray(f.image) && f.image.length > 0) {
+          swatchClass = 'has-img multi-img';
+          f.image.forEach((img, idx) => {
+            swatchContent += `<div class="slide ${idx === 0 ? 'active' : ''}" style="background: url('${img}') center/cover;"></div>`;
+          });
+        } else if (f.image && typeof f.image === 'string') {
+          swatchClass = 'has-img multi-img';
+          swatchContent += `<div class="slide active" style="background: url('${f.image}') center/cover;"></div>`;
+        }
+
         famHtml += `
           <div class="lib-fab">
-            <div class="lib-swatch ${f.image ? 'has-img' : (f.swatchClass || 's1')}" ${f.image ? `style="background: url('${f.image}') center/cover;"` : ''}>
-              <span class="lib-swatch-tag">
+            <div class="lib-swatch ${swatchClass}" id="fab-${f.id}">
+              ${swatchContent}
+              <span class="lib-swatch-tag" style="z-index: 3;">
                 <span class="tri tri-sm" style="margin-right:4px;border-bottom-color:var(--accent)"></span>
                 ${f.tag || ''}
               </span>
@@ -371,6 +385,21 @@
     });
 
     container.innerHTML = html;
+
+    // Start transitions for multi-image swatches
+    setTimeout(() => {
+      document.querySelectorAll('#fabrics-container .multi-img').forEach(swatch => {
+        const slides = swatch.querySelectorAll('.slide');
+        if (slides.length > 1) {
+          let current = 0;
+          setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+          }, 5000);
+        }
+      });
+    }, 100);
   });
 </script>
 </body>

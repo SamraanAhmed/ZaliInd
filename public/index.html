@@ -862,8 +862,8 @@
     <div class="cat-grid">
       <a href="products.html#casual" class="cat cat-4">
         <picture class="cat-bg">
-          <source media="(max-width: 768px)" srcset="SiteData/Casual%20WearMobile.png">
-          <img src="SiteData/Casual%20WearDesktop.png" alt="Casual Wear">
+          <source media="(max-width: 768px)" srcset="SiteData/Casual%20WearMobile.webp">
+          <img src="SiteData/Casual%20WearDesktop.webp" alt="Casual Wear">
         </picture>
         <div class="cat-overlay"></div>
         <div class="cat-content">
@@ -876,8 +876,8 @@
     </a>
       <a href="products.html#fightwear" class="cat cat-1">
         <picture class="cat-bg">
-          <source media="(max-width: 768px)" srcset="SiteData/Fightwear%20Mobile%20(2).png">
-          <img src="SiteData/Fightwear%20Desktop.png" alt="Fightwear">
+          <source media="(max-width: 768px)" srcset="SiteData/Fightwear%20Mobile%20(2).webp">
+          <img src="SiteData/Fightwear%20Desktop.webp" alt="Fightwear">
         </picture>
         <div class="cat-overlay"></div>
         <div class="cat-content">
@@ -890,8 +890,8 @@
     </a>
       <a href="products.html#sportswear" class="cat cat-4">
         <picture class="cat-bg">
-          <source media="(max-width: 768px)" srcset="SiteData/Sportswear%20Mobile.png">
-          <img src="SiteData/Sportswear%20Desktop.png" alt="Sportswear">
+          <source media="(max-width: 768px)" srcset="SiteData/Sportswear%20Mobile.webp">
+          <img src="SiteData/Sportswear%20Desktop.webp" alt="Sportswear">
         </picture>
         <div class="cat-overlay"></div>
         <div class="cat-content">
@@ -904,8 +904,8 @@
     </a>
       <a href="products.html#surfwear" class="cat cat-2">
         <picture class="cat-bg">
-          <source media="(max-width: 768px)" srcset="SiteData/SurfWear%20Mobile.png">
-          <img src="SiteData/SurfWear%20Desktop.png" alt="Surfwear">
+          <source media="(max-width: 768px)" srcset="SiteData/SurfWear%20Mobile.webp">
+          <img src="SiteData/SurfWear%20Desktop.webp" alt="Surfwear">
         </picture>
         <div class="cat-overlay"></div>
         <div class="cat-content">
@@ -918,8 +918,8 @@
     </a>
       <a href="products.html#team" class="cat cat-5">
         <picture class="cat-bg">
-          <source media="(max-width: 768px)" srcset="SiteData/TeamSports%20Mobile.png">
-          <img src="SiteData/Team%20Sports%20Desktop.png" alt="Team Sports">
+          <source media="(max-width: 768px)" srcset="SiteData/TeamSports%20Mobile.webp">
+          <img src="SiteData/Team%20Sports%20Desktop.webp" alt="Team Sports">
         </picture>
         <div class="cat-overlay"></div>
         <div class="cat-content">
@@ -986,7 +986,7 @@
     <!-- BIGGER VISUAL CARDS (link to print-methods page) -->
     <div class="method-bigs">
       <a href="print-methods.html#sublimation" class="method-big m1">
-        <div class="method-big-bg"><img src="SiteData/Sublimation.png" alt="Dye Sublimation"></div>
+        <div class="method-big-bg"><img src="SiteData/Sublimation.webp" alt="Dye Sublimation"></div>
         <div class="method-big-overlay"></div>
         <div class="method-big-content">
           <div>
@@ -999,7 +999,7 @@
         </div>
     </a>
       <a href="print-methods.html#screen-print" class="method-big m2">
-        <div class="method-big-bg"><img src="SiteData/Screen%20Print.jpg" alt="Screen Print"></div>
+        <div class="method-big-bg"><img src="SiteData/Screen%20Print.webp" alt="Screen Print"></div>
         <div class="method-big-overlay"></div>
         <div class="method-big-content">
           <div>
@@ -1012,7 +1012,7 @@
         </div>
     </a>
       <a href="print-methods.html#dtf" class="method-big m3">
-        <div class="method-big-bg"><img src="SiteData/DTF%20Heat%20Transfer.png" alt="DTF Print"></div>
+        <div class="method-big-bg"><img src="SiteData/DTF%20Heat%20Transfer.webp" alt="DTF Print"></div>
         <div class="method-big-overlay"></div>
         <div class="method-big-content">
           <div>
@@ -1038,7 +1038,7 @@
         </div>
     </a>
       <a href="print-methods.html#heat-transfer" class="method-big m5">
-        <div class="method-big-bg"><img src="SiteData/Heat%20Vinyl.png" alt="Heat Transfer"></div>
+        <div class="method-big-bg"><img src="SiteData/Heat%20Vinyl.webp" alt="Heat Transfer"></div>
         <div class="method-big-overlay"></div>
         <div class="method-big-content">
           <div>
@@ -1287,19 +1287,44 @@
     let html = '';
     const topFabrics = window.ZALI_FABRICS.slice(0, 4);
     
-    topFabrics.forEach(f => {
-      const swatchStyle = f.image ? `style="background: url('${f.image}') center/cover;"` : '';
-      const swatchClass = f.image ? 'has-img' : (f.swatchClass || 's1');
+    topFabrics.forEach((f, i) => {
+      let swatchContent = '';
+      let swatchClass = f.swatchClass || 's1';
+      
+      if (f.image && Array.isArray(f.image) && f.image.length > 0) {
+        swatchClass = 'has-img multi-img';
+        f.image.forEach((img, idx) => {
+          swatchContent += `<div class="slide ${idx === 0 ? 'active' : ''}" style="background: url('${img}') center/cover;"></div>`;
+        });
+      } else if (f.image && typeof f.image === 'string') {
+        swatchClass = 'has-img multi-img';
+        swatchContent += `<div class="slide active" style="background: url('${f.image}') center/cover;"></div>`;
+      }
       
       html += `
         <a href="fabrics.html" class="fab" style="text-decoration: none; color: inherit;">
-          <div class="fab-swatch ${swatchClass}" ${swatchStyle}></div>
+          <div class="fab-swatch ${swatchClass}" id="home-fab-swatch-${i}">${swatchContent}</div>
           <div class="fab-name">${f.name}</div>
           <div class="fab-spec">${f.spec || ''}</div>
         </a>
       `;
     });
     grid.innerHTML = html;
+
+    // Start transitions for multi-image swatches
+    setTimeout(() => {
+      document.querySelectorAll('#home-fab-grid .multi-img').forEach(swatch => {
+        const slides = swatch.querySelectorAll('.slide');
+        if (slides.length > 1) {
+          let current = 0;
+          setInterval(() => {
+            slides[current].classList.remove('active');
+            current = (current + 1) % slides.length;
+            slides[current].classList.add('active');
+          }, 5000);
+        }
+      });
+    }, 100);
   }
 
   if (document.readyState === 'loading') {

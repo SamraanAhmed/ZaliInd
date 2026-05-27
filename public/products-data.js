@@ -30,6 +30,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/crew%20neck%20full%20sleeve%20sublimated%20t-shirt-14bb50/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/crew%20neck%20full%20sleeve%20sublimated%20t-shirt-14bb50/02_ghost_front.webp",
@@ -55,6 +56,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Crop%20Shirt-29913b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Crop%20Shirt-29913b/02_detail.webp",
@@ -81,6 +83,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Crop%20T-Shirt-25d9a7/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Crop%20T-Shirt-25d9a7/02_ghost_front.webp",
@@ -106,6 +109,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Heavyweight%20T-Shirt/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Heavyweight%20T-Shirt/02_ghost_front.webp",
@@ -131,6 +135,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Henley%20T-Shirt/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Henley%20T-Shirt/02_ghost_front.webp",
@@ -155,6 +160,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Hooded%20Long%20Sleeve%20Tee/02_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Hooded%20Long%20Sleeve%20Tee/03_ghost_front.webp",
@@ -179,6 +185,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Long%20Sleeve%20v-neck%20T-Shirt-f2ea3e/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Long%20Sleeve%20v-neck%20T-Shirt-f2ea3e/02_ghost_front.webp",
@@ -205,6 +212,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Oversized%20T-Shirt/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/Oversized%20T-Shirt/02_ghost_front.webp",
@@ -230,6 +238,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/V-Neck%20T-Shirt%20short%20sleeve%20sublimated%20t-shirt/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Tshirts/V-Neck%20T-Shirt%20short%20sleeve%20sublimated%20t-shirt/02_ghost_front.webp",
@@ -262,6 +271,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Aloha%20Polo-07f7d6/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Aloha%20Polo-07f7d6/02_ghost_front.webp",
@@ -287,6 +297,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Long%20Sleeve%20Polo-314654/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Long%20Sleeve%20Polo-314654/02_detail.webp",
@@ -313,6 +324,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Performance%20Polo%20subliamtion%20tight%20fit/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Performance%20Polo%20subliamtion%20tight%20fit/02_ghost_front.webp",
@@ -338,6 +350,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Quarter-Zip%20Polo/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Quarter-Zip%20Polo/02_ghost_front.webp",
@@ -362,6 +375,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Short%20Sleeve%20Polo-6a3016/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Polos/Short%20Sleeve%20Polo-6a3016/02_ghost_front.webp",
@@ -394,6 +408,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Aloha%20Shirt%20(Classic)-43fcaa/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Aloha%20Shirt%20(Classic)-43fcaa/02_ghost_front.webp",
@@ -418,6 +433,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Camp%20Collar%20Shirt-1c2406/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Camp%20Collar%20Shirt-1c2406/02_ghost_front.webp",
@@ -442,6 +458,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Cuban%20Collar%20Shirt-bccf8b/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Cuban%20Collar%20Shirt-bccf8b/02_ghost_front.webp",
@@ -467,6 +484,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Linen%20Shirt%20Slim%20fIt-7cec80/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Linen%20Shirt%20Slim%20fIt-7cec80/02_ghost_front.webp",
@@ -492,6 +510,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Long%20Sleeve%20Aloha%20Shirt-2537f5/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Long%20Sleeve%20Aloha%20Shirt-2537f5/02_detail.webp",
@@ -517,6 +536,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Mandarin%20Collar%20Aloha-ca98b3/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Mandarin%20Collar%20Aloha-ca98b3/02_ghost_front.webp",
@@ -542,6 +562,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Palaka%20Shirt-fc7bbc/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Palaka%20Shirt-fc7bbc/02_ghost_front.webp",
@@ -567,6 +588,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Wedding%20Aloha%20Shirt-cdf06c/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Shirts/Wedding%20Aloha%20Shirt-cdf06c/02_ghost_front.webp",
@@ -599,6 +621,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Crew%20Neck%20Sweatshirt-a4ca18/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Crew%20Neck%20Sweatshirt-a4ca18/02_detail.webp",
@@ -624,6 +647,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Cropped%20Hoodie-7efd01/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Cropped%20Hoodie-7efd01/02_detail.webp",
@@ -649,6 +673,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Full%20Zip%20Hoodie-9cf16e/01_flat_lay.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Full%20Zip%20Hoodie-9cf16e/03_ghost_front.webp",
@@ -673,6 +698,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Hoodie%20&%20Jogger%20Set-2c27a8/01_flat_lay.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Hoodie%20&%20Jogger%20Set-2c27a8/02_ghost_front.webp",
@@ -697,6 +723,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-3af5ff/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-3af5ff/02_ghost_front.webp",
@@ -722,6 +749,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": true,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-6ca11e/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Pullover%20Hoodie-6ca11e/02_ghost_front.webp",
@@ -747,6 +775,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Quarter-Zip%20Pullover-7ad5a4/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Hoodies%20and%20Sweat%20Shirts/Quarter-Zip%20Pullover-7ad5a4/02_ghost_front.webp",
@@ -779,6 +808,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Joggers-0cecba/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Joggers-0cecba/02_ghost_front.webp",
@@ -804,6 +834,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Sweatpants%20subliamted-8d133d/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Sweatpants%20subliamted-8d133d/02_ghost_front.webp",
@@ -829,6 +860,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Walkshorts-878a31/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/Bottoms/Walkshorts-878a31/02_ghost_front.webp",
@@ -861,6 +893,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Bomber%20Jacket%20Subliamted-095cd2/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Bomber%20Jacket%20Subliamted-095cd2/02_ghost_front.webp",
@@ -886,6 +919,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Coach%20Jacket-11f482/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Coach%20Jacket-11f482/02_ghost_front.webp",
@@ -910,6 +944,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Puffer%20Vest-53dd62/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Puffer%20Vest-53dd62/02_ghost_front.webp",
@@ -935,6 +970,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Sideline%20Jacket-64a271/02_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Sideline%20Jacket-64a271/03_ghost_front.webp",
@@ -959,6 +995,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Softshell%20Jacket-afa519/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Softshell%20Jacket-afa519/02_detail.webp",
@@ -985,6 +1022,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Track%20Jacket-c33f1d/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Track%20Jacket-c33f1d/02_ghost_front.webp",
@@ -1010,6 +1048,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Varsity%20Jacket-2d60c0/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Varsity%20Jacket-2d60c0/02_ghost_front.webp",
@@ -1035,6 +1074,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "detail": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Windbreaker-581df3/01_detail.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/OUterwear/Windbreaker-581df3/02_ghost_front.webp",
@@ -1067,6 +1107,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "ghost_front": "FinalAllProductsZali/Downloads/Casual%20Wear/sets/Tracksuit%20Set-a0c70b/01_ghost_front.webp",
                 "ghost_back": "FinalAllProductsZali/Downloads/Casual%20Wear/sets/Tracksuit%20Set-a0c70b/02_ghost_back.webp",
@@ -1104,6 +1145,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Long%20Sleeve)-5cdd9e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Long%20Sleeve)-5cdd9e/02_detail.webp",
@@ -1130,6 +1172,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Short%20Sleeve)-0f748c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Compression%20Top%20(Short%20Sleeve)-0f748c/02_detail.webp",
@@ -1156,6 +1199,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Crop%20Training%20Top-5bb18b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Crop%20Training%20Top-5bb18b/02_detail.webp",
@@ -1182,6 +1226,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Half%20Sleeve%20Sublimated%20Perfromance%20T-Shirt-45fc28/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Half%20Sleeve%20Sublimated%20Perfromance%20T-Shirt-45fc28/02_detail.webp",
@@ -1207,6 +1252,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Hlaf%20Sleeve%20Performance%20Tee-08e48c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Hlaf%20Sleeve%20Performance%20Tee-08e48c/02_detail.webp",
@@ -1232,6 +1278,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Long%20Sleeve%20Performance%20Tee%20raglan%20sleeve%20Sublimated-5e0b74/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Long%20Sleeve%20Performance%20Tee%20raglan%20sleeve%20Sublimated-5e0b74/02_detail.webp",
@@ -1257,6 +1304,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Performance%20Tank-73fabf/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Performance%20Tank-73fabf/02_detail.webp",
@@ -1282,6 +1330,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Racerback%20Tank-adccd3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Racerback%20Tank-adccd3/02_detail.webp",
@@ -1307,6 +1356,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Sports%20Bra-d8e3b9/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Sports%20Bra-d8e3b9/02_detail.webp",
@@ -1332,6 +1382,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Stringer%20Tank-e034c2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Stringer%20Tank-e034c2/02_detail.webp",
@@ -1358,6 +1409,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Weightlifting%20Singlet-ab458c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Tops/Weightlifting%20Singlet-ab458c/02_detail.webp",
@@ -1391,6 +1443,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/2%20in%201%20shorts%20women-d75ad1/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/2%20in%201%20shorts%20women-d75ad1/02_detail.webp",
@@ -1417,6 +1470,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/2-in-1%20Shorts-36e074/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/2-in-1%20Shorts-36e074/02_detail.webp",
@@ -1442,6 +1496,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Biker%20Shorts-0b65a1/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Biker%20Shorts-0b65a1/02_detail.webp",
@@ -1467,6 +1522,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Bra%20&%20Shorts%20Set-3b1c91/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Bra%20&%20Shorts%20Set-3b1c91/02_detail.webp",
@@ -1493,6 +1549,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Compression%20Shorts-930f69/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Compression%20Shorts-930f69/02_detail.webp",
@@ -1518,6 +1575,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Compression%20Tights-f47b65/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Compression%20Tights-f47b65/02_detail.webp",
@@ -1543,6 +1601,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Flare%20Leggings-2ec387/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Flare%20Leggings-2ec387/02_detail.webp",
@@ -1568,6 +1627,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "ghost_front": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/French%20Terry%20Shorts-01dd7a/01_ghost_front.webp",
                 "ghost_back": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/French%20Terry%20Shorts-01dd7a/02_ghost_back.webp",
@@ -1592,6 +1652,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Gym%20Shorts-29daac/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Gym%20Shorts-29daac/02_detail.webp",
@@ -1617,6 +1678,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/High-Waist%20Leggings-1fc993/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/High-Waist%20Leggings-1fc993/02_detail.webp",
@@ -1643,6 +1705,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/High-Waist%20Leggings-9e15c2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/High-Waist%20Leggings-9e15c2/02_detail.webp",
@@ -1669,6 +1732,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Running%20Shorts-aa7e55/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Running%20Shorts-aa7e55/02_detail.webp",
@@ -1695,6 +1759,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Running%20Tights-a4268c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Running%20Tights-a4268c/02_detail.webp",
@@ -1719,6 +1784,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Scrunch%20Bum%20Leggings-3acb49/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Scrunch%20Bum%20Leggings-3acb49/02_detail.webp",
@@ -1745,6 +1811,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Tee%20&%20Shorts%20Set-4856da/01_flat_lay.webp",
                 "ghost_front": "FinalAllProductsZali/Downloads/SportsWear/Training%20Bottoms/Tee%20&%20Shorts%20Set-4856da/02_ghost_front.webp",
@@ -1776,6 +1843,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Accessories/Compression%20Arm%20Sleeve-55ab05/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Accessories/Compression%20Arm%20Sleeve-55ab05/02_detail.webp",
@@ -1801,6 +1869,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Accessories/Neck%20Gaiter-e61c6f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Accessories/Neck%20Gaiter-e61c6f/02_detail.webp",
@@ -1833,6 +1902,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Pants-4a9955/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Pants-4a9955/02_detail.webp",
@@ -1858,6 +1928,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Polo-5a091b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Polo-5a091b/02_detail.webp",
@@ -1883,6 +1954,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Quarter-Zip-184405/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Quarter-Zip-184405/02_detail.webp",
@@ -1908,6 +1980,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Shorts-1523bf/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Shorts-1523bf/02_detail.webp",
@@ -1933,6 +2006,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Skort-ef6c1c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Golf%20Skort-ef6c1c/02_detail.webp",
@@ -1958,6 +2032,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Tennis%20Dress-b6392d/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Tennis%20Dress-b6392d/02_detail.webp",
@@ -1983,6 +2058,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Tennis%20Skirt-3304e7/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Golf%20&%20Court/Tennis%20Skirt-3304e7/02_detail.webp",
@@ -2014,6 +2090,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Sets/Bra%20&%20Leggings%20Set-c41b49/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Sets/Bra%20&%20Leggings%20Set-c41b49/02_detail.webp",
@@ -2040,6 +2117,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Sets/Compression%20Set%20for%20men-2d935a/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Sets/Compression%20Set%20for%20men-2d935a/02_detail.webp",
@@ -2066,6 +2144,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SportsWear/Sets/Compression%20Set%20for%20men-ab4af7/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SportsWear/Sets/Compression%20Set%20for%20men-ab4af7/02_detail.webp",
@@ -2106,6 +2185,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/BJJ%20Grappling%20Shorts-1e2539/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/BJJ%20Grappling%20Shorts-1e2539/02_detail.webp",
@@ -2132,6 +2212,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Boxing%20Shorts-6a67ec/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Boxing%20Shorts-6a67ec/02_detail.webp",
@@ -2158,6 +2239,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/K1%20Shorts-437831/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/K1%20Shorts-437831/02_detail.webp",
@@ -2184,6 +2266,7 @@ window.ZALI_CATALOG = {
               "sizeRange": "",
               "leadTime": "",
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight Shorts/MMA Fight Shorts-e58f47/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight Shorts/MMA Fight Shorts-e58f47/02_detail.webp",
@@ -2210,6 +2293,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Muay%20Thai%20Shorts-c20ae3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Muay%20Thai%20Shorts-c20ae3/02_detail.webp",
@@ -2236,6 +2320,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Vale%20Tudo%20Shorts-c959ac/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Vale%20Tudo%20Shorts-c959ac/02_detail.webp",
@@ -2261,6 +2346,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Wrestling%20Shorts-bd64d6/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Fight%20Shorts/Wrestling%20Shorts-bd64d6/02_detail.webp",
@@ -2293,6 +2379,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/Long%20Sleeve%20Rashguard-f89043/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/Long%20Sleeve%20Rashguard-f89043/02_detail.webp",
@@ -2319,6 +2406,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/short%20sleeve%20rashguard-1f5014/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/short%20sleeve%20rashguard-1f5014/02_detail.webp",
@@ -2345,6 +2433,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/Sleeveless%20Rashguard/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Rashguards/Sleeveless%20Rashguard/02_detail.webp",
@@ -2377,6 +2466,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Sets/Spats%20&%20Shorts%20Set-103ad4/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Sets/Spats%20&%20Shorts%20Set-103ad4/02_detail.webp",
@@ -2402,6 +2492,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Sets/Spats-e76673/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Sets/Spats-e76673/02_detail.webp",
@@ -2434,6 +2525,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Boxing%20Walkout%20Robe-44eddf/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Boxing%20Walkout%20Robe-44eddf/02_detail.webp",
@@ -2459,6 +2551,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/MMA%20Training%20Tee-715b2a/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/MMA%20Training%20Tee-715b2a/02_detail.webp",
@@ -2484,6 +2577,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Wrestling%20Singlet-d0ac44/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Wrestling%20Singlet-d0ac44/02_detail.webp",
@@ -2509,6 +2603,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Wrestling%20Warmup%20Set-1c32d6/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Fightwear/Training%20&%20Sets/Wrestling%20Warmup%20Set-1c32d6/02_detail.webp",
@@ -2549,6 +2644,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Hawaiian%20Print%20Rashguard-317918/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Hawaiian%20Print%20Rashguard-317918/02_detail.webp",
@@ -2575,6 +2671,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Hawaiian%20Print%20Rashguard-5c672d/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Hawaiian%20Print%20Rashguard-5c672d/02_detail.webp",
@@ -2601,6 +2698,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Paddling%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Paddling%20Jersey/02_detail.webp",
@@ -2626,6 +2724,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Paddling%20Jersey-7613d3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Paddling%20Jersey-7613d3/02_detail.webp",
@@ -2651,6 +2750,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Poncho-23dea8/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Poncho-23dea8/02_detail.webp",
@@ -2677,6 +2777,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Shirt%20(Long%20Sleeve)-fc9243/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Shirt%20(Long%20Sleeve)-fc9243/02_detail.webp",
@@ -2702,6 +2803,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Shirt%20(Short%20Sleeve)-a854e7/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Shirt%20(Short%20Sleeve)-a854e7/02_detail.webp",
@@ -2728,6 +2830,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Tank-60baff/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Tops/Surf%20Tank-60baff/02_detail.webp",
@@ -2760,6 +2863,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/2-in-1%20Swim%20Shorts-41ff63/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/2-in-1%20Swim%20Shorts-41ff63/02_detail.webp",
@@ -2786,6 +2890,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/BoardShorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/BoardShorts/02_detail.webp",
@@ -2811,6 +2916,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-1d8e7e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-1d8e7e/02_detail.webp",
@@ -2837,6 +2943,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-94d303/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-94d303/02_detail.webp",
@@ -2863,6 +2970,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-d75c34/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Boardshorts-d75c34/02_detail.webp",
@@ -2889,6 +2997,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Brazilian%20bikini%20bottom-a7ea5f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Brazilian%20bikini%20bottom-a7ea5f/02_detail.webp",
@@ -2914,6 +3023,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Hawaiian%20Print%20Leggings-35351c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Hawaiian%20Print%20Leggings-35351c/02_detail.webp",
@@ -2940,6 +3050,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Hybrid%20Shorts-2d7c0f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Hybrid%20Shorts-2d7c0f/02_detail.webp",
@@ -2966,6 +3077,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Surf%20Bikini%20Bottoms-715040/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Surf%20Bikini%20Bottoms-715040/02_detail.webp",
@@ -2991,6 +3103,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Swim%20Jammers-69aef2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Swim%20Jammers-69aef2/02_detail.webp",
@@ -3016,6 +3129,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Swim%20Leggings-0c15e3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Swim%20Leggings-0c15e3/02_detail.webp",
@@ -3042,6 +3156,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Thong%20Pirnt%20Bikini%20Bottom-2b7d0a/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/In-Water%20Bottoms/Thong%20Pirnt%20Bikini%20Bottom-2b7d0a/02_detail.webp",
@@ -3074,6 +3189,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": true,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Aloha%20Camp%20Shirt-601371/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Aloha%20Camp%20Shirt-601371/02_detail.webp",
@@ -3099,6 +3215,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Beach%20WalkShorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Beach%20WalkShorts/02_detail.webp",
@@ -3124,6 +3241,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Beach%20Walkshorts-dd7f2e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Beach%20Walkshorts-dd7f2e/02_detail.webp",
@@ -3150,6 +3268,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/BoardShorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/BoardShorts/02_detail.webp",
@@ -3175,6 +3294,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Surf%20Hoodie-0179fe/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Surf%20Hoodie-0179fe/02_detail.webp",
@@ -3200,6 +3320,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Surf%20One-Piece-6b0990/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Surf%20One-Piece-6b0990/02_detail.webp",
@@ -3225,6 +3346,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Swim%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Swim%20Shorts/02_detail.webp",
@@ -3250,6 +3372,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Terry%20Shorts-34b19b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/Terry%20Shorts-34b19b/02_detail.webp",
@@ -3275,6 +3398,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/UPF%20Hooded%20Sun%20Shirt-ab9f02/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/UPF%20Hooded%20Sun%20Shirt-ab9f02/02_detail.webp",
@@ -3301,6 +3425,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/UPF%20Sun%20Shirt%20(Short%20Sleeve)-3ecd66/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Beach%20Lifestyle/UPF%20Sun%20Shirt%20(Short%20Sleeve)-3ecd66/02_detail.webp",
@@ -3333,6 +3458,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Fishing%20Polo-63612f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Fishing%20Polo-63612f/02_detail.webp",
@@ -3358,6 +3484,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Hooded%20Fishing%20Shirt%201-0f50f0/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Hooded%20Fishing%20Shirt%201-0f50f0/02_detail.webp",
@@ -3384,6 +3511,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Hooded%20Fishing%20Shirt-3821e2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Hooded%20Fishing%20Shirt-3821e2/02_detail.webp",
@@ -3410,6 +3538,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Long%20Sleeve%20Fishing%20Shirt-d69915/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Long%20Sleeve%20Fishing%20Shirt-d69915/02_detail.webp",
@@ -3436,6 +3565,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Short%20Sleeve%20Fishing%20Shirt-6247a5/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Short%20Sleeve%20Fishing%20Shirt-6247a5/02_detail.webp",
@@ -3461,6 +3591,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Swim%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/SurfWear/Fishing/Swim%20Shorts/02_detail.webp",
@@ -3500,6 +3631,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Compression%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Compression%20Shorts/02_detail.webp",
@@ -3525,6 +3657,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Long%20Sleeve)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Long%20Sleeve)/02_detail.webp",
@@ -3550,6 +3683,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Sleeveless)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Sleeveless)/02_detail.webp",
@@ -3575,6 +3709,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Sleeveless)-c6827e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Jersey%20(Sleeveless)-c6827e/02_detail.webp",
@@ -3600,6 +3735,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Shorts%20(Loose%20Fit)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Shorts%20(Loose%20Fit)/02_detail.webp",
@@ -3625,6 +3761,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Shorts%20(Loose%20Fit)-8b65b6/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Shorts%20(Loose%20Fit)-8b65b6/02_detail.webp",
@@ -3650,6 +3787,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Uniform%20Set/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7-on-7%20Uniform%20Set/02_detail.webp",
@@ -3676,6 +3814,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7on7%20Uniform/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/7-on-7%20Football/7on7%20Uniform/02_detail.webp",
@@ -3709,6 +3848,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Game%20Uniform%20Set/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Game%20Uniform%20Set/02_detail.webp",
@@ -3735,6 +3875,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Game%20Cut)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Game%20Cut)/02_detail.webp",
@@ -3761,6 +3902,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Pro%20Cut)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Pro%20Cut)/02_detail.webp",
@@ -3787,6 +3929,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Pro%20Cut)-a9c9eb/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Jersey%20(Pro%20Cut)-a9c9eb/02_detail.webp",
@@ -3813,6 +3956,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Practice%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/American%20Football%20Practice%20Jersey/02_detail.webp",
@@ -3838,6 +3982,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Pants%20(Integrated%20Pads)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Pants%20(Integrated%20Pads)/02_detail.webp",
@@ -3863,6 +4008,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Pants%20(Slotted,%20No%20Pads)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Pants%20(Slotted,%20No%20Pads)/02_detail.webp",
@@ -3888,6 +4034,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Practice%20Pants/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Football%20Practice%20Pants/02_detail.webp",
@@ -3913,6 +4060,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Long%20Sleeve%20American%20Football%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Long%20Sleeve%20American%20Football%20Jersey/02_detail.webp",
@@ -3939,6 +4087,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Long%20Sleeve%20American%20Football%20Jersey-54e062/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/American%20Football/Long%20Sleeve%20American%20Football%20Jersey-54e062/02_detail.webp",
@@ -3973,6 +4122,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(2-Button%20Henley)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(2-Button%20Henley)/02_detail.webp",
@@ -3998,6 +4148,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(2-Button%20Henley)-983bea/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(2-Button%20Henley)-983bea/02_detail.webp",
@@ -4023,6 +4174,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Full%20Button)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Full%20Button)/02_detail.webp"
@@ -4045,6 +4197,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Full%20Button)-05cecb/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Full%20Button)-05cecb/02_detail.webp",
@@ -4070,6 +4223,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Pullover%20V-Neck)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Pullover%20V-Neck)/02_detail.webp",
@@ -4095,6 +4249,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Pullover%20V-Neck)-416ef8/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Pullover%20V-Neck)-416ef8/02_detail.webp",
@@ -4120,6 +4275,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Sleeveless)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Sleeveless)/02_detail.webp",
@@ -4145,6 +4301,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Sleeveless)-29a58f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Jersey%20(Sleeveless)-29a58f/02_detail.webp",
@@ -4170,6 +4327,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Pants%20(Full%20Length)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Pants%20(Full%20Length)/02_detail.webp",
@@ -4195,6 +4353,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Pants%20(Knicker)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Pants%20(Knicker)/02_detail.webp",
@@ -4220,6 +4379,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Jersey%20(Mesh)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Jersey%20(Mesh)/02_detail.webp",
@@ -4245,6 +4405,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Jersey%20(Mesh)-ac11d5/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Jersey%20(Mesh)-ac11d5/02_detail.webp",
@@ -4270,6 +4431,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Pants/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Practice%20Pants/02_detail.webp",
@@ -4294,6 +4456,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Raglan%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Raglan%20Jersey/02_detail.webp",
@@ -4319,6 +4482,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Throwback%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Throwback%20Jersey/02_detail.webp",
@@ -4344,6 +4508,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Uniform%20Set/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Uniform%20Set/02_detail.webp",
@@ -4367,6 +4532,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Uniform%20Set-684d8d/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Baseball/Baseball%20Uniform%20Set-684d8d/02_detail.webp",
@@ -4402,6 +4568,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/BasketBall%20kit/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/BasketBall%20kit/02_detail.webp",
@@ -4429,6 +4596,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Basketball%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Basketball%20Shorts/02_detail.webp",
@@ -4454,6 +4622,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball/02_detail.webp",
@@ -4481,6 +4650,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball-70d849/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball-70d849/02_detail.webp",
@@ -4507,6 +4677,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball-cdef14/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Basketball/Reveradsble%20JErsey%20Basketball-cdef14/02_detail.webp",
@@ -4542,6 +4713,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Kit-0acae3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Kit-0acae3/02_detail.webp",
@@ -4569,6 +4741,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Shirt-05b18f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Shirt-05b18f/02_detail.webp",
@@ -4594,6 +4767,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Trousers-170d00/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Cricket/Cricket%20Trousers-170d00/02_detail.webp",
@@ -4627,6 +4801,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Bib%20Shorts-18c963/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Bib%20Shorts-18c963/02_detail.webp",
@@ -4652,6 +4827,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Jersey-e177a6/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Jersey-e177a6/02_detail.webp",
@@ -4677,6 +4853,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Kit-dee766/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Cycling/Cycling%20Kit-dee766/02_detail.webp",
@@ -4711,6 +4888,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Esports/Esports%20Jersey-71d3ff/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Esports/Esports%20Jersey-71d3ff/02_detail.webp",
@@ -4744,6 +4922,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Field%20Hockey/Field%20Hockey%20Jersey-158099/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Field%20Hockey/Field%20Hockey%20Jersey-158099/02_detail.webp",
@@ -4769,6 +4948,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Field%20Hockey/Field%20Hockey%20Jersey-fb827b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Field%20Hockey/Field%20Hockey%20Jersey-fb827b/02_detail.webp",
@@ -4804,6 +4984,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Jersey/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Jersey/02_detail.webp",
@@ -4829,6 +5010,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Set/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Set/03_detail.webp",
@@ -4853,6 +5035,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Set-7ad387/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Set-7ad387/03_detail.webp",
@@ -4880,6 +5063,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Flag%20Football/Flag%20Football%20Shorts/02_detail.webp",
@@ -4913,6 +5097,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Hockey%20Socks%20(Knit)-4daae1/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Hockey%20Socks%20(Knit)-4daae1/02_detail.webp",
@@ -4938,6 +5123,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Hockey%20Socks%20(Sublimated)-31120e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Hockey%20Socks%20(Sublimated)-31120e/02_detail.webp",
@@ -4963,6 +5149,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Goalie%20Cut)-283913/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Goalie%20Cut)-283913/02_detail.webp",
@@ -4988,6 +5175,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Pro%20Cut)-23126c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Pro%20Cut)-23126c/02_detail.webp",
@@ -5013,6 +5201,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Standard)-e58c07/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Jersey%20(Standard)-e58c07/02_detail.webp",
@@ -5038,6 +5227,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Pants%20Shell%20(Pro%20Cut)-3117f5/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Pants%20Shell%20(Pro%20Cut)-3117f5/02_detail.webp",
@@ -5063,6 +5253,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Pants%20Shell%20(Standard)-62f949/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Pants%20Shell%20(Standard)-62f949/02_detail.webp",
@@ -5088,6 +5279,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Practice%20Jersey-38dc5c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Practice%20Jersey-38dc5c/02_detail.webp",
@@ -5113,6 +5305,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Reversible%20Jersey-456b56/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Reversible%20Jersey-456b56/02_detail.webp",
@@ -5138,6 +5331,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Reversible%20Jersey-72b0ec/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Reversible%20Jersey-72b0ec/02_detail.webp",
@@ -5163,6 +5357,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Uniform%20Set-7d5e6a/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Ice%20Hockey/Ice%20Hockey%20Uniform%20Set-7d5e6a/02_detail.webp",
@@ -5198,6 +5393,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Lacrosse/Lacrosse%20Jersey-4d0efe/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Lacrosse/Lacrosse%20Jersey-4d0efe/02_detail.webp",
@@ -5223,6 +5419,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Lacrosse/Lacrosse%20Skort-9141df/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Lacrosse/Lacrosse%20Skort-9141df/02_detail.webp",
@@ -5256,6 +5453,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/BMX%20Casual%20Jersey-9f3108/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/BMX%20Casual%20Jersey-9f3108/02_detail.webp",
@@ -5281,6 +5479,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/BMX%20Race%20Jersey-6e3152/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/BMX%20Race%20Jersey-6e3152/02_detail.webp",
@@ -5306,6 +5505,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Jersey%20(Standard)-32661c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Jersey%20(Standard)-32661c/02_detail.webp",
@@ -5331,6 +5531,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Jersey%20(Vented)-2fdbdd/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Jersey%20(Vented)-2fdbdd/02_detail.webp",
@@ -5356,6 +5557,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Pants%20(Standard)-95eed0/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Pants%20(Standard)-95eed0/02_detail.webp",
@@ -5382,6 +5584,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Pants%20(Vented)-96f0a1/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/Motocross%20Pants%20(Vented)-96f0a1/02_detail.webp",
@@ -5407,6 +5610,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/MX%20Uniform%20Set-34dd35/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Motocross%20-%20BMX/MX%20Uniform%20Set-34dd35/02_detail.webp",
@@ -5441,6 +5645,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Netball/Netball%20Dress-89909f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Netball/Netball%20Dress-89909f/02_detail.webp",
@@ -5468,6 +5673,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Netball/Netball%20Skirt%20Set-057312/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Netball/Netball%20Skirt%20Set-057312/02_detail.webp",
@@ -5501,6 +5707,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Polo-c59e65/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Polo-c59e65/02_detail.webp",
@@ -5526,6 +5733,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Shorts-e260cb/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Shorts-e260cb/02_detail.webp",
@@ -5551,6 +5759,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Skirt-1e35c4/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Skirt-1e35c4/02_detail.webp",
@@ -5576,6 +5785,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Skort-76d551/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Skort-76d551/02_detail.webp",
@@ -5601,6 +5811,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Tank-6cc95c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Tank-6cc95c/02_detail.webp",
@@ -5626,6 +5837,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Uniform%20Set-7ec8b4/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Pickleball/Pickleball%20Uniform%20Set-7ec8b4/02_detail.webp",
@@ -5663,6 +5875,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Sleeveless)-9049fe/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Sleeveless)-9049fe/02_detail.webp",
@@ -5688,6 +5901,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Standard)-cb2d22/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Standard)-cb2d22/02_detail.webp",
@@ -5713,6 +5927,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 20,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Tank)-7ff46b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Jersey%20(Tank)-7ff46b/02_detail.webp",
@@ -5738,6 +5953,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Shorts-8c0522/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Shorts-8c0522/02_detail.webp",
@@ -5763,6 +5979,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Unifrom-907690/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Roller%20Derby/Roller%20Derby%20Unifrom-907690/02_detail.webp",
@@ -5799,6 +6016,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Trou%20(Shorts)-ee2a72/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Trou%20(Shorts)-ee2a72/02_detail.webp",
@@ -5824,6 +6042,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Uni-Suit%20(Men's)-93b739/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Uni-Suit%20(Men's)-93b739/02_detail.webp",
@@ -5849,6 +6068,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Uni-Suit%20(Women's)-1644f3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Rowing%20Uni-Suit%20(Women's)-1644f3/02_detail.webp",
@@ -5875,6 +6095,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Sleeveless%20Rowing%20Uni-Suit-b52d0f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Rowing%20-%20Crew/Sleeveless%20Rowing%20Uni-Suit-b52d0f/02_detail.webp",
@@ -5910,6 +6131,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Jersey-db7de3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Jersey-db7de3/02_detail.webp",
@@ -5935,6 +6157,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Kit-420a52/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Kit-420a52/02_detail.webp",
@@ -5960,6 +6183,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Shorts-93a6d2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Field%20&%20Court/Rugby/Rugby%20Shorts-93a6d2/02_detail.webp",
@@ -5993,6 +6217,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Jersey%20(Long%20Sleeve)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Jersey%20(Long%20Sleeve)/02_detail.webp",
@@ -6018,6 +6243,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Shorts/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Shorts/02_detail.webp",
@@ -6043,6 +6269,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Shorts-4c5628/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Soccer/Soccer%20Shorts-4c5628/02_detail.webp",
@@ -6076,6 +6303,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Belted%20Pants/01_flat_lay.webp"
               }
@@ -6097,6 +6325,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Belted%20Pants-c86f31/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Belted%20Pants-c86f31/02_detail.webp",
@@ -6122,6 +6351,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(2-Button%20Henley)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(2-Button%20Henley)/02_detail.webp"
@@ -6144,6 +6374,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(2-Button%20Henley)-74a983/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(2-Button%20Henley)-74a983/02_detail.webp",
@@ -6169,6 +6400,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Crew%20Neck%20Pullover)/01_flat_lay.webp"
               }
@@ -6190,6 +6422,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Crew%20Neck%20Pullover)-a177a2/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Crew%20Neck%20Pullover)-a177a2/02_detail.webp",
@@ -6215,6 +6448,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Full%20Button)/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Full%20Button)/02_detail.webp",
@@ -6238,6 +6472,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Full%20Button)-4d9f40/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Full%20Button)-4d9f40/02_detail.webp",
@@ -6263,6 +6498,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Sleeveless)/01_flat_lay.webp"
               }
@@ -6284,6 +6520,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Sleeveless)-c4bd7c/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(Sleeveless)-c4bd7c/02_detail.webp",
@@ -6309,6 +6546,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(V-Neck)/01_flat_lay.webp"
               }
@@ -6330,6 +6568,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(V-Neck)-32d400/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Jersey%20(V-Neck)-32d400/02_detail.webp",
@@ -6355,6 +6594,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Full%20Length)/01_flat_lay.webp"
               }
@@ -6376,6 +6616,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Full%20Length)-101880/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Full%20Length)-101880/02_detail.webp",
@@ -6402,6 +6643,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Knicker)/01_flat_lay.webp"
               }
@@ -6423,6 +6665,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Knicker)-12092f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Pants%20(Knicker)-12092f/02_detail.webp",
@@ -6449,6 +6692,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Shorts-f0bd24/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Softball/Softball%20Shorts-f0bd24/02_detail.webp",
@@ -6482,6 +6726,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20&%20Field%20Uniform%20Set-d4e569/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20&%20Field%20Uniform%20Set-d4e569/02_detail.webp",
@@ -6509,6 +6754,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Briefs%20(Sprint)-4ca670/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Briefs%20(Sprint)-4ca670/02_detail.webp",
@@ -6534,6 +6780,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Briefs%20(Women's%20Bun-Huggers)-dca1fc/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Briefs%20(Women's%20Bun-Huggers)-dca1fc/02_detail.webp",
@@ -6559,6 +6806,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Compression%20Shorts-5b1739/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Compression%20Shorts-5b1739/02_detail.webp",
@@ -6584,6 +6832,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Half-Tights-485c08/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Half-Tights-485c08/02_detail.webp",
@@ -6609,6 +6858,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Long%20Sleeve%20Compression%20Top-188a4e/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Long%20Sleeve%20Compression%20Top-188a4e/02_detail.webp",
@@ -6634,6 +6884,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Shorts%20(Split-Leg)-c1f29b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Shorts%20(Split-Leg)-c1f29b/02_detail.webp",
@@ -6660,6 +6911,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Shorts%20(Standard)-679ed0/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Shorts%20(Standard)-679ed0/02_detail.webp",
@@ -6685,6 +6937,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Compression)-e7a84f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Compression)-e7a84f/02_detail.webp",
@@ -6710,6 +6963,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Crop%20-%20Women's)-86b567/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Crop%20-%20Women's)-86b567/02_detail.webp",
@@ -6735,6 +6989,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Standard)-939d16/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Track,%20Cycling%20&%20Combat/Track%20&%20Field/Track%20Singlet%20(Standard)-939d16/02_detail.webp",
@@ -6768,6 +7023,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Training%20Tops/Pre-Match%20Training%20Top-37a5b1/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Training%20Tops/Pre-Match%20Training%20Top-37a5b1/02_detail.webp",
@@ -6793,6 +7049,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Training%20Tops/Team%20Polo-22bca0/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Specialty/Training%20Tops/Team%20Polo-22bca0/02_detail.webp",
@@ -6826,6 +7083,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Compression%20Shorts-a4665f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Compression%20Shorts-a4665f/02_detail.webp",
@@ -6851,6 +7109,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Cap%20Sleeve)-2dace3/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Cap%20Sleeve)-2dace3/02_detail.webp",
@@ -6876,6 +7135,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Long%20Sleeve)-63c624/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Long%20Sleeve)-63c624/02_detail.webp",
@@ -6901,6 +7161,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Short%20Sleeve)-477e9b/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Short%20Sleeve)-477e9b/02_detail.webp",
@@ -6926,6 +7187,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Sleeveless)-4b4bbc/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Jersey%20(Sleeveless)-4b4bbc/02_detail.webp",
@@ -6951,6 +7213,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Shorts%20(Men's%20Loose%20Fit)-a116be/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Shorts%20(Men's%20Loose%20Fit)-a116be/02_detail.webp",
@@ -6976,6 +7239,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Spandex%20Shorts%20(Women's)-c6b020/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Spandex%20Shorts%20(Women's)-c6b020/02_detail.webp",
@@ -7001,6 +7265,7 @@ window.ZALI_CATALOG = {
               "sizeRange": null,
               "leadTime": null,
               "moq": 25,
+              "is_featured": false,
               "images": {
                 "flat_lay": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Uniform%20Set-3ee39f/01_flat_lay.webp",
                 "detail": "FinalAllProductsZali/Downloads/Team%20Sports/Most%20Popular/Volleyball/Volleyball%20Uniform%20Set-3ee39f/02_detail.webp",

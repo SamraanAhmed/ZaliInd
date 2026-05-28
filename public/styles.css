@@ -638,10 +638,9 @@ nav.main {
   color: var(--ink);
 }
 .sec-desc {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--ink-soft);
   margin-top: 22px;
-  max-width: 540px;
   line-height: 1.55;
 }
 .sec-link {

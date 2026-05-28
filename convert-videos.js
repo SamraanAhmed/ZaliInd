@@ -33,11 +33,10 @@ async function processVideo(filename) {
     ffmpeg(inPath)
       .outputOptions([
         '-c:v libx264',
-        '-preset fast',
-        '-crf 26',       // Good compression
-        '-vf scale=-2:720', // Scale to 720p to load fast
+        '-preset medium',
+        '-crf 18',              // Visually lossless quality
         '-c:a aac',
-        '-b:a 128k',
+        '-b:a 192k',            // High quality audio
         '-movflags +faststart', // Crucial for iOS/Web playback
         '-pix_fmt yuv420p'      // Crucial for wide compatibility
       ])
